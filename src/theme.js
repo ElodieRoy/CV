@@ -3,7 +3,7 @@ import { createMuiTheme } from "@material-ui/core"
 const yellowColor = "#eea622"
 const darkBlueColor = "#303b45"
 const lightGreyColor = "#fafafa"
-const brownColor = "#3c3837"
+// const brownColor = "#3c3837"
 
 const theme = createMuiTheme({
   // Colors
@@ -45,6 +45,7 @@ const theme = createMuiTheme({
       root: {
         color: lightGreyColor,
         transition: "1s",
+        minWidth: "inherit",
         "&:hover": {
           backgroundColor: `${lightGreyColor}40`
         }

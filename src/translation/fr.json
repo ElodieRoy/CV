@@ -1,4 +1,24 @@
 {
   "title": "D\u00E9veloppeuse\u00A0WEB",
-  "downloadResume": "T\u00E9l\u00E9charger\u00A0CV"
+  "downloadResume": "T\u00E9l\u00E9charger\u00A0CV",
+  "languageTranslate": "en",
+  "languageTranslateName": "English version",
+  "menu": [
+    {
+      "id": "skills",
+      "text": "Comp\u00E9tences"
+    },
+    {
+      "id": "experiences",
+      "text": "Exp\u00E9riences"
+    },
+    {
+      "id": "education",
+      "text": "Formation"
+    },
+    {
+      "id": "contact",
+      "text": "Contact"
+    }
+  ]
 }

@@ -4,6 +4,9 @@ import Particles from "react-particles-js"
 import { useTranslation } from "react-i18next"
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    opacity: (props) => 1.5 - props.opacity
+  },
   particles: {
     height: "80vh",
     width: "100vw",
@@ -11,8 +14,8 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     position: "absolute",
-    top: 20,
-    height: "calc(80vh - 40px)",
+    top: 50,
+    height: "calc(80vh - 60px)",
     width: "240px",
     marginLeft: "calc(50% - 120px)",
     display: "flex",
@@ -22,17 +25,17 @@ const useStyles = makeStyles((theme) => ({
     userSelect: "none"
   },
   img: {
-    borderRadius: "50%",
-    height: "35%"
+    height: "35%",
+    borderRadius: "50%"
   }
 }))
 
-const HeroHeader = () => {
-  const classes = useStyles()
+const HeroHeader = (props) => {
+  const classes = useStyles(props)
   const { t } = useTranslation()
 
   return (
-    <header>
+    <header className={classes.root}>
       <Particles
         className={classes.particles}
         params={{
