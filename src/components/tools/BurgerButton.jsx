@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Button, makeStyles } from "@material-ui/core"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   burger: {
     height: "2.5em",
     width: "2.5em",
@@ -32,7 +32,7 @@ const useStyles = makeStyles({
       content: "''",
       width: "100%",
       borderRadius: "0.25em",
-      backgroundColor: "white",
+      backgroundColor: theme.palette.common.white,
       height: "0.25em",
       position: "absolute",
       transform: "rotate(0)",
@@ -67,7 +67,7 @@ const useStyles = makeStyles({
       }
     }
   }
-})
+}))
 
 const BurgerButton = () => {
   const [isOpen, setIsOpen] = useState(false)

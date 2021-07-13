@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from "react"
+import { useMediaQuery } from "@material-ui/core"
 
 import HeroHeader from "components/HeroHeader"
 import NavBar from "components/NavBar"
+import BackToTopButton from "components/tools/BackToTopButton"
 
 const App = () => {
   const [opacity, setOpacity] = useState(0)
+  const isMediumDisplay = useMediaQuery((theme) => theme.breakpoints.up("sm"))
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      const calcOpacity = window.scrollY / (window.outerHeight * 0.8 - 100)
+      const calcOpacity = window.scrollY / (window.innerHeight * 0.8 - 56 * 2)
       return calcOpacity > 1 ? setOpacity(1) : setOpacity(calcOpacity)
     })
   }, [])
 
   return (
     <>
-      <NavBar opacity={opacity} />
+      <NavBar opacity={opacity} isMediumDisplay={isMediumDisplay} />
       <HeroHeader opacity={opacity} />
+      <BackToTopButton isDisplay={opacity === 1} />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ullam,
         doloremque deserunt nisi iste cum, sunt atque voluptas optio, quod est
