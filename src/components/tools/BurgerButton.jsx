@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React from "react"
+import PropTypes from "prop-types"
 import { Button, makeStyles } from "@material-ui/core"
 
 const useStyles = makeStyles((theme) => ({
@@ -10,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     transition: ".2s all",
     webkitTapHighlightColor: "transparent",
+    zIndex: 2,
     "&.button:hover": {
       backgroundColor: "transparent"
     },
@@ -36,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
       height: "0.25em",
       position: "absolute",
       transform: "rotate(0)",
+      transitionDelay: ".2s",
       transition:
         ".2s top .2s, .1s left, .2s transform, .4s background-color .2s"
     },
@@ -52,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
     "&.open": {
       backgroundColor: "transparent",
       "&, &:after, &:before": {
+        transitionDelay: ".2s",
         transition:
           ".2s background-color, .2s top, .2s left, .2s transform .15s"
       },
@@ -69,22 +73,26 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const BurgerButton = () => {
-  const [isOpen, setIsOpen] = useState(false)
+const BurgerButton = (props) => {
+  const { isMenuOpen, onClick } = props
   const classes = useStyles()
-
-  const handleClick = () => {
-    setIsOpen(!isOpen)
-  }
 
   return (
     <Button
-      className={`${isOpen ? null : "button"} ${classes.burger}`}
-      onClick={handleClick}
+      id="burger-button"
+      className={`${isMenuOpen ? null : "button"} ${classes.burger}`}
+      onClick={onClick}
     >
-      <span className={`${isOpen ? "open" : null} ${classes.burgerLines}`} />
+      <span
+        className={`${isMenuOpen ? "open" : null} ${classes.burgerLines}`}
+      />
     </Button>
   )
+}
+
+BurgerButton.propTypes = {
+  isMenuOpen: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
 export default BurgerButton

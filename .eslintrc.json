@@ -43,6 +43,12 @@
 				"endOfLine": "auto"
 			}
 		],
-		"no-unused-vars": 1
+		"no-unused-vars": 1,
+		"react/jsx-props-no-spreading": [
+			2,
+			{
+				"custom": "ignore"
+			}
+		]
 	}
 }

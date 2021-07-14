@@ -21,8 +21,9 @@ const BackToTopButton = (props) => {
   }
 
   return (
-    <Zoom className={classes.root} in={isDisplay}>
+    <Zoom in={isDisplay}>
       <Fab
+        className={classes.root}
         onClick={handleClick}
         size="small"
         color="secondary"
