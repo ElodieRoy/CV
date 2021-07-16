@@ -1,6 +1,7 @@
 import React from "react"
 import { Button, makeStyles } from "@material-ui/core"
 import { useTranslation } from "react-i18next"
+import { scroller } from "react-scroll"
 
 const useStyles = makeStyles((theme) => ({
   menu: {
@@ -19,11 +20,25 @@ const DesktopMenu = () => {
   const { t } = useTranslation()
   const classes = useStyles()
 
+  const scrollTo = (element) => {
+    scroller.scrollTo(element, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart"
+    })
+  }
+
   return (
     <ul className={classes.menu}>
       {t(`menu`, { returnObjects: true }).map((item) => (
         <li className={classes.menuElements} key={item.id}>
-          <Button>{item.text}</Button>
+          <Button
+            onClick={() => {
+              scrollTo(item.id)
+            }}
+          >
+            {item.text}
+          </Button>
         </li>
       ))}
     </ul>

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
+import { scroller } from "react-scroll"
 import BurgerButton from "components/tools/BurgerButton"
 import { Button, ClickAwayListener, makeStyles } from "@material-ui/core"
 
@@ -51,6 +52,15 @@ const MobileMenu = () => {
     }
   }
 
+  const scrollTo = (element) => {
+    scroller.scrollTo(element, {
+      duration: 1000,
+      delay: 0,
+      smooth: "easeInOutQuart"
+    })
+    setIsMenuOpen(false)
+  }
+
   return (
     <>
       <BurgerButton isMenuOpen={isMenuOpen} onClick={handleToggle} />
@@ -58,7 +68,13 @@ const MobileMenu = () => {
         <ul className={`${classes.menu} ${isMenuOpen ? "menuOpen" : null}`}>
           {t(`menu`, { returnObjects: true }).map((item) => (
             <li key={item.id}>
-              <Button>{item.text}</Button>
+              <Button
+                onClick={() => {
+                  scrollTo(item.id)
+                }}
+              >
+                {item.text}
+              </Button>
             </li>
           ))}
         </ul>
