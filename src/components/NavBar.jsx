@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { makeStyles, Typography } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core"
 
 import DesktopMenu from "./menus/DesktopMenu"
 import MobileMenu from "./menus/MobileMenu"
