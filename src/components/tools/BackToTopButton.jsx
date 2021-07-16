@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Fab, makeStyles, Zoom } from "@material-ui/core"
 import { KeyboardArrowUp } from "@material-ui/icons"
+import { animateScroll as scroll } from "react-scroll"
 
 const useStyles = makeStyles({
   root: {
@@ -16,8 +17,7 @@ const BackToTopButton = (props) => {
   const classes = useStyles()
 
   const handleClick = () => {
-    const anchor = document.querySelector("header")
-    anchor.scrollIntoView({ behavior: "smooth" })
+    scroll.scrollToTop()
   }
 
   return (
