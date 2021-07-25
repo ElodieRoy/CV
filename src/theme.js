@@ -17,6 +17,9 @@ const theme = createMuiTheme({
     },
     secondary: {
       main: darkBlueColor
+    },
+    action: {
+      active: lightGreyColor
     }
   },
 
@@ -37,6 +40,20 @@ const theme = createMuiTheme({
       fontSize: "1.5rem",
       color: lightGreyColor,
       textAlign: "center"
+    },
+    h3: {
+      color: yellowColor,
+      fontSize: "2.5rem",
+      textAlign: "center",
+      marginBottom: 30,
+      textTransform: "uppercase"
+    },
+    h4: {
+      color: darkBlueColor,
+      textAlign: "center",
+      fontSize: "1.5rem",
+      fontWeight: 600,
+      marginTop: 20
     }
   },
   overrides: {
@@ -53,6 +70,19 @@ const theme = createMuiTheme({
       outlined: {
         backgroundColor: `${lightGreyColor}10`,
         border: `1px solid ${lightGreyColor}25`
+      }
+    },
+    MuiGrid: {
+      item: {
+        margin: "30px 0"
+      }
+    },
+    MuiTypography: {
+      root: {
+        "&::selection": {
+          color: yellowColor,
+          backgroundColor: darkBlueColor
+        }
       }
     }
   }

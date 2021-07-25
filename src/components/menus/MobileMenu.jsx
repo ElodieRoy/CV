@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "none",
     zIndex: 1,
     "&.menuOpen": {
-      height: "40vh",
+      height: "50vh",
       boxShadow: "0px 2px 11px 1px rgba(0,0,0,0.4)"
     },
     "&>li:first-child": {

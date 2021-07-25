@@ -31,12 +31,12 @@ const NavBar = (props) => {
   const classes = useStyles({ opacity, isMediumDisplay })
 
   return (
-    <div className={classes.root}>
-      <nav className={classes.nav}>
+    <nav className={classes.root}>
+      <div className={classes.nav}>
         {isMediumDisplay ? <DesktopMenu /> : <MobileMenu />}
         <TranslateButton />
-      </nav>
-    </div>
+      </div>
+    </nav>
   )
 }
 

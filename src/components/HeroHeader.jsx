@@ -1,21 +1,24 @@
 import React from "react"
+import PropTypes from "prop-types"
+
 import { Button, makeStyles, Typography } from "@material-ui/core"
 import Particles from "react-particles-js"
 import { useTranslation } from "react-i18next"
+import ScrollBottomArrow from "./tools/ScrollBottomArrow"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    opacity: (props) => 1.5 - props.opacity
+    opacity: (opacity) => 1.5 - opacity
   },
   particles: {
-    height: "80vh",
+    height: "100vh",
     width: "100vw",
     backgroundColor: theme.palette.secondary.main
   },
   title: {
     position: "absolute",
     top: 50,
-    height: "calc(80vh - 60px)",
+    height: "calc(100vh - 60px)",
     width: "240px",
     marginLeft: "calc(50% - 120px)",
     display: "flex",
@@ -26,12 +29,14 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     height: "35%",
+    maxHeight: 350,
     borderRadius: "50%"
   }
 }))
 
 const HeroHeader = (props) => {
-  const classes = useStyles(props)
+  const { opacity } = props
+  const classes = useStyles(opacity)
   const { t } = useTranslation()
 
   return (
@@ -100,9 +105,14 @@ const HeroHeader = (props) => {
         >
           {t("downloadResume")}
         </Button>
+        <ScrollBottomArrow isDisplay={opacity < 0.6} />
       </div>
     </header>
   )
+}
+
+HeroHeader.propTypes = {
+  opacity: PropTypes.number.isRequired
 }
 
 export default HeroHeader

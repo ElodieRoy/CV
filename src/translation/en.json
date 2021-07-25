@@ -20,5 +20,8 @@
       "id": "contact",
       "text": "Contact"
     }
-  ]
+  ],
+  "skills": "Skills",
+  "experiences": "Experiences",
+  "education": "Education"
 }
