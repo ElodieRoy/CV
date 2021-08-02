@@ -4,7 +4,7 @@ import { makeStyles, Typography } from "@material-ui/core"
 
 const useStyles = makeStyles({
   root: {
-    paddingTop: 80
+    padding: "80px 0"
   }
 })
 

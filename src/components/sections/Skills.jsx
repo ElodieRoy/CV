@@ -6,7 +6,7 @@ import IcomoonReact from "icomoon-react"
 
 const useStyles = makeStyles({
   root: {
-    paddingTop: 80
+    padding: "80px 0"
   },
   img: {
     height: 100,
