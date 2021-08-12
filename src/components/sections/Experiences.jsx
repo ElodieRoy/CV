@@ -1,24 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useTranslation } from "react-i18next"
-import { makeStyles, Typography } from "@material-ui/core"
+import { Typography } from "@material-ui/core"
 
 import Experience from "./Experience"
-
-const useStyles = makeStyles({
-  root: {
-    padding: "80px 0",
-    backgroundColor: "#ececec"
-  }
-})
 
 const Experiences = (props) => {
   const { isMediumDisplay } = props
   const { t } = useTranslation()
-  const classes = useStyles(isMediumDisplay)
 
   return (
-    <section className={classes.root} id="experiences">
+    <section id="experiences">
       <Typography variant="h3">{t("experiences")}</Typography>
       <ul>
         {t(`experiencesArray`, {

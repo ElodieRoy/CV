@@ -10,8 +10,15 @@ import Education from "components/sections/Education"
 const useStyles = makeStyles({
   root: {
     "&>section": {
+      padding: "80px 0",
+      margin: "0 auto",
+      maxWidth: "1440px",
       paddingRight: (isMediumDisplay) => (isMediumDisplay ? "40px" : "10px"),
-      paddingLeft: (isMediumDisplay) => (isMediumDisplay ? "40px" : "10px")
+      paddingLeft: (isMediumDisplay) => (isMediumDisplay ? "40px" : "10px"),
+      "&:nth-child(odd)": {
+        maxWidth: "inherit",
+        backgroundColor: "#ececec"
+      }
     }
   }
 })

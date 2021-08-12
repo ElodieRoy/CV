@@ -5,9 +5,6 @@ import iconSet from "icons.json"
 import IcomoonReact from "icomoon-react"
 
 const useStyles = makeStyles({
-  root: {
-    padding: "80px 0"
-  },
   img: {
     height: 100,
     width: 100
@@ -19,7 +16,7 @@ const Skills = () => {
   const classes = useStyles()
 
   return (
-    <section className={classes.root} id="skills">
+    <section id="skills">
       <Typography variant="h3">{t("skills")}</Typography>
       <Grid container justify="center">
         <Grid
