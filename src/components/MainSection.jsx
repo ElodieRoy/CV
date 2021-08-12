@@ -9,7 +9,10 @@ import Education from "components/sections/Education"
 
 const useStyles = makeStyles({
   root: {
-    padding: (isMediumDisplay) => (isMediumDisplay ? "0 40px" : "0 10px")
+    "&>section": {
+      paddingRight: (isMediumDisplay) => (isMediumDisplay ? "40px" : "10px"),
+      paddingLeft: (isMediumDisplay) => (isMediumDisplay ? "40px" : "10px")
+    }
   }
 })
 
@@ -21,7 +24,7 @@ const MainSection = (props) => {
     <main className={classes.root}>
       <BackToTopButton isDisplay={isBackToTopDisplay} />
       <Skills />
-      <Experiences />
+      <Experiences isMediumDisplay={isMediumDisplay} />
       <Education />
     </main>
   )

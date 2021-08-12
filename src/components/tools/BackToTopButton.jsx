@@ -8,7 +8,8 @@ const useStyles = makeStyles({
   root: {
     position: "fixed",
     bottom: "30px",
-    right: "30px"
+    right: "30px",
+    zIndex: 2
   }
 })
 

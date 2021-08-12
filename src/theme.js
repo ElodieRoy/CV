@@ -34,25 +34,51 @@ const theme = createMuiTheme({
       fontFamily: "medel",
       fontSize: "2.5rem",
       color: yellowColor,
-      textAlign: "center"
+      textAlign: "center",
+      userSelect: "none"
     },
     h2: {
       fontSize: "1.5rem",
       color: lightGreyColor,
-      textAlign: "center"
+      textAlign: "center",
+      userSelect: "none"
     },
     h3: {
       color: yellowColor,
       fontSize: "2.5rem",
       textAlign: "center",
       marginBottom: 30,
-      textTransform: "uppercase"
+      textTransform: "uppercase",
+      userSelect: "none"
     },
     h4: {
       color: darkBlueColor,
       textAlign: "center",
-      fontSize: "1.5rem",
+      fontSize: "1rem",
       fontWeight: 600,
+      marginTop: 20
+    },
+    h5: {
+      color: darkBlueColor,
+      fontSize: "1.2rem",
+      fontWeight: 600
+    },
+    h6: {
+      fontSize: ".8rem",
+      // fontWeight: 600,
+      marginTop: 20
+    },
+    subtitle1: {
+      color: "grey",
+      fontSize: "1rem",
+      // fontWeight: 200,
+      marginTop: 10
+    },
+    subtitle2: {
+      color: "grey",
+      fontSize: "0.8rem",
+      fontWeight: 200,
+      fontStyle: "italic",
       marginTop: 20
     }
   },
@@ -83,6 +109,11 @@ const theme = createMuiTheme({
           color: yellowColor,
           backgroundColor: darkBlueColor
         }
+      }
+    },
+    MuiPaper: {
+      root: {
+        backgroundColor: lightGreyColor
       }
     }
   }

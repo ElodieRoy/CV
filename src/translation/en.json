@@ -3,6 +3,7 @@
   "downloadResume": "Download resume",
   "languageTranslate": "fr",
   "languageTranslateName": "Version fran\u00E7aise",
+  "detail": "detail",
   "menu": [
     {
       "id": "skills",
@@ -23,5 +24,39 @@
   ],
   "skills": "Skills",
   "experiences": "Experiences",
+  "experiencesArray": [
+    {
+      "id": "exp1",
+      "title": "Stage développeuse Front-end",
+      "company": "Monsieur Alexandre AUTRAN",
+      "period": "Mai - Juin 2021",
+      "resume": "",
+      "detail": ""
+    },
+    {
+      "id": "exp2",
+      "title": "Consultante SAP BW HANA/BI4 pour le compte de SAFRAN",
+      "company": "Freelance pour SOPRA STERIA",
+      "period": "Janvier 2019 - Mai 2020",
+      "resume": "",
+      "detail": ""
+    },
+    {
+      "id": "exp3",
+      "title": "Data Analyst pour le compte d'Airbus",
+      "company": "AKKA Technologies",
+      "period": "Juillet 2014 - Décembre 2018",
+      "resume": "",
+      "detail": ""
+    },
+    {
+      "id": "exp4",
+      "title": "Consultante SAP BW pour le compte d'Airbus",
+      "company": "AKKA Technologies",
+      "period": "Septembre 2011 - Juin 2014",
+      "resume": "",
+      "detail": ""
+    }
+  ],
   "education": "Education"
 }

@@ -6,7 +6,6 @@ import { scroller } from "react-scroll"
 const useStyles = makeStyles((theme) => ({
   menu: {
     display: "flex",
-    listStyle: "none",
     color: theme.palette.common.white
   },
   menuElements: {

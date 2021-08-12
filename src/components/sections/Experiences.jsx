@@ -1,90 +1,47 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { useTranslation } from "react-i18next"
 import { makeStyles, Typography } from "@material-ui/core"
+
+import Experience from "./Experience"
 
 const useStyles = makeStyles({
   root: {
     padding: "80px 0",
-    backgroundColor: "#F5F5F5"
+    backgroundColor: "#ececec"
   }
 })
 
-const Experiences = () => {
+const Experiences = (props) => {
+  const { isMediumDisplay } = props
   const { t } = useTranslation()
-  const classes = useStyles()
+  const classes = useStyles(isMediumDisplay)
 
   return (
     <section className={classes.root} id="experiences">
       <Typography variant="h3">{t("experiences")}</Typography>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ullam,
-        doloremque deserunt nisi iste cum, sunt atque voluptas optio, quod est
-        qui velit facilis delectus eligendi odio molestias itaque suscipit?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel maxime
-        sit, quidem, tenetur ex harum corrupti iure excepturi mollitia, dolore
-        repellat nisi nobis aliquid! Corrupti facere dolorum nulla nam culpa?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui inventore
-        aut adipisci, ipsum, libero suscipit deserunt rem facere eveniet minima
-        mollitia blanditiis dolores, voluptas eaque molestiae soluta eligendi
-        impedit quam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Deserunt, fuga voluptates. Illo ut perferendis veniam quo, alias
-        quaerat, corrupti saepe impedit at quas ex, eum sapiente. Quia sint
-        accusantium veniam. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Corrupti ullam, doloremque deserunt nisi iste cum, sunt atque
-        voluptas optio, quod est qui velit facilis delectus eligendi odio
-        molestias itaque suscipit? Lorem ipsum dolor sit, amet consectetur
-        adipisicing elit. Vel maxime sit, quidem, tenetur ex harum corrupti iure
-        excepturi mollitia, dolore repellat nisi nobis aliquid! Corrupti facere
-        dolorum nulla nam culpa? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Qui inventore aut adipisci, ipsum, libero suscipit
-        deserunt rem facere eveniet minima mollitia blanditiis dolores, voluptas
-        eaque molestiae soluta eligendi impedit quam. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Deserunt, fuga voluptates. Illo ut
-        perferendis veniam quo, alias quaerat, corrupti saepe impedit at quas
-        ex, eum sapiente. Quia sint accusantium veniam. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Corrupti ullam, doloremque deserunt
-        nisi iste cum, sunt atque voluptas optio, quod est qui velit facilis
-        delectus eligendi odio molestias itaque suscipit? Lorem ipsum dolor sit,
-        amet consectetur adipisicing elit. Vel maxime sit, quidem, tenetur ex
-        harum corrupti iure excepturi mollitia, dolore repellat nisi nobis
-        aliquid! Corrupti facere dolorum nulla nam culpa? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Qui inventore aut adipisci, ipsum,
-        libero suscipit deserunt rem facere eveniet minima mollitia blanditiis
-        dolores, voluptas eaque molestiae soluta eligendi impedit quam. Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Deserunt, fuga
-        voluptates. Illo ut perferendis veniam quo, alias quaerat, corrupti
-        saepe impedit at quas ex, eum sapiente. Quia sint accusantium veniam.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ullam,
-        doloremque deserunt nisi iste cum, sunt atque voluptas optio, quod est
-        qui velit facilis delectus eligendi odio molestias itaque suscipit?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel maxime
-        sit, quidem, tenetur ex harum corrupti iure excepturi mollitia, dolore
-        repellat nisi nobis aliquid! Corrupti facere dolorum nulla nam culpa?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui inventore
-        aut adipisci, ipsum, libero suscipit deserunt rem facere eveniet minima
-        mollitia blanditiis dolores, voluptas eaque molestiae soluta eligendi
-        impedit quam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Deserunt, fuga voluptates. Illo ut perferendis veniam quo, alias
-        quaerat, corrupti saepe impedit at quas ex, eum sapiente. Quia sint
-        accusantium veniam. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Corrupti ullam, doloremque deserunt nisi iste cum, sunt atque
-        voluptas optio, quod est qui velit facilis delectus eligendi odio
-        molestias itaque suscipit? Lorem ipsum dolor sit, amet consectetur
-        adipisicing elit. Vel maxime sit, quidem, tenetur ex harum corrupti iure
-        excepturi mollitia, dolore repellat nisi nobis aliquid! Corrupti facere
-        dolorum nulla nam culpa? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Qui inventore aut adipisci, ipsum, libero suscipit
-        deserunt rem facere eveniet minima mollitia blanditiis dolores, voluptas
-        eaque molestiae soluta eligendi impedit quam. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Deserunt, fuga voluptates. Illo ut
-        perferendis veniam quo, alias quaerat, corrupti saepe impedit at quas
-        ex, eum sapiente. Quia sint accusantium veniam. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Corrupti ullam, doloremque deserunt
-        nisi iste cum, sunt atque voluptas optio, quod est qui velit facilis
-        delectus eligendi odio molestias itaque suscipit?
-      </p>
+      <ul>
+        {t(`experiencesArray`, {
+          returnObjects: true
+        }).map((item) => (
+          <Experience
+            key={item.id}
+            id={item.id}
+            isMediumDisplay={isMediumDisplay}
+            title={item.title}
+            company={item.company}
+            period={item.period}
+            resume={item.resume}
+            detail={Array.from(item.detail)}
+          />
+        ))}
+      </ul>
     </section>
   )
+}
+
+Experiences.propTypes = {
+  isMediumDisplay: PropTypes.bool.isRequired
 }
 
 export default Experiences

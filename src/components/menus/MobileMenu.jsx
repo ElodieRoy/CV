@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
     height: 0,
     backgroundColor: theme.palette.primary.main,
-    listStyle: "none",
     transition: "height 0.7s ease-out, box-shadow 0.3s ease-in",
     display: "flex",
     flexDirection: "column",

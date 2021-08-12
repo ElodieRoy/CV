@@ -3,6 +3,7 @@
   "downloadResume": "T\u00E9l\u00E9charger\u00A0CV",
   "languageTranslate": "en",
   "languageTranslateName": "English version",
+  "detail": "d\u00E9tail",
   "menu": [
     {
       "id": "skills",
@@ -21,7 +22,133 @@
       "text": "Contact"
     }
   ],
-  "skills": "Compétences",
+  "skills": "Comp\u00E9tences",
   "experiences": "Exp\u00E9riences",
+  "experiencesArray": [
+    {
+      "id": "exp1",
+      "title": "Stage d\u00E9veloppeuse Front-end",
+      "company": "Monsieur Alexandre AUTRAN",
+      "period": "Mai - Juillet 2021",
+      "resume": "D\u00E9veloppement front-end d'une application web preuve de concept permettant la mise en relation d’offres et de demandes",
+      "detail": [
+        {
+          "id": "det1",
+          "text": "Initialisation du projet : r\u00E9daction des bonnes pratiques, configuration Eslint, internalisation i18n"
+        },
+        {
+          "id": "det2",
+          "text": "R\u00E9daction de sp\u00E9cifications techniques"
+        },
+        {
+          "id": "det3",
+          "text": "Int\u00E9gration de la maquette de manière responsive sous React.js"
+        },
+        {
+          "id": "det4",
+          "text": "Mise en place de JSON Server pour simuler une API REST"
+        }
+      ]
+    },
+    {
+      "id": "exp2",
+      "title": "Consultante SAP BW, HANA/BI4 pour le compte de SAFRAN",
+      "company": "Freelance pour SOPRA STERIA",
+      "period": "Janvier 2019 - Mai 2020",
+      "resume": "Renfort auprès de l’\u00E9quipe Business Intelligence de SOPRA-STERIA pour la maintenance des outils d\u00E9cisionnels de SAFRAN",
+      "detail": [
+        {
+          "id": "det1",
+          "text": "Gestion des incidents et \u00E9volution via Service NOW"
+        },
+        {
+          "id": "det2",
+          "text": "Analyse des anomalies et identification de solutions"
+        },
+        {
+          "id": "det3",
+          "text": "Chiffrage de la solution"
+        },
+        {
+          "id": "det4",
+          "text": "Mod\u00E9lisation et conception BW 7.4, HANA et BI4"
+        },
+        {
+          "id": "det5",
+          "text": "Tests unitaires, d’int\u00E9gration et de non r\u00E9gression"
+        }
+      ]
+    },
+    {
+      "id": "exp3",
+      "title": "Data Analyst pour le compte d'Airbus",
+      "company": "AKKA Technologies",
+      "period": "Juillet 2014 - D\u00E9cembre 2018",
+      "resume": "D\u00E9veloppement en mode agile d’un projet d\u00E9cisionnel visant à d\u00E9tailler les temps et co\u00fbts pour la production de m\u00e2t r\u00E9acteur dans l'usine de Saint Eloi",
+      "detail": [
+        {
+          "id": "det1",
+          "text": "Identification des besoins utilisateurs"
+        },
+        {
+          "id": "det2",
+          "text": "Analyse des règles de gestion pour r\u00E9pondre aux besoins utilisateurs"
+        },
+        {
+          "id": "det3",
+          "text": "R\u00E9daction du cahier des charges, documentation technique et notice"
+        },
+        {
+          "id": "det4",
+          "text": "Mod\u00E9lisation d’une base de donn\u00E9es sur SQL Server"
+        },
+        {
+          "id": "det5",
+          "text": "Cr\u00E9ation de requêtes sur SAP BW, SAP Lumira et WebFOCUS"
+        },
+        {
+          "id": "det6",
+          "text": "Evolution des pro\u00E9c\u00E9dures et des besoins"
+        },
+        {
+          "id": "det7",
+          "text": "Tests unitaires et de non regression"
+        }
+      ]
+    },
+    {
+      "id": "exp4",
+      "title": "Consultante SAP BW pour le compte d'Airbus",
+      "company": "AKKA Technologies",
+      "period": "Septembre 2011 - Juin 2014",
+      "resume": "Développement et maintenance d'un projet concernant les stocks et demandes sur SAP BW pour le compte d’AIRBUS",
+      "detail": [
+        {
+          "id": "det1",
+          "text": "Analyse fonctionnelle et technique"
+        },
+        {
+          "id": "det2",
+          "text": "Proposition et rédaction de solutions"
+        },
+        {
+          "id": "det3",
+          "text": "Modélisation et conception BI 7 et 3.10"
+        },
+        {
+          "id": "det4",
+          "text": "Optimisation de l’architecture et des traitements"
+        },
+        {
+          "id": "det5",
+          "text": "Tests unitaires, d’intégration et de non régression"
+        },
+        {
+          "id": "det6",
+          "text": "Gestion des anomalies et évolutions (Quality Center)"
+        }
+      ]
+    }
+  ],
   "education": "Formation"
 }
