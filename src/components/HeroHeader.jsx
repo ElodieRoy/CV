@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   particles: {
     height: "100vh",
-    width: "calc(100vw - 8px)",
+    width: "100%",
     backgroundColor: theme.palette.secondary.main
   },
   title: {

@@ -10,6 +10,7 @@ import Education from "components/sections/Education"
 const useStyles = makeStyles({
   root: {
     "&>section": {
+      overflow: "hidden",
       padding: "80px 0",
       margin: "0 auto",
       maxWidth: "1440px",

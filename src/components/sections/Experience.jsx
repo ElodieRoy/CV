@@ -195,7 +195,7 @@ Experience.propTypes = {
   company: PropTypes.string.isRequired,
   period: PropTypes.string.isRequired,
   resume: PropTypes.string.isRequired,
-  detail: PropTypes.arrayOf(PropTypes.string).isRequired
+  detail: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 export default Experience
