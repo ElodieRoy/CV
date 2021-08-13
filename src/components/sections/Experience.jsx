@@ -12,16 +12,29 @@ const useStyles = makeStyles((theme) => ({
     margin: (isMediumDisplay) => (isMediumDisplay ? "0 auto" : "0 0 0 30px"),
     paddingTop: 50,
     background: "grey",
-    "&:nth-child(1)": { borderRadius: 50 },
-    "&:nth-child(odd) div": {
-      left: 51
+    "&:nth-child(1)": { borderRadius: "50px 50px 0 0" },
+    "&:nth-child(odd)>div": {
+      left: 100,
+      opacity: 0,
+      transition: ".5s ease-in-out",
+      "&.visible": {
+        opacity: 1,
+        left: 51
+      }
     },
-    "&:nth-child(even) div": {
+    "&:nth-child(even)>div": {
       "& p:last-child": {
         textAlign: (isMediumDisplay) => (isMediumDisplay ? "right" : "left")
       },
       left: (isMediumDisplay) =>
-        isMediumDisplay ? "max(calc(-50vw + 45px), -545px)" : 51
+        isMediumDisplay ? "max(calc(-50vw + 45px - 50px), -595px)" : 100,
+      opacity: 0,
+      transition: ".5s ease-in-out",
+      "&.visible": {
+        opacity: 1,
+        left: (isMediumDisplay) =>
+          isMediumDisplay ? "max(calc(-50vw + 45px), -545px)" : 51
+      }
     },
     "&:nth-child(odd) div::before": {
       left: -15,
@@ -64,9 +77,14 @@ const useStyles = makeStyles((theme) => ({
     width: 50,
     height: 50,
     borderRadius: "50%",
-    backgroundColor: theme.palette.common.white,
-    color: theme.palette.primary.main,
-    zIndex: 1
+    color: "transparent",
+    zIndex: 1,
+    backgroundColor: "transparent",
+    transition: ".5s ease-in-out",
+    "&.visible": {
+      backgroundColor: theme.palette.common.white,
+      color: theme.palette.primary.main
+    }
   },
   checkbox: {
     position: "absolute",
@@ -115,50 +133,56 @@ const useStyles = makeStyles((theme) => ({
 
 const Experience = (props) => {
   const { id, isMediumDisplay, title, company, period, resume, detail } = props
-  // const data = Array.from(detail)
+
   const { t } = useTranslation()
   const classes = useStyles(isMediumDisplay)
 
-  function onChange(isVisible) {
-    console.log("Element is now %s", isVisible ? "visible" : "hidden")
-  }
-
   return (
     <li className={classes.timeline}>
-      <VisibilitySensor onChange={onChange}>
-        <>
-          <WorkIcon className={classes.icon} />
-          <Paper className={classes.list}>
-            <Typography variant="h5" component="h3">
-              {title}
-            </Typography>
-            <Typography variant="subtitle1" component="p">
-              {company}
-            </Typography>
-            <input
-              type="checkbox"
-              id={`detail ${id}`}
-              className={classes.checkbox}
-              defaultChecked
-            />
-            <div className={classes.detail}>
-              <Typography variant="h6" component="p">
-                {resume}
+      <VisibilitySensor
+        partialVisibility
+        offset={{ top: 150 }}
+        minTopValue={150}
+      >
+        {({ isVisible }) => (
+          <>
+            <Paper
+              className={`${classes.list} ${isVisible ? "visible" : null}`}
+            >
+              <Typography variant="h5" component="h3">
+                {title}
               </Typography>
-              <ul>
-                {detail.map((item) => (
-                  <li key={item.id}>{item.text}</li>
-                ))}
-              </ul>
-            </div>
-            <label htmlFor={`detail ${id}`} className={classes.labelDetail}>
-              {t("detail")}
-            </label>
-            <Typography variant="subtitle2" component="p">
-              {period}
-            </Typography>
-          </Paper>
-        </>
+              <Typography variant="subtitle1" component="p">
+                {company}
+              </Typography>
+              <input
+                type="checkbox"
+                id={`detail ${id}`}
+                className={classes.checkbox}
+                defaultChecked
+              />
+              <div className={classes.detail}>
+                <Typography variant="h6" component="p">
+                  {resume}
+                </Typography>
+                <ul>
+                  {detail.map((item) => (
+                    <li key={item.id}>{item.text}</li>
+                  ))}
+                </ul>
+              </div>
+              <label htmlFor={`detail ${id}`} className={classes.labelDetail}>
+                {t("detail")}
+              </label>
+              <Typography variant="subtitle2" component="p">
+                {period}
+              </Typography>
+            </Paper>
+            <WorkIcon
+              className={`${classes.icon} ${isVisible ? "visible" : null}`}
+            />
+          </>
+        )}
       </VisibilitySensor>
     </li>
   )
