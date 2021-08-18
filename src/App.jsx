@@ -4,6 +4,7 @@ import { useMediaQuery } from "@material-ui/core"
 import HeroHeader from "components/HeroHeader"
 import NavBar from "components/NavBar"
 import MainSection from "components/MainSection"
+import Footer from "components/Footer"
 
 const App = () => {
   const [opacity, setOpacity] = useState(0)
@@ -24,6 +25,7 @@ const App = () => {
         isBackToTopDisplay={opacity === 1}
         isMediumDisplay={isMediumDisplay}
       />
+      <Footer />
     </>
   )
 }

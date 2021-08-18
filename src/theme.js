@@ -53,7 +53,6 @@ const theme = createMuiTheme({
     },
     h4: {
       color: darkBlueColor,
-      textAlign: "center",
       fontSize: "1rem",
       fontWeight: 600,
       marginTop: 20
@@ -64,8 +63,8 @@ const theme = createMuiTheme({
       fontWeight: 600
     },
     h6: {
+      color: yellowColor,
       fontSize: ".8rem",
-      // fontWeight: 600,
       marginTop: 20
     },
     subtitle1: {

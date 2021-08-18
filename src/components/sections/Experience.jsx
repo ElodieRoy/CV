@@ -111,6 +111,7 @@ const useStyles = makeStyles((theme) => ({
     visibility: "visible",
     maxHeight: 800,
     transition: ".5s ease-in-out",
+    paddingTop: 20,
     "& ul": {
       listStyleType: "circle",
       marginTop: 20
@@ -162,7 +163,7 @@ const Experience = (props) => {
                 defaultChecked
               />
               <div className={classes.detail}>
-                <Typography variant="h6" component="p">
+                <Typography variant="body2" component="p">
                   {resume}
                 </Typography>
                 <ul>

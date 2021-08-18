@@ -24,7 +24,7 @@ const Education = (props) => {
 
   return (
     <Paper className={classes.root}>
-      <Typography variant="h6" component="p" align="center">
+      <Typography variant="body2" component="p" align="center">
         <SchoolIcon />
         <br />
         {degree}
