@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core"
 import BackToTopButton from "components/tools/BackToTopButton"
 import Skills from "components/sections/Skills"
 import Experiences from "components/sections/Experiences"
-import Education from "components/sections/Education"
+import Educations from "components/sections/Educations"
 
 const useStyles = makeStyles({
   root: {
@@ -33,7 +33,7 @@ const MainSection = (props) => {
       <BackToTopButton isDisplay={isBackToTopDisplay} />
       <Skills />
       <Experiences isMediumDisplay={isMediumDisplay} />
-      <Education />
+      <Educations isMediumDisplay={isMediumDisplay} />
     </main>
   )
 }

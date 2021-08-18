@@ -1,28 +1,48 @@
 import React from "react"
-import { useTranslation } from "react-i18next"
-import { makeStyles, Typography } from "@material-ui/core"
+import PropTypes from "prop-types"
+import { makeStyles, Paper, Typography } from "@material-ui/core"
+import SchoolIcon from "@material-ui/icons/School"
 
 const useStyles = makeStyles({
   root: {
-    padding: "80px 0",
-    "&input[type=radio]": {
-      display: "none"
-    }
+    height: "100%",
+    width: "90%",
+    minHeight: 250,
+    maxHeight: 350,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: 25,
+    margin: "0 auto 40px auto"
   }
 })
 
-const Education = () => {
-  const { t } = useTranslation()
+const Education = (props) => {
+  const { period, degree, title } = props
   const classes = useStyles()
 
   return (
-    <section className={classes.root} id="education">
-      <Typography variant="h3">{t("education")}</Typography>
-      <input type="radio" name="slider" id="item-1" defaultChecked />
-      <input type="radio" name="slider" id="item-2" />
-      <input type="radio" name="slider" id="item-3" />
-    </section>
+    <Paper className={classes.root}>
+      <Typography variant="h6" component="p" align="center">
+        <SchoolIcon />
+        <br />
+        {degree}
+      </Typography>
+      <Typography variant="h5" component="h3" align="center">
+        {title}
+      </Typography>
+      <Typography variant="subtitle2" component="p">
+        {period}
+      </Typography>
+    </Paper>
   )
+}
+
+Education.propTypes = {
+  period: PropTypes.string.isRequired,
+  degree: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 }
 
 export default Education

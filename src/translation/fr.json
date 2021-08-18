@@ -150,5 +150,25 @@
       ]
     }
   ],
-  "education": "Formation"
+  "education": "Formation",
+  "educationsArray": [
+    {
+      "id": "educ1",
+      "title": "D\u00E9veloppeur Web & Web mobile",
+      "period": "2020 - 2021",
+      "degree": "RNCP niveau 5"
+    },
+    {
+      "id": "educ2",
+      "title": "Statistique & Informatique D\u00E9cisionnelle",
+      "period": "2008 - 2011",
+      "degree": "Master"
+    },
+    {
+      "id": "educ3",
+      "title": "Statistique & Traitement Informatique des Donn\u00E9es",
+      "period": "2006 - 2008",
+      "degree": "DUT"
+    }
+  ]
 }
