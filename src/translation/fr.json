@@ -27,7 +27,7 @@
   "experiencesArray": [
     {
       "id": "exp1",
-      "title": "Stage d\u00E9veloppeuse Front-end",
+      "title": "Stage int\u00E9gratrice web / ReactJS",
       "company": "Monsieur Alexandre AUTRAN",
       "period": "Mai - Juillet 2021",
       "resume": "D\u00E9veloppement front-end d'une application web preuve de concept permettant la mise en relation d’offres et de demandes",
@@ -81,7 +81,7 @@
     },
     {
       "id": "exp3",
-      "title": "Data Analyst pour le compte d'Airbus",
+      "title": "Consultante BI pour le compte d'Airbus",
       "company": "AKKA Technologies",
       "period": "Juillet 2014 - D\u00E9cembre 2018",
       "resume": "D\u00E9veloppement en mode agile d’un projet d\u00E9cisionnel visant à d\u00E9tailler les temps et co\u00fbts pour la production de m\u00e2t r\u00E9acteur dans l'usine de Saint Eloi",

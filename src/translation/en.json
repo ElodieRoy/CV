@@ -27,36 +27,148 @@
   "experiencesArray": [
     {
       "id": "exp1",
-      "title": "Stage développeuse Front-end",
+      "title": "Internship web integrator / ReactJS",
       "company": "Monsieur Alexandre AUTRAN",
-      "period": "Mai - Juin 2021",
-      "resume": "",
-      "detail": ""
+      "period": "May - July 2021",
+      "resume": "Front-end development of a proof-of-concept web application for matching offers and requests",
+      "detail": [
+        {
+          "id": "det1",
+          "text": "Project initiation: writing best practices, Eslint configuration, i18n internalisation"
+        },
+        {
+          "id": "det2",
+          "text": "Writing of technical specifications"
+        },
+        {
+          "id": "det3",
+          "text": "Responsive integration with React.js"
+        },
+        {
+          "id": "det4",
+          "text": "Implementation of JSON Server to simulate a REST API"
+        }
+      ]
     },
     {
       "id": "exp2",
-      "title": "Consultante SAP BW HANA/BI4 pour le compte de SAFRAN",
-      "company": "Freelance pour SOPRA STERIA",
-      "period": "Janvier 2019 - Mai 2020",
-      "resume": "",
-      "detail": ""
+      "title": "SAP BW HANA/BI4 consultant for SAFRAN",
+      "company": "Freelance for SOPRA STERIA",
+      "period": "January 2019 - May 2020",
+      "resume": "Business Intelligence team reinforcement for the maintenance of SAFRAN's decision-making tools",
+      "detail": [
+        {
+          "id": "det1",
+          "text": "Manage defects and change requests on Service NOW"
+        },
+        {
+          "id": "det2",
+          "text": "Defect analysis and solution identification"
+        },
+        {
+          "id": "det3",
+          "text": "Quotation and solution development"
+        },
+        {
+          "id": "det4",
+          "text": "Modeling and design on BW 7.4, HANA et BI4"
+        },
+        {
+          "id": "det5",
+          "text": "Unit, integration and non-regression tests"
+        }
+      ]
     },
     {
       "id": "exp3",
-      "title": "Data Analyst pour le compte d'Airbus",
+      "title": "Business analyst and BI developer on AIRBUS site",
       "company": "AKKA Technologies",
-      "period": "Juillet 2014 - Décembre 2018",
-      "resume": "",
-      "detail": ""
+      "period": "July 2014 - December 2018",
+      "resume": "Develop a new End-to-End decision-making tool about cost and spent time based on bills of materials for AIRBUS manufacturing",
+      "detail": [
+        {
+          "id": "det1",
+          "text": "Identify user needs (production unit financial controller, business improvement manager)"
+        },
+        {
+          "id": "det2",
+          "text": "Analyse business rules and translate business needs into IT requirement"
+        },
+        {
+          "id": "det3",
+          "text": "Write specification, technical documentation and user manual"
+        },
+        {
+          "id": "det4",
+          "text": "Identify data sources (IBM, SAP R/3, BW, flat file) and automate collection processes"
+        },
+        {
+          "id": "det5",
+          "text": "Create SAP BW queries and reports on SAP Lumira to recover data"
+        },
+        {
+          "id": "det6",
+          "text": "Model a SQL Server database to store data"
+        },
+        {
+          "id": "det7",
+          "text": "Unit test and user acceptance testing"
+        }
+      ]
     },
     {
       "id": "exp4",
-      "title": "Consultante SAP BW pour le compte d'Airbus",
+      "title": "SAP BW consultant for AIRBUS",
       "company": "AKKA Technologies",
-      "period": "Septembre 2011 - Juin 2014",
-      "resume": "",
-      "detail": ""
+      "period": "September 2011 - June 2014",
+      "resume": "Development and maintenance of a stocks and demands project on SAP BW for AIRBUS",
+      "detail": [
+        {
+          "id": "det1",
+          "text": "Functional and technical analysis"
+        },
+        {
+          "id": "det2",
+          "text": "Proposing functional and technical solution"
+        },
+        {
+          "id": "det3",
+          "text": "Model and design BI 7 and 3.10"
+        },
+        {
+          "id": "det4",
+          "text": "Optimize architecture and process"
+        },
+        {
+          "id": "det5",
+          "text": "Unit, integration and non-regression tests"
+        },
+        {
+          "id": "det6",
+          "text": "Manage defects and change requests on Quality Center"
+        }
+      ]
     }
   ],
-  "education": "Education"
+  "education": "Education",
+  "educationsArray": [
+    {
+      "id": "educ1",
+      "title": "Web & Mobile Web Developer",
+      "period": "2020 - 2021",
+      "degree": "Professional certification level 5"
+    },
+    {
+      "id": "educ2",
+      "title": "Statistics and decisional data processing",
+      "period": "2008 - 2011",
+      "degree": "Master’s degree"
+    },
+    {
+      "id": "educ3",
+      "title": "Statistics and data processing",
+      "period": "2006 - 2008",
+      "degree": "DUT (Higher National Diploma)"
+    }
+  ]
 }
