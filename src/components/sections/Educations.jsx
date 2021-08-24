@@ -79,6 +79,7 @@ const Educations = (props) => {
               returnObjects: true
             }).map((item, index) => (
               <label
+                key={item.id}
                 className={classes.card}
                 htmlFor={`item-${index}`}
                 id={`educ-${index}`}
@@ -98,6 +99,7 @@ const Educations = (props) => {
             returnObjects: true
           }).map((item) => (
             <Education
+              key={item.id}
               period={item.period}
               degree={item.degree}
               title={item.title}

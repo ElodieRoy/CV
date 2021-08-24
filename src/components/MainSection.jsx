@@ -6,6 +6,7 @@ import BackToTopButton from "components/tools/BackToTopButton"
 import Skills from "components/sections/Skills"
 import Experiences from "components/sections/Experiences"
 import Educations from "components/sections/Educations"
+import Contact from "./sections/Contact"
 
 const useStyles = makeStyles({
   root: {
@@ -34,6 +35,7 @@ const MainSection = (props) => {
       <Skills />
       <Experiences isMediumDisplay={isMediumDisplay} />
       <Educations isMediumDisplay={isMediumDisplay} />
+      <Contact />
     </main>
   )
 }

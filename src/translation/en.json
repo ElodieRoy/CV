@@ -170,5 +170,11 @@
       "period": "2006 - 2008",
       "degree": "DUT (Higher National Diploma)"
     }
-  ]
+  ],
+  "contact": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Your message",
+    "submit": "Send"
+  }
 }
