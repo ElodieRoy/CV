@@ -84,7 +84,7 @@
       "title": "Consultante BI pour le compte d'AIRBUS",
       "company": "AKKA Technologies",
       "period": "Juillet 2014 - D\u00E9cembre 2018",
-      "resume": "D\u00E9veloppement en mode agile d’un projet d\u00E9cisionnel visant à d\u00E9tailler les temps et co\u00fbts pour la production de m\u00e2t r\u00E9acteur dans l'usine de Saint Eloi",
+      "resume": "D\u00E9veloppement en mode agile d’un projet d\u00E9cisionnel visant \u00E0 d\u00E9tailler les temps et co\u00fbts pour la production de m\u00e2t r\u00E9acteur dans l'usine de Saint Eloi",
       "detail": [
         {
           "id": "det1",
@@ -121,7 +121,7 @@
       "title": "Consultante SAP BW pour le compte d'AIRBUS",
       "company": "AKKA Technologies",
       "period": "Septembre 2011 - Juin 2014",
-      "resume": "Développement et maintenance d'un projet concernant les stocks et demandes sur SAP BW pour le compte d’AIRBUS",
+      "resume": "D\u00E9veloppement et maintenance d'un projet concernant les stocks et demandes sur SAP BW pour le compte d’AIRBUS",
       "detail": [
         {
           "id": "det1",
@@ -129,11 +129,11 @@
         },
         {
           "id": "det2",
-          "text": "Proposition et rédaction de solutions"
+          "text": "Proposition et r\u00E9daction de solutions"
         },
         {
           "id": "det3",
-          "text": "Modélisation et conception BI 7 et 3.10"
+          "text": "Mod\u00E9lisation et conception BI 7 et 3.10"
         },
         {
           "id": "det4",
@@ -141,11 +141,11 @@
         },
         {
           "id": "det5",
-          "text": "Tests unitaires, d’intégration et de non régression"
+          "text": "Tests unitaires, d’int\u00E9gration et de non r\u00E9gression"
         },
         {
           "id": "det6",
-          "text": "Gestion des anomalies et évolutions (Quality Center)"
+          "text": "Gestion des anomalies et \u00E9volutions (Quality Center)"
         }
       ]
     }
@@ -170,5 +170,17 @@
       "period": "2006 - 2008",
       "degree": "DUT"
     }
-  ]
+  ],
+  "contact": {
+    "name": "Nom",
+    "email": "Adresse mail",
+    "message": "Votre message (max 1000 carac)",
+    "submit": "Envoyer"
+  },
+  "errorMessage": {
+    "empty": "Champ vide",
+    "invalidEmail": "Adresse mail invalide",
+    "shortName": "Nom trop court",
+    "success": "Message envoy\u00E9"
+  }
 }
