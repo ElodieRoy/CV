@@ -181,6 +181,7 @@
     "empty": "Champ vide",
     "invalidEmail": "Adresse mail invalide",
     "shortName": "Nom trop court",
-    "success": "Message envoy\u00E9"
+    "success": "Message envoy\u00E9",
+    "system": "Erreur systeme"
   }
 }

@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import { Button, makeStyles, TextField, Typography } from "@material-ui/core"
 import { useTranslation } from "react-i18next"
-import SuccessSnackbar from "components/tools/SuccessSnackbar"
+import Alert from "components/tools/Alert"
+import axios from "axios"
 
 const useStyles = makeStyles({
   form: {
@@ -21,7 +22,7 @@ const Contact = () => {
     email: { value: "", error: false, errorMessage: "" },
     message: { value: "", error: false, errorMessage: "" }
   })
-  const [isMsgSent, setIsMsgSent] = useState(false)
+  const [messageSent, setMessageSent] = useState("")
 
   const handleFormChange = (event) => {
     const inputName = event.target.name
@@ -82,12 +83,32 @@ const Contact = () => {
       })
     } else {
       // send to back
-      setIsMsgSent(true)
-      setContactValues({
-        name: { value: "", error: false, errorMessage: "" },
-        email: { value: "", error: false, errorMessage: "" },
-        message: { value: "", error: false, errorMessage: "" }
+      const name = contactValues.name.value
+      const email = contactValues.email.value
+      const message = contactValues.message.value
+
+      axios({
+        method: "post",
+        url: `${process.env.REACT_APP_API_CONTACT}`,
+        headers: { "content-type": "application/json" },
+        data: { name, email, message }
       })
+        .then(() => {
+          setMessageSent("success")
+          setContactValues({
+            name: { value: "", error: false, errorMessage: "" },
+            email: { value: "", error: false, errorMessage: "" },
+            message: { value: "", error: false, errorMessage: "" }
+          })
+        })
+        .catch((error) => {
+          if (error.response.status === 400) {
+            setMessageSent(error.response.data)
+          } else {
+            setMessageSent(error.message)
+          }
+          return null
+        })
     }
   }
 
@@ -104,7 +125,6 @@ const Contact = () => {
           name="name"
           size="small"
           label={t("contact.name")}
-          autoFocus
           value={contactValues.name.value}
           onChange={handleFormChange}
           error={contactValues.name.error}
@@ -120,7 +140,6 @@ const Contact = () => {
           name="email"
           size="small"
           label={t("contact.email")}
-          autoFocus
           value={contactValues.email.value}
           onChange={handleFormChange}
           error={contactValues.email.error}
@@ -136,7 +155,6 @@ const Contact = () => {
           name="message"
           size="small"
           label={t("contact.message")}
-          autoFocus
           value={contactValues.message.value}
           onChange={handleFormChange}
           error={contactValues.message.error}
@@ -150,16 +168,19 @@ const Contact = () => {
           variant="contained"
           fullWidth
           color="secondary"
-          onClick={() => handleFormSubmit(true)}
+          onClick={() => handleFormSubmit()}
         >
           {t("contact.submit")}
         </Button>
       </form>
-      <SuccessSnackbar
-        isOpen={isMsgSent}
-        setIsOpen={setIsMsgSent}
-        message={t("errorMessage.success")}
-      />
+      {messageSent !== "" && (
+        <Alert
+          isOpen
+          setIsOpen={setMessageSent}
+          message={t(`errorMessage.${messageSent}`, messageSent)}
+          severity={messageSent === "success" ? "success" : "error"}
+        />
+      )}
     </section>
   )
 }

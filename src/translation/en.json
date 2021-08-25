@@ -181,6 +181,7 @@
     "empty": "Empty Field",
     "invalidEmail": "Invalid Email",
     "shortName": "Name too short",
-    "success": "Message sent"
+    "success": "Message sent",
+    "system": "System error"
   }
 }

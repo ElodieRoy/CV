@@ -2,6 +2,7 @@
   "name": "elodie-roy",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://elodie-roy.local",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
@@ -9,6 +10,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
     "i18next": "^20.3.2",
     "i18next-browser-languagedetector": "^6.1.2",
     "icomoon-react": "^2.0.19",
