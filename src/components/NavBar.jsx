@@ -27,13 +27,13 @@ const useStyles = makeStyles({
 })
 
 const NavBar = (props) => {
-  const { opacity, isMediumDisplay } = props
+  const { opacity, isMediumDisplay, section } = props
   const classes = useStyles({ opacity, isMediumDisplay })
 
   return (
     <nav className={classes.root}>
       <div className={classes.nav}>
-        {isMediumDisplay ? <DesktopMenu /> : <MobileMenu />}
+        {isMediumDisplay ? <DesktopMenu section={section} /> : <MobileMenu />}
         <TranslateButton />
       </div>
     </nav>
@@ -42,7 +42,8 @@ const NavBar = (props) => {
 
 NavBar.propTypes = {
   opacity: PropTypes.number.isRequired,
-  isMediumDisplay: PropTypes.bool.isRequired
+  isMediumDisplay: PropTypes.bool.isRequired,
+  section: PropTypes.string.isRequired
 }
 
 export default NavBar
