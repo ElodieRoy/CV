@@ -1,6 +1,7 @@
 {
   "title": "D\u00E9veloppeuse\u00A0WEB",
   "downloadResume": "T\u00E9l\u00E9charger\u00A0CV",
+  "language": "fr",
   "languageTranslate": "en",
   "languageTranslateName": "English version",
   "detail": "d\u00E9tail",
@@ -52,7 +53,7 @@
     },
     {
       "id": "exp2",
-      "title": "Consultante SAP BW, HANA/BI4 pour le compte de SAFRAN",
+      "title": "Consultante SAP BI pour le compte de SAFRAN",
       "company": "Freelance pour SOPRA STERIA",
       "period": "Janvier 2019 - Mai 2020",
       "resume": "Renfort auprès de l’\u00E9quipe Business Intelligence de SOPRA-STERIA pour la maintenance des outils d\u00E9cisionnels de SAFRAN",

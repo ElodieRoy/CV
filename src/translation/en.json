@@ -1,6 +1,7 @@
 {
   "title": "WEB\u00A0developper",
   "downloadResume": "Download resume",
+  "language": "en",
   "languageTranslate": "fr",
   "languageTranslateName": "Version fran\u00E7aise",
   "detail": "detail",
@@ -52,7 +53,7 @@
     },
     {
       "id": "exp2",
-      "title": "SAP BW HANA/BI4 consultant for SAFRAN",
+      "title": "SAP BI consultant for SAFRAN",
       "company": "Freelance for SOPRA STERIA",
       "period": "January 2019 - May 2020",
       "resume": "Business Intelligence team reinforcement for the maintenance of SAFRAN's decision-making tools",

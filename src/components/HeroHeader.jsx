@@ -100,7 +100,7 @@ const HeroHeader = (props) => {
         <Button
           variant="outlined"
           component="a"
-          href="docs/CV_Elodie_ROY_FR.pdf"
+          href={`docs/CV_Elodie_ROY_${t("language")}.pdf`}
           target="_blank"
         >
           {t("downloadResume")}
