@@ -55,7 +55,7 @@ const DesktopMenu = ({ section }) => {
               scrollTo(item.id)
             }}
           >
-            {item.id}
+            {item.text}
           </Button>
         </li>
       ))}

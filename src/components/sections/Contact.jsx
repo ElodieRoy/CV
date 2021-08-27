@@ -4,12 +4,16 @@ import { useTranslation } from "react-i18next"
 import Alert from "components/tools/Alert"
 import axios from "axios"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   form: {
     margin: "0 auto",
-    maxWidth: 800
+    maxWidth: 800,
+    "& div": {
+      backgroundColor: theme.palette.common.white,
+      borderRadius: 5
+    }
   }
-})
+}))
 
 const mailFormat =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/

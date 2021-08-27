@@ -11,16 +11,29 @@ const App = () => {
   const [section, setSection] = useState("none")
 
   useEffect(() => {
+    const experiencesSectionHeight =
+      document.getElementById("experiences").offsetHeight
+    const educationSectionHeight =
+      document.getElementById("education").offsetHeight
+    const contactSectionHeight = document.getElementById("contact").offsetHeight
+    console.log(experiencesSectionHeight)
+
     window.addEventListener("scroll", () => {
       const calcOpacity = window.scrollY / (window.innerHeight - 64)
       const sectionTop = window.scrollY - window.innerHeight
-
+      console.log(sectionTop)
       // Determine section
-      if (sectionTop > 2913) {
+      if (
+        sectionTop >
+        experiencesSectionHeight + educationSectionHeight + contactSectionHeight
+      ) {
         setSection("contact")
-      } else if (sectionTop > 2381) {
+      } else if (
+        sectionTop >
+        experiencesSectionHeight + educationSectionHeight
+      ) {
         setSection("education")
-      } else if (sectionTop > 1065) {
+      } else if (sectionTop > experiencesSectionHeight) {
         setSection("experiences")
       } else if (sectionTop > -64) {
         setSection("skills")
