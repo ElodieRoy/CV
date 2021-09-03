@@ -5,37 +5,24 @@ import HeroHeader from "components/HeroHeader"
 import MainSection from "components/MainSection"
 import Footer from "components/Footer"
 
+import isInViewport from "functions/isInViewport"
+
 const App = () => {
   const [opacity, setOpacity] = useState(0)
   const isMediumDisplay = useMediaQuery((theme) => theme.breakpoints.up("sm"))
   const [section, setSection] = useState("none")
 
   useEffect(() => {
-    const experiencesSectionHeight =
-      document.getElementById("experiences").offsetHeight
-    const educationSectionHeight =
-      document.getElementById("education").offsetHeight
-    const contactSectionHeight = document.getElementById("contact").offsetHeight
-    console.log(experiencesSectionHeight)
-
     window.addEventListener("scroll", () => {
       const calcOpacity = window.scrollY / (window.innerHeight - 64)
-      const sectionTop = window.scrollY - window.innerHeight
-      console.log(sectionTop)
-      // Determine section
-      if (
-        sectionTop >
-        experiencesSectionHeight + educationSectionHeight + contactSectionHeight
-      ) {
+
+      if (isInViewport("contact")) {
         setSection("contact")
-      } else if (
-        sectionTop >
-        experiencesSectionHeight + educationSectionHeight
-      ) {
+      } else if (isInViewport("education")) {
         setSection("education")
-      } else if (sectionTop > experiencesSectionHeight) {
+      } else if (isInViewport("experiences")) {
         setSection("experiences")
-      } else if (sectionTop > -64) {
+      } else if (isInViewport("skills")) {
         setSection("skills")
       } else {
         setSection("none")
