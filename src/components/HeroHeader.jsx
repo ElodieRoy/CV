@@ -9,11 +9,12 @@ import NavBar from "./NavBar"
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    height: "100vh",
+    width: "100%",
     opacity: (opacity) => 1.5 - opacity
   },
   particles: {
-    height: "100vh",
-    width: "100%",
+    height: "100%",
     backgroundColor: theme.palette.secondary.main
   },
   title: {
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const HeroHeader = (props) => {
-  const { opacity, isMediumDisplay, section } = props
+  const { opacity, isMediumDisplay, section, isParticlesVisible } = props
   const classes = useStyles(opacity)
   const { t } = useTranslation()
 
@@ -47,53 +48,55 @@ const HeroHeader = (props) => {
         isMediumDisplay={isMediumDisplay}
         section={section}
       />
-      <div className={classes.root}>
-        <Particles
-          className={classes.particles}
-          params={{
-            particles: {
-              line_linked: {
-                distance: 150,
-                color: "#ddd",
-                opacity: 0.1,
-                width: 1
-              },
-              move: {
-                speed: 0.5
-              },
-              number: {
-                value: 200,
-                density: {
-                  enable: true,
-                  value_area: 1000
-                }
-              },
-              size: {
-                value: 1
-              }
-            },
-            interactivity: {
-              events: {
-                onclick: {
-                  enable: true,
-                  mode: "push"
+      <div id="particles" className={classes.root}>
+        {isParticlesVisible && (
+          <Particles
+            className={classes.particles}
+            params={{
+              particles: {
+                line_linked: {
+                  distance: 150,
+                  color: "#ddd",
+                  opacity: 0.1,
+                  width: 1
                 },
-                onhover: {
-                  enable: true,
-                  mode: ["grab", "connect"]
+                move: {
+                  speed: 0.5
+                },
+                number: {
+                  value: 200,
+                  density: {
+                    enable: true,
+                    value_area: 1000
+                  }
+                },
+                size: {
+                  value: 1
                 }
               },
-              modes: {
-                push: {
-                  particles_nb: 2
+              interactivity: {
+                events: {
+                  onclick: {
+                    enable: true,
+                    mode: "push"
+                  },
+                  onhover: {
+                    enable: true,
+                    mode: ["grab", "connect"]
+                  }
                 },
-                bubble: {
-                  size: 2
+                modes: {
+                  push: {
+                    particles_nb: 2
+                  },
+                  bubble: {
+                    size: 2
+                  }
                 }
               }
-            }
-          }}
-        />
+            }}
+          />
+        )}
         <div className={classes.title}>
           <img
             className={classes.img}
@@ -122,7 +125,8 @@ const HeroHeader = (props) => {
 HeroHeader.propTypes = {
   opacity: PropTypes.number.isRequired,
   isMediumDisplay: PropTypes.bool.isRequired,
-  section: PropTypes.string.isRequired
+  section: PropTypes.string.isRequired,
+  isParticlesVisible: PropTypes.bool.isRequired
 }
 
 export default HeroHeader
