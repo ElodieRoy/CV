@@ -1,17 +1,20 @@
-import React from "react"
 import PropTypes from "prop-types"
 import { useTranslation } from "react-i18next"
 import { makeStyles, Paper, Typography } from "@material-ui/core"
 import WorkIcon from "@material-ui/icons/Work"
 import VisibilitySensor from "react-visibility-sensor"
+import clsx from "clsx"
 
 const useStyles = makeStyles((theme) => ({
   timeline: {
     position: "relative",
     width: 6,
-    margin: (isMediumDisplay) => (isMediumDisplay ? "0 auto" : "0 0 0 30px"),
+    margin: "0 0 0 30px",
     paddingTop: 50,
     background: "grey",
+    [theme.breakpoints.up("sm")]: {
+      margin: "0 auto"
+    },
     "&:nth-child(1)": { borderRadius: "50px 50px 0 0" },
     "&:nth-child(odd)>div": {
       left: 100,
@@ -23,17 +26,24 @@ const useStyles = makeStyles((theme) => ({
       }
     },
     "&:nth-child(even)>div": {
-      "& p:last-child": {
-        textAlign: (isMediumDisplay) => (isMediumDisplay ? "right" : "left")
-      },
-      left: (isMediumDisplay) =>
-        isMediumDisplay ? "max(calc(-50vw + 45px - 50px), -595px)" : 100,
+      left: 100,
       opacity: 0,
       transition: ".5s ease-in-out",
+      [theme.breakpoints.up("sm")]: {
+        left: "max(calc(-50vw + 45px - 50px), -595px)"
+      },
       "&.visible": {
         opacity: 1,
-        left: (isMediumDisplay) =>
-          isMediumDisplay ? "max(calc(-50vw + 45px), -545px)" : 51
+        left: 51,
+        [theme.breakpoints.up("sm")]: {
+          left: "max(calc(-50vw + 45px), -545px)"
+        }
+      },
+      "& p:last-child": {
+        textAlign: "left",
+        [theme.breakpoints.up("sm")]: {
+          textAlign: "right"
+        }
       }
     },
     "&:nth-child(odd) div::before": {
@@ -42,21 +52,20 @@ const useStyles = makeStyles((theme) => ({
       borderColor: `transparent ${theme.palette.common.white} transparent transparent`
     },
     "&:nth-child(even) div::before": {
-      left: (isMediumDisplay) =>
-        isMediumDisplay ? "min(calc(50vw - 91px), 500px)" : -15,
-      borderWidth: (isMediumDisplay) =>
-        isMediumDisplay ? "10px 0 10px 16px" : "10px 16px 10px 0",
-      borderColor: (isMediumDisplay) =>
-        isMediumDisplay
-          ? `transparent transparent transparent ${theme.palette.common.white}`
-          : `transparent ${theme.palette.common.white} transparent transparent`
+      left: -15,
+      borderWidth: "10px 16px 10px 0",
+      borderColor: `transparent ${theme.palette.common.white} transparent transparent`,
+      [theme.breakpoints.up("sm")]: {
+        left: "min(calc(50vw - 91px), 500px)",
+        borderWidth: "10px 0 10px 16px",
+        borderColor: `transparent transparent transparent ${theme.palette.common.white}`
+      }
     }
   },
   list: {
     position: "relative",
     bottom: 0,
-    width: (isMediumDisplay) =>
-      isMediumDisplay ? "calc(50vw - 90px)" : "calc(100vw - 90px - 30px)",
+    width: "calc(100vw - 90px - 30px)",
     maxWidth: 500,
     padding: 15,
     "&::before": {
@@ -66,6 +75,9 @@ const useStyles = makeStyles((theme) => ({
       width: 0,
       height: 0,
       borderStyle: "solid"
+    },
+    [theme.breakpoints.up("sm")]: {
+      width: "calc(50vw - 90px)"
     }
   },
   icon: {
@@ -132,11 +144,9 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const Experience = (props) => {
-  const { id, isMediumDisplay, title, company, period, resume, detail } = props
-
+const Experience = ({ id, title, company, period, resume, detail }) => {
   const { t } = useTranslation()
-  const classes = useStyles(isMediumDisplay)
+  const classes = useStyles()
 
   return (
     <li className={classes.timeline}>
@@ -147,9 +157,7 @@ const Experience = (props) => {
       >
         {({ isVisible }) => (
           <>
-            <Paper
-              className={`${classes.list} ${isVisible ? "visible" : null}`}
-            >
+            <Paper className={clsx(classes.list, { visible: isVisible })}>
               <Typography variant="h5" component="h3">
                 {title}
               </Typography>
@@ -179,9 +187,7 @@ const Experience = (props) => {
                 {period}
               </Typography>
             </Paper>
-            <WorkIcon
-              className={`${classes.icon} ${isVisible ? "visible" : null}`}
-            />
+            <WorkIcon className={clsx(classes.icon, { visible: isVisible })} />
           </>
         )}
       </VisibilitySensor>
@@ -191,7 +197,6 @@ const Experience = (props) => {
 
 Experience.propTypes = {
   id: PropTypes.string.isRequired,
-  isMediumDisplay: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
   company: PropTypes.string.isRequired,
   period: PropTypes.string.isRequired,

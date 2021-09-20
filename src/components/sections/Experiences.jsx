@@ -1,12 +1,9 @@
-import React from "react"
-import PropTypes from "prop-types"
 import { useTranslation } from "react-i18next"
 import { Typography } from "@material-ui/core"
 
 import Experience from "./Experience"
 
-const Experiences = (props) => {
-  const { isMediumDisplay } = props
+const Experiences = () => {
   const { t } = useTranslation()
 
   return (
@@ -19,7 +16,6 @@ const Experiences = (props) => {
           <Experience
             key={item.id}
             id={item.id}
-            isMediumDisplay={isMediumDisplay}
             title={item.title}
             company={item.company}
             period={item.period}
@@ -30,10 +26,6 @@ const Experiences = (props) => {
       </ul>
     </section>
   )
-}
-
-Experiences.propTypes = {
-  isMediumDisplay: PropTypes.bool.isRequired
 }
 
 export default Experiences

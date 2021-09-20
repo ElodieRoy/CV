@@ -1,8 +1,9 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { scroller } from "react-scroll"
 import BurgerButton from "components/tools/BurgerButton"
 import { Button, ClickAwayListener, makeStyles } from "@material-ui/core"
+import clsx from "clsx"
 
 const useStyles = makeStyles((theme) => ({
   menu: {
@@ -64,7 +65,7 @@ const MobileMenu = () => {
     <>
       <BurgerButton isMenuOpen={isMenuOpen} onClick={handleToggle} />
       <ClickAwayListener onClickAway={handleClose}>
-        <ul className={`${classes.menu} ${isMenuOpen ? "menuOpen" : null}`}>
+        <ul className={clsx(classes.menu, { menuOpen: isMenuOpen })}>
           {t(`menu`, { returnObjects: true }).map((item) => (
             <li key={item.id}>
               <Button

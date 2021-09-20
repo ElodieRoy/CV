@@ -1,4 +1,4 @@
-import React from "react"
+import { useCallback } from "react"
 import PropTypes from "prop-types"
 import { Fab, makeStyles, Zoom } from "@material-ui/core"
 import { KeyboardArrowUp } from "@material-ui/icons"
@@ -13,13 +13,12 @@ const useStyles = makeStyles({
   }
 })
 
-const BackToTopButton = (props) => {
-  const { isDisplay } = props
+const BackToTopButton = ({ isDisplay }) => {
   const classes = useStyles()
 
-  const handleClick = () => {
+  const handleClick = useCallback(() => {
     scroll.scrollToTop()
-  }
+  }, [])
 
   return (
     <Zoom in={isDisplay}>

@@ -1,7 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
 import { useTranslation } from "react-i18next"
-import { makeStyles, Typography } from "@material-ui/core"
+import { makeStyles, Typography, useMediaQuery } from "@material-ui/core"
 import Education from "./Education"
 
 const useStyles = makeStyles({
@@ -61,10 +59,10 @@ const useStyles = makeStyles({
   }
 })
 
-const Educations = (props) => {
-  const { isMediumDisplay } = props
+const Educations = () => {
   const { t } = useTranslation()
   const classes = useStyles()
+  const isMediumDisplay = useMediaQuery((theme) => theme.breakpoints.up("sm"))
 
   return (
     <section className={classes.root} id="education">
@@ -109,10 +107,6 @@ const Educations = (props) => {
       )}
     </section>
   )
-}
-
-Educations.propTypes = {
-  isMediumDisplay: PropTypes.bool.isRequired
 }
 
 export default Educations

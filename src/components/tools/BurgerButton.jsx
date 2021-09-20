@@ -1,5 +1,5 @@
-import React from "react"
 import PropTypes from "prop-types"
+import clsx from "clsx"
 import { Button, makeStyles } from "@material-ui/core"
 
 const useStyles = makeStyles((theme) => ({
@@ -73,19 +73,16 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const BurgerButton = (props) => {
-  const { isMenuOpen, onClick } = props
+const BurgerButton = ({ isMenuOpen, onClick }) => {
   const classes = useStyles()
 
   return (
     <Button
       id="burger-button"
-      className={`${isMenuOpen ? null : "button"} ${classes.burger}`}
+      className={clsx(classes.burger, { button: isMenuOpen })}
       onClick={onClick}
     >
-      <span
-        className={`${isMenuOpen ? "open" : null} ${classes.burgerLines}`}
-      />
+      <span className={clsx(classes.burgerLines, { open: isMenuOpen })} />
     </Button>
   )
 }

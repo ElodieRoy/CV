@@ -1,4 +1,3 @@
-import React from "react"
 import { useTranslation } from "react-i18next"
 import { Grid, makeStyles, Typography } from "@material-ui/core"
 import iconSet from "icons.json"

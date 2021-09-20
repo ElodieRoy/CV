@@ -1,11 +1,8 @@
-import React from "react"
 import PropTypes from "prop-types"
 import { Snackbar } from "@material-ui/core"
 import MuiAlert from "@material-ui/lab/Alert"
 
-const Alert = (props) => {
-  const { isOpen, setIsOpen, message, severity } = props
-
+const Alert = ({ isOpen, setIsOpen, message, severity }) => {
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return

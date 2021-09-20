@@ -1,4 +1,4 @@
-import React from "react"
+import { useCallback, memo } from "react"
 import PropTypes from "prop-types"
 import { Fab, makeStyles, Zoom } from "@material-ui/core"
 import { scroller } from "react-scroll"
@@ -28,11 +28,10 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const ScrollBottomArrow = (props) => {
-  const { isDisplay } = props
+const ScrollBottomArrow = ({ isDisplay }) => {
   const classes = useStyles()
 
-  const scrollToFirstElement = () => {
+  const scrollToFirstElement = useCallback(() => {
     const firstElem = document.querySelector("main section").id
 
     scroller.scrollTo(firstElem, {
@@ -40,7 +39,7 @@ const ScrollBottomArrow = (props) => {
       delay: 0,
       smooth: "easeInOutQuart"
     })
-  }
+  }, [])
 
   return (
     <Zoom in={isDisplay}>
@@ -55,4 +54,4 @@ ScrollBottomArrow.propTypes = {
   isDisplay: PropTypes.bool.isRequired
 }
 
-export default ScrollBottomArrow
+export default memo(ScrollBottomArrow)

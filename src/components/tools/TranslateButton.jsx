@@ -1,9 +1,13 @@
-import React from "react"
 import { useTranslation } from "react-i18next"
-import { IconButton, Tooltip } from "@material-ui/core"
+import { IconButton, makeStyles, Tooltip } from "@material-ui/core"
 import i18next from "i18next"
 
+const useStyles = makeStyles({
+  img: { width: "2rem" }
+})
+
 const TranslateButton = () => {
+  const classes = useStyles()
   const { t } = useTranslation()
 
   return (
@@ -15,7 +19,7 @@ const TranslateButton = () => {
         <img
           src={`images/flag_${t("languageTranslate")}.svg`}
           alt={t("languageTranslateName")}
-          style={{ width: "2rem" }}
+          className={classes.img}
         />
       </IconButton>
     </Tooltip>

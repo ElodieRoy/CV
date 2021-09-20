@@ -1,8 +1,8 @@
-import React from "react"
 import PropTypes from "prop-types"
 import { Button, makeStyles } from "@material-ui/core"
 import { useTranslation } from "react-i18next"
 import { scroller } from "react-scroll"
+import clsx from "clsx"
 
 const useStyles = makeStyles((theme) => ({
   menu: {
@@ -48,9 +48,7 @@ const DesktopMenu = ({ section }) => {
       {t(`menu`, { returnObjects: true }).map((item) => (
         <li className={classes.menuElements} key={item.id}>
           <Button
-            className={
-              item.id === section ? `${classes.slider} active` : classes.slider
-            }
+            className={clsx(classes.slider, { active: item.id === section })}
             onClick={() => {
               scrollTo(item.id)
             }}

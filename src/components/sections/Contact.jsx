@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { Button, makeStyles, TextField, Typography } from "@material-ui/core"
 import { useTranslation } from "react-i18next"
 import Alert from "components/tools/Alert"

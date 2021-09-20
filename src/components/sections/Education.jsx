@@ -1,4 +1,3 @@
-import React from "react"
 import PropTypes from "prop-types"
 import { makeStyles, Paper, Typography } from "@material-ui/core"
 import SchoolIcon from "@material-ui/icons/School"
@@ -18,8 +17,7 @@ const useStyles = makeStyles({
   }
 })
 
-const Education = (props) => {
-  const { period, degree, title } = props
+const Education = ({ period, degree, title }) => {
   const classes = useStyles()
 
   return (

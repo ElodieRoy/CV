@@ -1,4 +1,4 @@
-import React from "react"
+import { memo } from "react"
 import { Button, makeStyles, Typography } from "@material-ui/core"
 import { GitHub, LinkedIn, Mail } from "@material-ui/icons"
 
@@ -50,4 +50,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default memo(Footer)

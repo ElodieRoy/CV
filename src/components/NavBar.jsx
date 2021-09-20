@@ -1,12 +1,11 @@
-import React from "react"
 import PropTypes from "prop-types"
-import { makeStyles } from "@material-ui/core"
+import { makeStyles, useMediaQuery } from "@material-ui/core"
 
 import DesktopMenu from "./menus/DesktopMenu"
 import MobileMenu from "./menus/MobileMenu"
 import TranslateButton from "./tools/TranslateButton"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     position: "fixed",
     width: "100%",
@@ -19,16 +18,19 @@ const useStyles = makeStyles({
   nav: {
     maxWidth: "1440px",
     margin: "0 auto",
-    padding: (param) => (param.isMediumDisplay ? "0 20px" : "0 10px"),
+    padding: "0 10px",
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
+    [theme.breakpoints.up("sm")]: {
+      padding: "0 20px"
+    }
   }
-})
+}))
 
-const NavBar = (props) => {
-  const { opacity, isMediumDisplay, section } = props
-  const classes = useStyles({ opacity, isMediumDisplay })
+const NavBar = ({ opacity, section }) => {
+  const classes = useStyles({ opacity })
+  const isMediumDisplay = useMediaQuery((theme) => theme.breakpoints.up("sm"))
 
   return (
     <nav className={classes.root}>
@@ -42,7 +44,6 @@ const NavBar = (props) => {
 
 NavBar.propTypes = {
   opacity: PropTypes.number.isRequired,
-  isMediumDisplay: PropTypes.bool.isRequired,
   section: PropTypes.string.isRequired
 }
 
