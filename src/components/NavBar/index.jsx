@@ -1,9 +1,9 @@
 import PropTypes from "prop-types"
 import { makeStyles, useMediaQuery } from "@material-ui/core"
 
-import DesktopMenu from "./menus/DesktopMenu"
-import MobileMenu from "./menus/MobileMenu"
-import TranslateButton from "./tools/TranslateButton"
+import DesktopNav from "./DesktopNav"
+import MobileNav from "./MobileNav"
+import TranslateButton from "../tools/TranslateButton"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 2,
     transition: "0.5s"
   },
-  nav: {
+  navContainer: {
     maxWidth: "1440px",
     margin: "0 auto",
     padding: "0 10px",
@@ -34,8 +34,8 @@ const NavBar = ({ opacity, section }) => {
 
   return (
     <nav className={classes.root}>
-      <div className={classes.nav}>
-        {isMediumDisplay ? <DesktopMenu section={section} /> : <MobileMenu />}
+      <div className={classes.navContainer}>
+        {isMediumDisplay ? <DesktopNav section={section} /> : <MobileNav />}
         <TranslateButton />
       </div>
     </nav>

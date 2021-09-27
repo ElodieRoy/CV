@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const MobileMenu = () => {
+const MobileNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { t } = useTranslation()
   const classes = useStyles()
@@ -83,4 +83,4 @@ const MobileMenu = () => {
   )
 }
 
-export default MobileMenu
+export default MobileNav

@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const DesktopMenu = ({ section }) => {
+const DesktopNav = ({ section }) => {
   const { t } = useTranslation()
   const classes = useStyles()
 
@@ -61,8 +61,8 @@ const DesktopMenu = ({ section }) => {
   )
 }
 
-DesktopMenu.propTypes = {
+DesktopNav.propTypes = {
   section: PropTypes.string.isRequired
 }
 
-export default DesktopMenu
+export default DesktopNav
