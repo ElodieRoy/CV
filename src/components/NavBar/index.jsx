@@ -28,14 +28,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const NavBar = ({ opacity, section }) => {
+const NavBar = ({ opacity }) => {
   const classes = useStyles({ opacity })
   const isMediumDisplay = useMediaQuery((theme) => theme.breakpoints.up("sm"))
 
   return (
     <nav className={classes.root}>
       <div className={classes.navContainer}>
-        {isMediumDisplay ? <DesktopNav section={section} /> : <MobileNav />}
+        {isMediumDisplay ? <DesktopNav /> : <MobileNav />}
         <TranslateButton />
       </div>
     </nav>
@@ -43,8 +43,7 @@ const NavBar = ({ opacity, section }) => {
 }
 
 NavBar.propTypes = {
-  opacity: PropTypes.number.isRequired,
-  section: PropTypes.string.isRequired
+  opacity: PropTypes.number.isRequired
 }
 
 export default NavBar

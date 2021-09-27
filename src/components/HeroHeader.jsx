@@ -79,13 +79,13 @@ const PARTICLES_PARAMS = {
   }
 }
 
-const HeroHeader = ({ opacity, section, isTopVisible }) => {
+const HeroHeader = ({ opacity, isTopVisible }) => {
   const classes = useStyles(opacity)
   const { t } = useTranslation()
 
   return (
     <header>
-      <NavBar opacity={opacity} section={section} />
+      <NavBar opacity={opacity} />
       <div id="particles" className={classes.root}>
         {isTopVisible && (
           <Particles className={classes.particles} params={PARTICLES_PARAMS} />
@@ -117,7 +117,6 @@ const HeroHeader = ({ opacity, section, isTopVisible }) => {
 
 HeroHeader.propTypes = {
   opacity: PropTypes.number.isRequired,
-  section: PropTypes.string.isRequired,
   isTopVisible: PropTypes.bool.isRequired
 }
 

@@ -1,8 +1,6 @@
-import PropTypes from "prop-types"
-import { Button, makeStyles } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core"
 import { useTranslation } from "react-i18next"
-import { scroller } from "react-scroll"
-import clsx from "clsx"
+import { Link as LinkScroll } from "react-scroll"
 
 const useStyles = makeStyles((theme) => ({
   menu: {
@@ -11,14 +9,27 @@ const useStyles = makeStyles((theme) => ({
   },
   menuElements: {
     marginRight: "20px",
-    fontWeight: 500
+    lineHeight: 1.75,
+    fontWeight: 500,
+    textTransform: "uppercase",
+    transition: "all 0.5s",
+    userSelect: "none",
+    "&:hover": {
+      transform: "scale(1.1)"
+    }
   },
   slider: {
+    position: "relative",
+    display: "inline-block",
+    justifyContent: "center",
+    padding: "6px 8px",
+    cursor: "pointer",
     "&:before": {
       content: "''",
       position: "absolute",
       bottom: 5,
       height: 2,
+      left: "5%",
       borderRadius: 10,
       width: 0,
       backgroundColor: "transparent",
@@ -31,38 +42,29 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const DesktopNav = ({ section }) => {
+const DesktopNav = () => {
   const { t } = useTranslation()
   const classes = useStyles()
-
-  const scrollTo = (element) => {
-    scroller.scrollTo(element, {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart"
-    })
-  }
 
   return (
     <ul className={classes.menu}>
       {t(`menu`, { returnObjects: true }).map((item) => (
         <li className={classes.menuElements} key={item.id}>
-          <Button
-            className={clsx(classes.slider, { active: item.id === section })}
-            onClick={() => {
-              scrollTo(item.id)
-            }}
+          <LinkScroll
+            className={classes.slider}
+            to={item.id}
+            smooth
+            offset={-64}
+            spy
+            duration={1000}
+            activeClass="active"
           >
             {item.text}
-          </Button>
+          </LinkScroll>
         </li>
       ))}
     </ul>
   )
-}
-
-DesktopNav.propTypes = {
-  section: PropTypes.string.isRequired
 }
 
 export default DesktopNav
