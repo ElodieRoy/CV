@@ -1,8 +1,6 @@
 import { memo } from "react"
-import PropTypes from "prop-types"
 import { makeStyles } from "@material-ui/core"
 
-import BackToTopButton from "components/tools/BackToTopButton"
 import Skills from "components/sections/Skills"
 import Experiences from "components/sections/Experiences"
 import Educations from "components/sections/Educations"
@@ -29,22 +27,17 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const MainSection = ({ isBackToTopDisplay }) => {
+const MainSection = () => {
   const classes = useStyles()
 
   return (
     <main className={classes.root}>
-      <BackToTopButton isDisplay={isBackToTopDisplay} />
       <Skills />
       <Experiences />
       <Educations />
       <Contact />
     </main>
   )
-}
-
-MainSection.propTypes = {
-  isBackToTopDisplay: PropTypes.bool.isRequired
 }
 
 export default memo(MainSection)
