@@ -1,0 +1,9 @@
+# Use offical Node.js image based on Debian to get glibc, compatible with SWC.
+FROM node:18-slim
+
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
+COPY . .
+
+CMD ["npm", "run", "dev"]

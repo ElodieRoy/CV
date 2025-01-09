@@ -1,0 +1,12 @@
+{
+  "projects": [
+    {
+      "name": "CV",
+      "description": "Online application built with Next.js",
+      "version": "1.0.0",
+      "author": "Elodie",
+      "license": "MIT"
+    }
+  ],
+  "data": []
+}
