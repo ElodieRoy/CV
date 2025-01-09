@@ -27,11 +27,11 @@ This online CV website was designed to showcase my skills and professional exper
 
 ## Technologies Used
 
--**Frontend Framework**: Next.js used for static rendering (SSG), perfect for SEO and performance
--**Language**: TypeScript for type safety and better long-term maintenance
--**Styling**: Tailwind CSS because it is modern, fast to configure and use, and ideal for quickly creating responsive designs
--**Data Management**: JSON, the simplicity of the data and the frequency of updates justify the use of these simple files
--**Containerization**: Docker to ensure simpler and isolated deployment
+- **Frontend Framework**: Next.js used for static rendering (SSG), perfect for SEO and performance
+- **Language**: TypeScript for type safety and better long-term maintenance
+- **Styling**: Tailwind CSS because it is modern, fast to configure and use, and ideal for quickly creating responsive designs
+- **Data Management**: JSON, the simplicity of the data and the frequency of updates justify the use of these simple files
+- **Containerization**: Docker to ensure simpler and isolated deployment
 
 ---
 
@@ -45,7 +45,7 @@ This online CV website was designed to showcase my skills and professional exper
 
 1. **Clone the repository**
   ```bash
-   git clone ***
+   git clone https://github.com/ElodieRoy/CV.git
   ```
 2. **Go to the right directory and start the Docker services**
   ```bash
