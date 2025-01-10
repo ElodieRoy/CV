@@ -1,6 +1,7 @@
 # Elodie-roy.fr
 
 ![Licence MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Unit tests](https://github.com/ElodieRoy/CV/actions/workflows/development.yml/badge.svg)](https://github.com/ElodieRoy/CV/actions/workflows/development.yml)
 
 This online CV website was designed to showcase my skills and professional experience, emphasizing my web development expertise.
 
