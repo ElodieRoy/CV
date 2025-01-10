@@ -1,0 +1,29 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches-ignore:
+      - main # Ignore pushes to the main branch
+  pull_request:
+    branches:
+      - main # Only run on pull requests to the main branch
+
+jobs:
+  test:
+    name: Test application
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: "☁️ Checkout repository"
+        uses: actions/checkout@v4
+
+      - name: "🔧 Setup node"
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: "📦 Install dependencies"
+        run: npm run install-all
+
+      - name: "🔍 Run tests"
+        run: npm run test

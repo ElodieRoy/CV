@@ -1,0 +1,9 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "scripts": {
+    "install-all": "cd frontend && npm ci",
+    "test": "cd frontend && npm run ts-check && npm run lint",
+    "postinstall": "echo '⚠️ Please install recommended VS Code extensions listed in .vscode/extensions.json'"
+  }
+}
