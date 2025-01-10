@@ -11,7 +11,10 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends(
+    "plugin:@next/next/recommended",
+    "plugin:@typescript-eslint/recommended",
+  ),
   {
     files: ["**/*.{ts,tsx}"],
     plugins: {
@@ -22,7 +25,10 @@ const eslintConfig = [
     },
   },
   {
-    extends: ["eslint-config-prettier"], // desactiv conflicts rules
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    rules: {
+      // Add any additional rules here
+    },
   },
 ];
 
