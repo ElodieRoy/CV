@@ -13,20 +13,15 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends(
     "plugin:@next/next/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
   ),
   {
     files: ["**/*.{ts,tsx}"],
     plugins: {
-      prettier: [eslintPluginPrettier],
+      prettier: eslintPluginPrettier,
     },
     rules: {
-      "prettier/prettier": [
-        "error",
-        {
-          plugins: ["prettier-plugin-tailwindcss"],
-        },
-      ],
+      "prettier/prettier": "error",
     },
   },
   {
