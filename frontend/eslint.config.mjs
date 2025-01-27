@@ -14,20 +14,20 @@ const eslintConfig = [
   ...compat.extends(
     "plugin:@next/next/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
+    "plugin:react/recommended",
   ),
   {
     files: ["**/*.{ts,tsx}"],
-    plugins: {
-      prettier: eslintPluginPrettier,
-    },
+    plugins: { prettier: eslintPluginPrettier },
     rules: {
-      "prettier/prettier": "error",
+      "prettier/prettier": "warn",
+      "react/react-in-jsx-scope": 0,
     },
-  },
-  {
-    files: ["**/*.{js,jsx,ts,tsx}"],
-    rules: {
-      // Add any additional rules here
+    settings: {
+      react: {
+        version: "detect", // Automatically detect the React version
+      },
     },
   },
 ];
