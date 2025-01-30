@@ -3,6 +3,7 @@
 @theme {
   --breakpoint-desktop: initial;
   --color-primary: #f8ad16;
+  --color-secondary: #d97706;
   --color-light: #fafafa;
 }
 
@@ -27,7 +28,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   border-radius: 8px;
 }
 

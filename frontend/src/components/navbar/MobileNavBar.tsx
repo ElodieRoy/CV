@@ -1,3 +1,4 @@
+import { NavBarContent } from "@/components/navbar/NavBarContent";
 import { cn } from "@/lib/utils";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import { useState } from "react";
@@ -35,10 +36,12 @@ export function MobileNavBar() {
       </button>
       <div
         className={cn(
-          "lg:hidden fixed z-2 top-0 right-0 sm:w-3/5 w-4/5 bg-primary h-screen translate-x-full transition-all duration-500",
+          "lg:hidden fixed z-2 top-0 right-0 md:w-2/5 w-3/5 bg-primary h-screen translate-x-full transition-all duration-500 pt-28 pl-20 text-2xl font-normal",
           { "translate-x-0": isMenuOpen }
         )}
-      ></div>
+      >
+        <NavBarContent onItemClick={() => setIsMenuOpen(false)} />
+      </div>
     </>
   );
 }
