@@ -47,5 +47,5 @@ export default tseslint.config(
         version: "detect", // Automatically detect the React version
       },
     },
-  }
+  },
 );
