@@ -40,11 +40,12 @@ export default tseslint.config(
       "react/react-in-jsx-scope": "off",
       "react/prop-types": "off",
       "react/no-unescaped-entities": "off",
+      "@typescript-eslint/consistent-type-definitions": "off",
     },
     settings: {
       react: {
         version: "detect", // Automatically detect the React version
       },
     },
-  },
+  }
 );

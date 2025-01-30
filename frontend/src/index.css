@@ -1,5 +1,38 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-desktop: initial;
   --color-primary: #f8ad16;
+  --color-light: #fafafa;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Styling Scrollbars */
+
+/* in Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 6px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-light); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }

@@ -8,7 +8,7 @@ import { Skills } from "@/sections/Skills";
 
 export default function App() {
   return (
-    <>
+    <div>
       <Header />
       <main>
         <Home />
@@ -18,6 +18,6 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

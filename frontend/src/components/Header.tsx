@@ -1,22 +1,11 @@
+import { DesktopNavBar } from "@/components/navbar/DesktopNavBar";
+import { MobileNavBar } from "@/components/navbar/MobileNavBar";
+
 export function Header() {
   return (
-    <header className="bg-gray-800 text-white p-4">
-      <nav>
-        <ul className="flex space-x-4">
-          <li>
-            <a href="#profile">Profil</a>
-          </li>
-          <li>
-            <a href="#skills">Compétences</a>
-          </li>
-          <li>
-            <a href="#experiences">Expériences</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
+    <header className="fixed left-0 right-0 text-light p-4 lg:container mx-auto flex justify-end">
+      <DesktopNavBar />
+      <MobileNavBar />
     </header>
   );
 }
