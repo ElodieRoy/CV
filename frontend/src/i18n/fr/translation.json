@@ -1,0 +1,9 @@
+{
+  "menu": {
+    "home": "Accueil",
+    "profile": "Profil",
+    "skills": "Compétences",
+    "experiences": "Expériences",
+    "contact": "Contact"
+  }
+}
