@@ -1,10 +1,11 @@
 export function Home() {
   return (
     <section
-      className="bg-[url('src/assets/bg.jpg')] bg-cover bg-center"
+      className="bg-gradient-to-l from-pink-500/70 via-red-500/70 to-amber-500/70"
       id="home"
     >
-      <div className=" bg-gradient-to-tr from-pink-500/30 via-red-500/30 to-amber-500/30 h-screen"></div>
+      {/*  */}
+      <div className="bg-[url('src/assets/bg2.webp')] bg-cover bg-center opacity-10 h-screen"></div>
     </section>
   );
 }
