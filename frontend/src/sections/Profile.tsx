@@ -9,8 +9,8 @@ export function Profile() {
           Qui suis-je ?
         </h3>
         <p className="text-lg leading-relaxed">
-          Bonjour, je suis Élodie, développeuse <strong>full-stack</strong>{" "}
-          depuis plus de {nbExp} ans, spécialisée en <strong>React</strong> et{" "}
+          Je suis Élodie, développeuse <strong>full-stack</strong> depuis plus
+          de {nbExp} ans, spécialisée en <strong>React</strong> et{" "}
           <strong>TypeScript</strong>, avec un fort intérêt pour l’expérience
           utilisateur.
         </p>
