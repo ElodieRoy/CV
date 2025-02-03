@@ -5,7 +5,7 @@
   --color-primary: #f8ad16;
   --color-secondary: #d97706;
   --color-light: #fafafa;
-
+  --color-dark: #171717;
   --animate-blur-in-bottom: blur-in-bottom 500ms ease-out forwards;
   --animate-fade-in: fade-in 1s ease-in forwards;
   --animate-zoom-in: zoom-in 700ms ease-in forwards;
@@ -20,6 +20,10 @@
 
 @utility animation-delay-1000 {
   animation-delay: 1000ms;
+}
+
+@utility animation-delay-1500 {
+  animation-delay: 1500ms;
 }
 
 html,

@@ -1,4 +1,5 @@
 import photo from "@/assets/Elodie_ROY_photo_342.jpg";
+import { Button } from "@/components/ui/Button";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "react-i18next";
 
@@ -27,6 +28,9 @@ export function Home() {
           <MapPinIcon className="size-4" />
           {t("home.location")}
         </p>
+        <Button className="backdrop-blur-lg text-xs opacity-0 animate-slide-in-top animation-delay-1500">
+          {t("home.download")}
+        </Button>
       </div>
     </section>
   );
