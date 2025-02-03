@@ -8,16 +8,16 @@ import { Skills } from "@/sections/Skills";
 
 export default function App() {
   return (
-    <div>
+    <>
       <Header />
-      <main>
+      <main className="h-full">
         <Home />
         <Profile />
         <Skills />
         <Experience />
         <Contact />
+        <Footer />
       </main>
-      <Footer />
-    </div>
+    </>
   );
 }
