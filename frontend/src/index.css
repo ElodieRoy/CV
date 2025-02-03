@@ -10,8 +10,8 @@
   --animate-fade-in: fade-in 1s ease-in forwards;
   --animate-zoom-in: zoom-in 700ms ease-in forwards;
   --animate-slide-in-top: slide-in-top 500ms forwards;
-  --animate-slide-through: slide-in-left 1s ease-in-out,
-    slide-out-right 1s ease-in-out forwards 1s;
+  --animate-slide-through: slide-in-left 500ms ease-in-out 1s,
+    slide-out-right 500ms ease-in-out forwards 1500ms;
 }
 
 @utility animation-delay-500 {
@@ -24,6 +24,14 @@
 
 @utility animation-delay-1500 {
   animation-delay: 1500ms;
+}
+
+@utility animation-delay-2000 {
+  animation-delay: 2000ms;
+}
+
+@utility animation-delay-2500 {
+  animation-delay: 2500ms;
 }
 
 html,
@@ -72,18 +80,22 @@ button {
 
 @keyframes slide-in-left {
   0% {
+    opacity: 1;
     transform: translateX(-100%);
   }
   100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }
 
 @keyframes slide-out-right {
   0% {
+    opacity: 1;
     transform: translateX(0);
   }
   100% {
+    opacity: 1;
     transform: translateX(100%);
   }
 }

@@ -1,6 +1,6 @@
 import photo from "@/assets/Elodie_ROY_photo_342.jpg";
 import { Button } from "@/components/ui/Button";
-import { MapPinIcon } from "@heroicons/react/24/outline";
+import MapPinIcon from "@heroicons/react/24/outline/MapPinIcon";
 import { useTranslation } from "react-i18next";
 
 export function Home() {
@@ -19,10 +19,10 @@ export function Home() {
           {t("home.name")}
         </h1>
         <div className="overflow-hidden w-fit relative">
-          <h2 className="opacity-0 text-4xl tracking-tighter text-light font-light animate-fade-in animation-delay-1000">
+          <h2 className="opacity-0 text-4xl tracking-tighter text-light font-light animate-fade-in animation-delay-1500">
             {t("home.title")}
           </h2>
-          <div className="absolute top-0 bg-light h-14 w-full animate-slide-through" />
+          <div className="absolute top-0 bg-light h-14 w-full opacity-0 animate-slide-through" />
         </div>
         <p className="font-light flex items-center gap-1 opacity-0 animate-slide-in-top animation-delay-1000">
           <MapPinIcon className="size-4" />
