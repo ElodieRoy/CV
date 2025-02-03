@@ -16,7 +16,7 @@ export function Home() {
         <div className="size-30 rounded-full overflow-hidden border-3 scale-0.5 border-light shadow-2xl opacity-0 animate-zoom-in">
           <img src={photo} alt="profil photo" />
         </div>
-        <h1 className="opacity-0 animate-blur-in-bottom animation-delay-500 font-bold text-3xl tracking-wide">
+        <h1 className="opacity-0 animate-blur-in-bottom animation-delay-500 font-bold text-3xl tracking-wide select-all">
           {t("home.name")}
         </h1>
         <div className="overflow-hidden w-fit relative">
@@ -29,12 +29,12 @@ export function Home() {
           <MapPinIcon className="size-4" />
           {t("home.location")}
         </p>
-        <Button className="backdrop-blur-lg text-xs opacity-0 animate-slide-in-top animation-delay-1500">
+        <Button className="backdrop-blur-lg text-xs opacity-0 animate-slide-in-top animation-delay-1500 duration-500">
           {t("home.download")}
         </Button>
       </div>
       <p className="text-light text-xs absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2 flex-nowrap items-center">
-        Scroll Down
+        {t("scroll")}
         <ArrowDownIcon className="size-3 animate-bounce" />
       </p>
     </section>
