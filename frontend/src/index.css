@@ -5,6 +5,20 @@
   --color-primary: #f8ad16;
   --color-secondary: #d97706;
   --color-light: #fafafa;
+
+  --animate-blur-in-bottom: blur-in-bottom 500ms ease-out forwards;
+  --animate-fade-in: fade-in 10ms forwards;
+  --animate-slide-in-top: slide-in-top 500ms forwards;
+  --animate-slide-through: slide-in-left 1s ease-in-out,
+    slide-out-right 1s ease-in-out forwards 1s;
+}
+
+@utility animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+@utility animation-delay-1000 {
+  animation-delay: 1000ms;
 }
 
 body,
@@ -16,7 +30,59 @@ button {
   cursor: pointer;
 }
 
-/* Styling Scrollbars */
+/*** Animations ***/
+@keyframes blur-in-bottom {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*** scrollbar ***/
 
 /* in Chrome, Edge, and Safari */
 body::-webkit-scrollbar {
