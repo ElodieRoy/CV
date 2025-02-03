@@ -7,7 +7,7 @@
   --color-light: #fafafa;
   --color-dark: #171717;
   --animate-blur-in-bottom: blur-in-bottom 500ms ease-out forwards;
-  --animate-fade-in: fade-in 1s ease-in forwards;
+  --animate-fade-in: fade-in 1ms ease-in forwards;
   --animate-zoom-in: zoom-in 700ms ease-in forwards;
   --animate-slide-in-top: slide-in-top 500ms forwards;
   --animate-slide-through: slide-in-left 500ms ease-in-out 1s,
