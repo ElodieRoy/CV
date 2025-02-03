@@ -1,5 +1,6 @@
 import photo from "@/assets/Elodie_ROY_photo_342.jpg";
 import { Button } from "@/components/ui/Button";
+import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import MapPinIcon from "@heroicons/react/24/outline/MapPinIcon";
 import { useTranslation } from "react-i18next";
 
@@ -32,6 +33,10 @@ export function Home() {
           {t("home.download")}
         </Button>
       </div>
+      <p className="text-light text-xs absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2 flex-nowrap items-center">
+        Scroll Down
+        <ArrowDownIcon className="size-3 animate-bounce" />
+      </p>
     </section>
   );
 }
