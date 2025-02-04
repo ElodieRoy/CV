@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 export function Profile() {
   const nbExp = new Date().getFullYear() - 2021;
   return (
-    <section className="bg-background dark:bg-foreground" id="profile">
+    <section id="profile">
       <Container>
         <h3 className="text-primary text-4xl font-semibold mb-4">
           Qui suis-je ?

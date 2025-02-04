@@ -2,12 +2,31 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@layer base {
+  :root {
+    --light: #fafafa;
+    --dark: #171717;
+    --primary: #f8ad16;
+    --secondary: #d97706;
+    --background: var(--light);
+    --foreground: var(--dark);
+  }
+
+  .dark {
+    --background: var(--dark);
+    --foreground: var(--light);
+  }
+}
+
 @theme {
   --breakpoint-desktop: initial;
-  --color-primary: #f8ad16;
-  --color-secondary: #d97706;
-  --color-background: #fafafa;
-  --color-foreground: #171717;
+  --breakpoint-3xl: 110rem;
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-light: var(--light);
+  --color-dark: var(--dark);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
   --animate-blur-in-bottom: blur-in-bottom 500ms ease-out forwards;
   --animate-fade-in: fade-in 1ms ease-in forwards;
   --animate-zoom-in: zoom-in 700ms ease-in forwards;

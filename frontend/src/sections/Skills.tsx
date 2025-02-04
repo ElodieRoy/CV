@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 
 export function Skills() {
   return (
-    <section className="bg-background" id="skills">
+    <section id="skills">
       <Container>
         <h3 className="text-center text-4xl font-semibold bg-linear-to-r from-pink-500 to-amber-500 bg-clip-text text-transparent">
           Compétences

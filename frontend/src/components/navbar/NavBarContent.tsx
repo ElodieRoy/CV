@@ -15,7 +15,7 @@ export function NavBarContent({ onItemClick }: NavBarContentProps) {
           <a className="relative" href={`#${key}`}>
             {value}
           </a>
-          <span className="absolute left-0 -bottom-1 w-0 h-1 lg:h-0.5 rounded-md bg-background transition-all duration-300 group-hover:w-full" />
+          <span className="absolute left-0 -bottom-1 w-0 h-1 lg:h-0.5 rounded-md bg-light transition-all duration-300 group-hover:w-full" />
         </li>
       ))}
     </ul>
