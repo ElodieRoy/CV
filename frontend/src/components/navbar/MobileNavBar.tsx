@@ -1,4 +1,5 @@
 import { NavBarContent } from "@/components/navbar/NavBarContent";
+import { ThemeButton } from "@/components/ui/ThemeButton";
 import { cn } from "@/lib/utils";
 import {
   ArrowDownTrayIcon,
@@ -25,6 +26,11 @@ export function MobileNavBar({ isScrolled }: { isScrolled: boolean }) {
         Elodie ROY
       </span>
       <div className="lg:hidden ml-auto flex gap-3 items-center">
+        <ThemeButton
+          className={cn("size-0 lg:hidden", {
+            "size-6 delay-300": isScrolled,
+          })}
+        />
         <button
           className={cn("lg:hidden font-bold size-6 opacity-0 transition-all", {
             "opacity-100 delay-400": isScrolled,
@@ -41,7 +47,7 @@ export function MobileNavBar({ isScrolled }: { isScrolled: boolean }) {
               "absolute right-0 top-0 size-full scale-0 transition-all duration-500 rotate-0",
               {
                 "scale-100 rotate-90": isMenuOpen,
-              }
+              },
             )}
           />
           <Bars3Icon
@@ -49,7 +55,7 @@ export function MobileNavBar({ isScrolled }: { isScrolled: boolean }) {
               "absolute right-0 top-0 size-full scale-100 transition-all duration-500",
               {
                 "scale-0": isMenuOpen,
-              }
+              },
             )}
           />
         </button>
@@ -57,7 +63,7 @@ export function MobileNavBar({ isScrolled }: { isScrolled: boolean }) {
       <div
         className={cn(
           "lg:hidden fixed z-2 top-0 right-0 w-4/5 md:w-2/5 sm:w-3/5 bg-primary h-screen translate-x-full transition-all duration-500 pt-28 pl-20 text-[0px] font-normal",
-          { "translate-x-0 text-2xl": isMenuOpen }
+          { "translate-x-0 text-2xl": isMenuOpen },
         )}
       >
         <NavBarContent onItemClick={() => setIsMenuOpen(false)} />

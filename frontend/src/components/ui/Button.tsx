@@ -7,7 +7,7 @@ export function Button(props: ComponentPropsWithoutRef<"button">) {
       {...props}
       className={twMerge(
         "border border-light py-2 px-4 rounded-full hover:bg-light transition-all hover:text-dark/70",
-        props.className
+        props.className,
       )}
     >
       {props.children}

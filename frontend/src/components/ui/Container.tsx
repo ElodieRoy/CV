@@ -7,7 +7,7 @@ export function Container(props: ComponentPropsWithoutRef<"div">) {
       {...props}
       className={twMerge(
         "container mx-auto pt-16 lg:pt-14 px-3 lg:px-5 max-w-6xl",
-        props.className
+        props.className,
       )}
     >
       {props.children}
