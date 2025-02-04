@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --breakpoint-desktop: initial;
   --color-primary: #f8ad16;
   --color-secondary: #d97706;
-  --color-light: #fafafa;
-  --color-dark: #171717;
+  --color-background: #fafafa;
+  --color-foreground: #171717;
   --animate-blur-in-bottom: blur-in-bottom 500ms ease-out forwards;
   --animate-fade-in: fade-in 1ms ease-in forwards;
   --animate-zoom-in: zoom-in 700ms ease-in forwards;
@@ -123,7 +125,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--color-light); /* color of the tracking area */
+  background: var(--color-); /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {

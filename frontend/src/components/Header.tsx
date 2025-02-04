@@ -30,7 +30,7 @@ export function Header() {
           isScrolled,
       })}
     >
-      <Container className="fixed left-0 right-0 text-light h-16 lg:h-14 px-4 z-1 flex items-center lg:max-w-6xl pt-0 lg:pt-0 gap-2">
+      <Container className="fixed left-0 right-0 text-background h-16 lg:h-14 px-4 z-1 flex items-center lg:max-w-6xl pt-0 lg:pt-0 gap-2">
         <DesktopNavBar />
         <MobileNavBar isScrolled={isScrolled} />
       </Container>
