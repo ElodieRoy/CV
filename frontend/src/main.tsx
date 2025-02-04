@@ -1,4 +1,4 @@
-import { DarkThemeProvider } from "@/contexts/ThemeContext";
+import { DarkThemeProvider } from "@/contexts/DarkThemeProvider";
 import "@/i18n/config.ts";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
@@ -10,5 +10,5 @@ createRoot(document.getElementById("root")!).render(
     <DarkThemeProvider>
       <App />
     </DarkThemeProvider>
-  </StrictMode>,
+  </StrictMode>
 );

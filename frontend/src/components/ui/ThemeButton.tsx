@@ -1,4 +1,4 @@
-import { useDarkTheme } from "@/contexts/ThemeContext";
+import { useDarkTheme } from "@/hooks/useDarkTheme";
 import { cn } from "@/lib/utils";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { ComponentPropsWithoutRef } from "react";
