@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
-export function MobileNavBar() {
+export function MobileNavBar({ isScrolled }: { isScrolled: boolean }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
@@ -13,13 +13,20 @@ export function MobileNavBar() {
           onClick={() => setIsMenuOpen(false)}
         />
       )}
+      <span
+        className={cn("lg:hidden font-bold text-2xl opacity-0 transition-all", {
+          "opacity-100 delay-400": isScrolled,
+        })}
+      >
+        Elodie ROY
+      </span>
       <button
-        className="lg:hidden z-3 relative"
+        className="lg:hidden z-3 relative ml-auto"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <XMarkIcon
           className={cn(
-            "absolute right-0 size-9 scale-0 transition-all duration-500 rotate-0",
+            "absolute right-0 -top-5 size-9 scale-0 transition-all duration-500 rotate-0",
             {
               "scale-100 rotate-90": isMenuOpen,
             }
@@ -27,7 +34,7 @@ export function MobileNavBar() {
         />
         <Bars3Icon
           className={cn(
-            "absolute right-0 size-9 scale-100 transition-all duration-500",
+            "absolute right-0 -top-5 size-9 scale-100 transition-all duration-500",
             {
               "scale-0": isMenuOpen,
             }
