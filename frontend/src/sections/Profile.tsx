@@ -6,24 +6,29 @@ export function Profile() {
   return (
     <section id="profile">
       <Container>
-        <Typography type="h4" className="mb-4">
-          Qui suis-je ?
+        <Typography type="h3" className="mb-4 bg-primary">
+          ✨ Qui suis-je ? ✨
         </Typography>
         <Typography type="p">
-          Je suis Élodie, développeuse <strong>full-stack</strong> depuis plus
-          de {nbExp} ans, spécialisée en <strong>React</strong> et{" "}
-          <strong>TypeScript</strong>, avec un fort intérêt pour l’expérience
-          utilisateur.
+          Je suis Élodie, développeuse <strong>full-stack web</strong> avec plus
+          de {nbExp} ans d'expérience. Mon terrain de jeu préféré?{" "}
+          <strong>React</strong> et <strong>TypeScript</strong>, où j’aime créer
+          des applications robustes, performantes et centrées sur l'expérience
+          utilisateur. J'aime explorer et utiliser tous les outils qui
+          m'aideront à offrir des solutions optimales.
         </Typography>
-        <Typography type="p" className=" mt-2">
-          Issue d’une reconversion après 9 ans dans l’informatique décisionnel,
-          j’ai développé une approche centrée sur le produit et l’utilisateur,
-          enrichie par de{" "}
-          <strong>
-            solides bonnes pratiques en gestion et exploitation des données
-          </strong>
-          . Cette expérience me permet aujourd'hui de créer des solutions à la
-          fois performantes et intuitives.
+        <Typography type="p">
+          Issue d’une reconversion après 9 ans dans l’informatique
+          décisionnelle, j’ai développé une approche centrée sur le produit et
+          l’utilisateur, enrichie d'une <strong>rigueur technique</strong> avec
+          de solides connaissances en{" "}
+          <strong>gestion et exploitation des données</strong>.
+        </Typography>
+        <Typography type="p">
+          Mes envies? Prendre part à la création d'un produit de qualité en
+          rejoignant une <strong>équipe soudée et bienveillante</strong> dans un{" "}
+          <strong>projet structuré et bien organisé</strong> tout en continuant
+          d'apprendre et progresser chaque jour.
         </Typography>
       </Container>
     </section>
