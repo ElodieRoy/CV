@@ -8,7 +8,7 @@ export function ThemeButton(props: ComponentPropsWithoutRef<"button">) {
   return (
     <button
       {...props}
-      className={cn("size-6 z-50 text-light relative", props.className)}
+      className={cn("size-6 text-light relative", props.className)}
       onClick={toggleDarkMode}
     >
       <MoonIcon

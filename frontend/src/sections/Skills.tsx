@@ -1,12 +1,11 @@
 import { Container } from "@/components/ui/Container";
+import { Typography } from "@/components/ui/Typography";
 
 export function Skills() {
   return (
     <section id="skills">
       <Container>
-        <h3 className="text-center text-4xl font-semibold bg-linear-to-r from-pink-500 to-amber-500 bg-clip-text text-transparent">
-          Compétences
-        </h3>
+        <Typography type="h3">Compétences</Typography>
         <p className="h-screen"></p>
       </Container>
     </section>
