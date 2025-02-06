@@ -1,12 +1,9 @@
 import { NavBarContent } from "@/components/navbar/NavBarContent";
+import { DownloadButton } from "@/components/ui/DownloadButton";
 import { ThemeButton } from "@/components/ui/ThemeButton";
 import { useIsScrolled } from "@/hooks/useIsScrolled";
 import { cn } from "@/lib/utils";
-import {
-  ArrowDownTrayIcon,
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
 export function MobileNavBar() {
@@ -34,13 +31,11 @@ export function MobileNavBar() {
             "size-6 delay-300": isScrolled,
           })}
         />
-        <button
-          className={cn("lg:hidden font-bold size-6 opacity-0 transition-all", {
+        <DownloadButton
+          className={cn("lg:hidden opacity-0 transition-all", {
             "opacity-100 delay-400": isScrolled,
           })}
-        >
-          <ArrowDownTrayIcon className="size-full" />
-        </button>
+        />
         <button
           className="relative size-9 z-3"
           onClick={() => setIsMenuOpen(!isMenuOpen)}

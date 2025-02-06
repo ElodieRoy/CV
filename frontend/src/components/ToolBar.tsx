@@ -1,3 +1,4 @@
+import { DownloadButton } from "@/components/ui/DownloadButton";
 import { ThemeButton } from "@/components/ui/ThemeButton";
 import { useIsScrolled } from "@/hooks/useIsScrolled";
 import { cn } from "@/lib/utils";
@@ -13,7 +14,7 @@ export function ToolBar() {
         }
       )}
     >
-      <ThemeButton />
+      <DownloadButton />
       <ThemeButton />
       <ThemeButton />
     </div>
