@@ -87,9 +87,11 @@ export function LinkedinButton({
   );
 }
 
-export function GithubButton() {
+export function GithubButton({
+  className,
+}: ComponentPropsWithoutRef<"button">) {
   return (
-    <IconButtons>
+    <IconButtons className={className}>
       <a href={"https://github.com/ElodieRoy"} target="_blank" rel="noreferrer">
         <img src="/icons/github-light.svg" />
       </a>

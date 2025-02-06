@@ -7,11 +7,12 @@ const YEAR = new Date().getFullYear();
 export function Footer() {
   return (
     <footer className="bg-background text-foreground">
-      <Container className="flex justify-between items-center pb-5">
+      <Container className="flex max-lg:flex-col justify-between items-center pb-5 gap-3">
         <Typography type="small">@{YEAR} - By Elodie ROY</Typography>
-
-        <LinkedinButton className={"ml-auto mr-2"} />
-        <GithubButton />
+        <div>
+          <LinkedinButton className={"size-5 mr-4"} />
+          <GithubButton className={"size-5"} />
+        </div>
       </Container>
     </footer>
   );
