@@ -1,5 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ToolBar } from "@/components/ToolBar";
 import { Contact } from "@/sections/Contact";
 import { Experience } from "@/sections/Experience";
 import { Profile } from "@/sections/Profile";
@@ -9,6 +10,7 @@ export default function App() {
   return (
     <>
       <Header />
+      <ToolBar />
       <main className="bg-background text-foreground">
         <Profile />
         <Skills />

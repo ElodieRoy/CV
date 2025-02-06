@@ -79,9 +79,7 @@ export function Skills() {
                       width={32}
                       height={32}
                     />
-                    <span className="text-gray-700 dark:text-gray-300 text-xs">
-                      {tool.name}
-                    </span>
+                    <span className="text-xs">{tool.name}</span>
                   </div>
                 ))}
               </div>
