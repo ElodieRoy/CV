@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { ComponentPropsWithoutRef, ElementType } from "react";
 
-const typographyVariants = cva("", {
+const typographyVariants = cva("selection:bg-red-500/70 selection:text-light", {
   variants: {
     type: {
       h1: "select-all scroll-m-20 font-mono text-3xl font-bold",
