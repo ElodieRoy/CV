@@ -1,5 +1,10 @@
-import { DownloadButton } from "@/components/ui/DownloadButton";
-import { ThemeButton } from "@/components/ui/ThemeButton";
+import {
+  ContactButton,
+  DownloadButton,
+  LanguageButton,
+  LinkedinButton,
+  ThemeButton,
+} from "@/components/ui/IconButtons";
 import { useIsScrolled } from "@/hooks/useIsScrolled";
 import { cn } from "@/lib/utils";
 
@@ -16,7 +21,9 @@ export function ToolBar() {
     >
       <DownloadButton />
       <ThemeButton />
-      <ThemeButton />
+      <LanguageButton />
+      <ContactButton />
+      <LinkedinButton />
     </div>
   );
 }

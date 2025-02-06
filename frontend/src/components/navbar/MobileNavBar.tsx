@@ -1,6 +1,9 @@
 import { NavBarContent } from "@/components/navbar/NavBarContent";
-import { DownloadButton } from "@/components/ui/DownloadButton";
-import { ThemeButton } from "@/components/ui/ThemeButton";
+import {
+  DownloadButton,
+  LanguageButton,
+  ThemeButton,
+} from "@/components/ui/IconButtons";
 import { useIsScrolled } from "@/hooks/useIsScrolled";
 import { cn } from "@/lib/utils";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
@@ -25,15 +28,20 @@ export function MobileNavBar() {
       >
         Elodie ROY
       </span>
-      <div className="lg:hidden ml-auto flex gap-3 items-center">
+      <div className="lg:hidden ml-auto flex gap-4 items-center">
         <ThemeButton
           className={cn("size-0 lg:hidden", {
             "size-6 delay-300": isScrolled,
           })}
         />
+        <LanguageButton
+          className={cn("lg:hidden size-0", {
+            "size-6 delay-300": isScrolled,
+          })}
+        />
         <DownloadButton
-          className={cn("lg:hidden opacity-0 transition-all", {
-            "opacity-100 delay-400": isScrolled,
+          className={cn("lg:hidden size-0", {
+            "size-6 delay-300": isScrolled,
           })}
         />
         <button

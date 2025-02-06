@@ -11,5 +11,8 @@
     "location": "Toulouse",
     "download": "Télécharger CV"
   },
-  "scroll": "Faites défiler"
+  "scroll": "Faites défiler",
+  "translate": "English version",
+  "lightMode": "Mode jour",
+  "darkMode": "Mode nuit"
 }
