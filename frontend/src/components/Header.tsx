@@ -1,30 +1,12 @@
 import { DesktopNavBar } from "@/components/navbar/DesktopNavBar";
 import { MobileNavBar } from "@/components/navbar/MobileNavBar";
 import { Container } from "@/components/ui/Container";
-import { ThemeButton } from "@/components/ui/ThemeButton";
+import { useIsScrolled } from "@/hooks/useIsScrolled";
 import { cn } from "@/lib/utils";
 import { Home } from "@/sections/Home";
-import { useEffect, useState } from "react";
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 200) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+  const { isScrolled } = useIsScrolled();
   return (
     <header className="h-full 3xl:h-2/3">
       <div
@@ -33,17 +15,12 @@ export function Header() {
           {
             "bg-linear-to-r from-pink-500 to-amber-500 h-16 lg:h-14 shadow-2xl":
               isScrolled,
-          },
+          }
         )}
       >
         <Container className="fixed left-0 right-0 text-light h-16 lg:h-14 px-4 z-1 flex items-center lg:max-w-6xl pt-0 lg:pt-0 gap-2">
-          <ThemeButton
-            className={cn("size-0 max-lg:hidden", {
-              "size-6 delay-300": isScrolled,
-            })}
-          />
           <DesktopNavBar />
-          <MobileNavBar isScrolled={isScrolled} />
+          <MobileNavBar />
         </Container>
       </div>
       <Home />
