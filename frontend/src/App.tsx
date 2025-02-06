@@ -1,7 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { ToolBar } from "@/components/ToolBar";
-import { Contact } from "@/sections/Contact";
 import { Profile } from "@/sections/Profile";
 import { Skills } from "@/sections/Skills";
 
@@ -14,7 +13,7 @@ export default function App() {
         <Profile />
         <Skills />
         {/* <Experience /> */}
-        <Contact />
+        {/* <Contact /> */}
       </main>
       <Footer />
     </>

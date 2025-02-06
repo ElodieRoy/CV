@@ -1,9 +1,12 @@
 import { NavBarContent } from "@/components/navbar/NavBarContent";
+import { Socials } from "@/components/Socials";
 import {
   DownloadButton,
   LanguageButton,
   ThemeButton,
 } from "@/components/ui/IconButtons";
+import { Typography } from "@/components/ui/Typography";
+import { CURRENT_YEAR } from "@/constants";
 import { useIsScrolled } from "@/hooks/useIsScrolled";
 import { cn } from "@/lib/utils";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
@@ -68,11 +71,15 @@ export function MobileNavBar() {
       </div>
       <div
         className={cn(
-          "lg:hidden fixed z-2 top-0 right-0 w-4/5 md:w-2/5 sm:w-3/5 bg-primary h-screen translate-x-full transition-all duration-500 pt-28 pl-20 text-[0px] font-normal",
+          "lg:hidden fixed z-2 top-0 right-0 w-4/5 md:w-2/5 sm:w-3/5 bg-primary h-screen translate-x-full transition-all duration-500 py-34 flex flex-col justify-between pl-20 text-[0px] font-normal",
           { "translate-x-0 text-2xl": isMenuOpen }
         )}
       >
         <NavBarContent onItemClick={() => setIsMenuOpen(false)} />
+        <div>
+          <Socials />
+          <Typography type="muted">@{CURRENT_YEAR} - By Elodie ROY</Typography>
+        </div>
       </div>
     </>
   );

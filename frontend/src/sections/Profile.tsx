@@ -1,8 +1,9 @@
 import { Container } from "@/components/ui/Container";
 import { Typography } from "@/components/ui/Typography";
+import { CURRENT_YEAR } from "@/constants";
 
 export function Profile() {
-  const nbExp = new Date().getFullYear() - 2021;
+  const nbExp = CURRENT_YEAR - 2021;
   return (
     <section id="profile">
       <Container>
