@@ -1,0 +1,18 @@
+{
+  "menu": {
+    "profile": "Profil",
+    "skills": "Compétences",
+    "experiences": "Expériences",
+    "contact": "Contact"
+  },
+  "home": {
+    "name": "Elodie ROY",
+    "title": "Développeuse Full-Stack",
+    "location": "Toulouse",
+    "download": "Télécharger CV"
+  },
+  "scroll": "Faites défiler",
+  "translate": "English version",
+  "lightMode": "Mode jour",
+  "darkMode": "Mode nuit"
+}

@@ -11,18 +11,24 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends(
+    "plugin:@next/next/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
+    "plugin:react/recommended",
+  ),
   {
     files: ["**/*.{ts,tsx}"],
-    plugins: {
-      prettier: eslintPluginPrettier,
-    },
+    plugins: { prettier: eslintPluginPrettier },
     rules: {
-      "prettier/prettier": "error",
+      "prettier/prettier": "warn",
+      "react/react-in-jsx-scope": 0,
     },
-  },
-  {
-    extends: ["eslint-config-prettier"], // desactiv conflicts rules
+    settings: {
+      react: {
+        version: "detect", // Automatically detect the React version
+      },
+    },
   },
 ];
 
