@@ -1,6 +1,7 @@
 import {
   ContactButton,
   DownloadButton,
+  GithubButton,
   LanguageButton,
   LinkedinButton,
   ThemeButton,
@@ -19,11 +20,12 @@ export function ToolBar() {
         }
       )}
     >
-      <DownloadButton />
       <ThemeButton />
       <LanguageButton />
+      <DownloadButton />
       <ContactButton />
       <LinkedinButton />
+      <GithubButton />
     </div>
   );
 }

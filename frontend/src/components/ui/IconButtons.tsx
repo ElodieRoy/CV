@@ -71,15 +71,27 @@ export function ContactButton() {
   );
 }
 
-export function LinkedinButton() {
+export function LinkedinButton({
+  className,
+}: ComponentPropsWithoutRef<"button">) {
   return (
-    <IconButtons>
+    <IconButtons className={className}>
       <a
         href={"https://www.linkedin.com/in/eroy"}
         target="_blank"
         rel="noreferrer"
       >
         <img src="/icons/linkedin-plain.svg" />
+      </a>
+    </IconButtons>
+  );
+}
+
+export function GithubButton() {
+  return (
+    <IconButtons>
+      <a href={"https://github.com/ElodieRoy"} target="_blank" rel="noreferrer">
+        <img src="/icons/github-light.svg" />
       </a>
     </IconButtons>
   );
