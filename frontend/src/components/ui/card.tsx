@@ -12,7 +12,7 @@ export function Card({
   return (
     <div
       {...props}
-      className={cn("rounded-lg bg-background2 p-6 shadow", className)}
+      className={cn("rounded-lg bg-background2 p-6 shadow h-full", className)}
     >
       <h3 className="text-xl font-semibold text-foreground mb-4">{title}</h3>
       {children}

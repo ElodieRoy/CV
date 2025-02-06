@@ -1,3 +1,4 @@
+import { InViewWrapper } from "@/components/InViewWrapper";
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/Container";
 import { Typography } from "@/components/ui/Typography";
@@ -6,7 +7,6 @@ const techStack = [
   {
     category: "Frontend",
     tools: [
-      { name: "JavaScript", logo: "/icons/javascript-original.svg" },
       { name: "TypeScript", logo: "/icons/typescript-original.svg" },
       { name: "React", logo: "/icons/react-original.svg" },
       { name: "Astro", logo: "/icons/astro-original.svg" },
@@ -64,26 +64,25 @@ export function Skills() {
     <section id="skills">
       <Container>
         <Typography type="h3">Compétences</Typography>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-8">
           {techStack.map((category) => (
-            <Card key={category.category} title={category.category}>
-              <div className="flex flex-wrap gap-4">
-                {category.tools.map((tool) => (
-                  <div
-                    key={tool.name}
-                    className="flex flex-col justify-center items-center gap-1"
-                  >
-                    <img
-                      src={tool.logo}
-                      alt={tool.name}
-                      width={32}
-                      height={32}
-                    />
-                    <span className="text-xs">{tool.name}</span>
-                  </div>
-                ))}
-              </div>
-            </Card>
+            <InViewWrapper key={category.category}>
+              <Card key={category.category} title={category.category}>
+                <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4 lg:flex lg:flex-col items-start lg:pl-4">
+                  {category.tools.map((tool) => (
+                    <div
+                      key={tool.name}
+                      className="flex max-lg:flex-col justify-center items-center gap-1 lg:gap-3 "
+                    >
+                      <img src={tool.logo} alt={tool.name} className="size-9" />
+                      <span className="text-xs lg:text-sm whitespace-nowrap">
+                        {tool.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            </InViewWrapper>
           ))}
         </div>
       </Container>
