@@ -10,23 +10,22 @@ export function Profile() {
       </Typography>
       <Typography type="p">
         Je suis Élodie, développeuse <strong>full-stack web</strong> avec plus
-        de {nbExp} ans d'expérience. Mon terrain de jeu préféré?{" "}
-        <strong>React</strong> et <strong>TypeScript</strong>, où j’aime créer
-        des applications robustes, performantes et pensées pour l'utilisateur.
-        Je n'hésite pas à explorer et utiliser tous les outils qui m'aideront à
-        concevoir les solutions.
+        de {nbExp} ans d'expérience, spécialisée en <strong>React</strong> et{" "}
+        <strong>TypeScript</strong>. J'aime concevoir des applications
+        performantes et pensées pour l'utilisateur, n'hésitant pas à explorer et
+        tester les outils les plus adaptés pour y parvenir.
       </Typography>
       <Typography type="p">
         Issue d’une reconversion après 9 ans dans l’informatique décisionnelle,
         j’ai développé une approche centrée sur le produit et l’utilisateur,
-        enrichie d'une <strong>rigueur technique</strong> avec de solides
-        connaissances en <strong>gestion et exploitation des données</strong>.
+        enrichie d'une <strong>rigueur technique</strong> et expertise en{" "}
+        <strong>gestion et exploitation des données</strong>.
       </Typography>
       <Typography type="p">
-        Mes envies? Prendre part à la création d'un produit de qualité en
-        rejoignant une <strong>équipe soudée et bienveillante</strong> dans un{" "}
-        <strong>projet structuré et bien organisé</strong> tout en continuant
-        d'apprendre et progresser chaque jour.
+        Je cherche à contribuer à la création d'un produit de qualité au sein
+        d'une <strong>équipe soudée et bienveillante</strong> dans un{" "}
+        <strong>projet structuré</strong> tout en évoluant et apprenant chaque
+        jour.
       </Typography>
     </section>
   );
