@@ -11,7 +11,10 @@ export function Input<T extends ElementType>({
   return (
     <Comp
       {...props}
-      className={cn("bg-background2 rounded-xl py-2 px-4", props.className)}
+      className={cn(
+        "bg-background2 rounded-xl py-2 px-4 hover:ring-1 ring-primary ring-offset-background ring-offset-3 focus:outline-0 focus:ring-2 transition-all",
+        props.className
+      )}
     />
   );
 }
