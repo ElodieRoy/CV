@@ -71,7 +71,7 @@ export function MobileNavBar() {
       </div>
       <div
         className={cn(
-          "lg:hidden fixed z-2 top-0 right-0 w-4/5 md:w-2/5 sm:w-3/5 bg-primary h-screen translate-x-full transition-all duration-500 py-34 flex flex-col justify-between pl-20 text-[0px] font-normal",
+          "lg:hidden fixed z-2 top-0 right-0 w-4/5 md:w-2/5 sm:w-3/5 bg-primary h-screen translate-x-full transition-all duration-500 py-22 flex flex-col justify-between pl-20 text-[0px] font-normal",
           { "translate-x-0 text-2xl": isMenuOpen }
         )}
       >

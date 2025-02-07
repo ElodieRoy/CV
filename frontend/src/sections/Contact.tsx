@@ -1,7 +1,10 @@
+import { Typography } from "@/components/ui/Typography";
+
 export function Contact() {
   return (
-    <section className="h-screen" id="contact">
-      Contact
+    <section id="contact">
+      <Typography type="h3">Contactez-moi</Typography>
+      <form></form>
     </section>
   );
 }
