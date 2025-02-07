@@ -5,7 +5,7 @@ export function Profile() {
   const nbExp = CURRENT_YEAR - 2021;
   return (
     <section id="profile">
-      <Typography type="h3" className="mb-4 bg-primary text-left">
+      <Typography type="h3" className="bg-primary text-left">
         ✨ Qui suis-je ? ✨
       </Typography>
       <Typography type="p">
