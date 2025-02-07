@@ -13,12 +13,14 @@
     --background: var(--light);
     --background2: var(--light2);
     --foreground: var(--dark);
+    --foreground2: var(--dark2);
   }
 
   .dark {
     --background: var(--dark);
     --foreground: var(--light);
     --background2: var(--dark2);
+    --foreground2: var(--light2);
   }
 }
 
@@ -32,6 +34,7 @@
   --color-background: var(--background);
   --color-background2: var(--background2);
   --color-foreground: var(--foreground);
+  --color-foreground2: var(--foreground2);
   --animate-blur-in-bottom: blur-in-bottom 500ms ease-out forwards;
   --animate-fade-in: fade-in 1ms ease-in forwards;
   --animate-zoom-in: zoom-in 700ms ease-in forwards;

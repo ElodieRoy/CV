@@ -10,8 +10,10 @@ export function Button({
   return (
     <button
       className={cn(
-        "border border-light py-2 px-4 rounded-full flex items-center justify-center",
-        { "hover:bg-light transition-all hover:text-dark/70": !pending },
+        "border border-foreground py-2 px-4 rounded-full flex items-center justify-center",
+        {
+          "hover:bg-foreground2 transition-all hover:text-background": !pending,
+        },
         { "opacity-50 cursor-not-allowed": pending },
         className
       )}
