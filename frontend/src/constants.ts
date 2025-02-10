@@ -55,3 +55,18 @@ export const techStack = [
     ],
   },
 ];
+
+export const confettiParams = {
+  particleCount: 100,
+  spread: 70,
+  colors: [
+    "#F44336",
+    "#E91E63",
+    "#FFC107",
+    "#2196F3",
+    "#4CAF50",
+    "#9C27B0",
+    "#009688",
+  ],
+  origin: { y: 0.8 },
+};
