@@ -1,4 +1,4 @@
-import { ContactForm } from "@/components/ContactForm";
+import { ContactForm } from "@/components/form/ContactForm";
 import { Typography } from "@/components/ui/Typography";
 
 export function Contact() {

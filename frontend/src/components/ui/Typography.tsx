@@ -18,6 +18,7 @@ const typographyVariants = cva("selection:bg-red-500/70 selection:text-light", {
       small: "text-md font-light leading-none",
       muted: "text-sm text-muted-foreground",
       link: "font-medium text-cyan-600 hover:underline dark:text-primary",
+      error: "text-sm text-red-400",
     },
   },
 });
@@ -38,6 +39,7 @@ const defaultElementMapping: Record<NonNullable<Type>, ElementType> = {
   small: "p",
   muted: "p",
   link: "a",
+  error: "p",
   default: "p",
 };
 

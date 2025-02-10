@@ -15,7 +15,7 @@ export function Button({
           "hover:bg-foreground2 transition-all hover:text-background": !pending,
         },
         { "opacity-50 cursor-not-allowed": pending },
-        className
+        className,
       )}
       {...props}
     >

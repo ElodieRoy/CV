@@ -5,7 +5,7 @@ export const DarkThemeProvider = ({ children }: PropsWithChildren) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(
     localStorage.currentTheme === "dark" ||
       (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
+        window.matchMedia("(prefers-color-scheme: dark)").matches),
   );
 
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode);

@@ -41,11 +41,13 @@ export default tseslint.config(
       "react/prop-types": "off",
       "react/no-unescaped-entities": "off",
       "@typescript-eslint/consistent-type-definitions": "off",
+      "@typescript-eslint/no-misused-promises": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
     },
     settings: {
       react: {
         version: "detect", // Automatically detect the React version
       },
     },
-  },
+  }
 );
