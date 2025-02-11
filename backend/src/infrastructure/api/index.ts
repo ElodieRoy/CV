@@ -10,7 +10,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use('/docs', serve, setup(swaggerDocument))
+app.use('/docs', serve, setup(swaggerDocument));
 
 RegisterRoutes(app);
 

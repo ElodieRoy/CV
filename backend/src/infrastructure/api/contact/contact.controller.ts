@@ -29,6 +29,5 @@ export class ContactController extends Controller {
       console.error(error);
       throw new Error('An error occured while sending the email');
     }
-
   }
 }
