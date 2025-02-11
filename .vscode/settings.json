@@ -5,13 +5,19 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit"
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
   "files.associations": {
     "*.css": "tailwindcss"
   },
   "[svg]": {
     "editor.defaultFormatter": "jock.svg"
+  },
+  "eslint.options": {
+    "configFile": "./frontend/eslint.config.js"
   }
 }

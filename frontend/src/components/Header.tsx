@@ -15,7 +15,7 @@ export function Header() {
           {
             "bg-linear-to-r from-pink-500 to-amber-500 h-16 lg:h-14 shadow-2xl":
               isScrolled,
-          }
+          },
         )}
       >
         <Container className="fixed left-0 right-0 text-light h-16 lg:h-14 px-4 z-1 flex items-center lg:max-w-6xl pt-0 lg:pt-0 gap-2">

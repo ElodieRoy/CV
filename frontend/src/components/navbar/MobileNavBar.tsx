@@ -56,7 +56,7 @@ export function MobileNavBar() {
               "absolute right-0 top-0 size-full scale-0 transition-all duration-500 rotate-0",
               {
                 "scale-100 rotate-90": isMenuOpen,
-              }
+              },
             )}
           />
           <Bars3Icon
@@ -64,15 +64,15 @@ export function MobileNavBar() {
               "absolute right-0 top-0 size-full scale-100 transition-all duration-500",
               {
                 "scale-0": isMenuOpen,
-              }
+              },
             )}
           />
         </button>
       </div>
       <div
         className={cn(
-          "lg:hidden fixed z-2 top-0 right-0 w-4/5 md:w-2/5 sm:w-3/5 bg-primary h-screen translate-x-full transition-all duration-500 py-34 flex flex-col justify-between pl-20 text-[0px] font-normal",
-          { "translate-x-0 text-2xl": isMenuOpen }
+          "lg:hidden fixed z-2 top-0 right-0 w-4/5 md:w-2/5 sm:w-3/5 bg-primary h-screen translate-x-full transition-all duration-500 py-22 flex flex-col justify-between pl-20 text-[0px] font-normal",
+          { "translate-x-0 text-2xl": isMenuOpen },
         )}
       >
         <NavBarContent onItemClick={() => setIsMenuOpen(false)} />
