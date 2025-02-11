@@ -1,5 +1,5 @@
 import { Body, Controller, Post, Route, SuccessResponse } from 'tsoa';
-import { ContactInputDTO } from '../dto/contact.dto';
+import { ContactInputDTO } from './contact.dto';
 
 @Route('contact')
 export class ContactController extends Controller {
@@ -8,7 +8,7 @@ export class ContactController extends Controller {
   }
 
   /**
-   * Send an email
+   * Send an email from contact form
    */
   @Post()
   @SuccessResponse('200', 'Email sent')
