@@ -12,4 +12,4 @@ export const ContactInputDTO = z.object({
     .max(3000, "Le message ne doit pas dépasser 3000 caractères."),
 });
 
-export type ContactInputDTO = z.infer<typeof ContactInputDTO>;
+export type ContactInputDTO = ReturnType<typeof ContactInputDTO.parse>;
