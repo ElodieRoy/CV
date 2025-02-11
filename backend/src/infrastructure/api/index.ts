@@ -5,7 +5,6 @@ import config from './api.config';
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const server = app.listen(config.port, () => {
