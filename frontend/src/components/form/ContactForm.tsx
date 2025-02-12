@@ -46,14 +46,14 @@ export function ContactForm() {
     >
       <Input
         className="flex-1"
-        placeholder="Nom"
+        placeholder="Prénom/Nom"
         name="name"
         register={register}
         error={errors.name}
         disabled={isSubmitting}
       />
       <Input
-        className="flex-2"
+        className="w-full md:flex-2"
         placeholder="Email"
         name="email"
         register={register}
