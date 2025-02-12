@@ -17,11 +17,13 @@ export function ContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<ContactData>({
     resolver: zodResolver(contactSchema),
   });
+
+  console.log("🌸 ", isSubmitting);
 
   const onSubmit = async (data: ContactData) => {
     try {
@@ -61,7 +63,7 @@ export function ContactForm() {
         register={register}
         error={errors.message}
       />
-      <Button type="submit" className="w-full">
+      <Button type="submit" className="w-full" isLoading={isSubmitting}>
         Envoyer
       </Button>
     </form>
