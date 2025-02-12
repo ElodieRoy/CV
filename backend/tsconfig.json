@@ -15,7 +15,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*", "@/*"],
-      "@build/*": ["build/*"],
       "@api/*": ["src/infrastructure/api/*"]
     }
   }

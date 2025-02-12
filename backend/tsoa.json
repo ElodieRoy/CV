@@ -1,20 +1,22 @@
 {
   "entryFile": "src/index.ts",
   "noImplicitAdditionalProperties": "throw-on-extras",
-  "controllerPathGlobs": ["src/**/*.controller.ts"],
+  "controllerPathGlobs": ["src/infrastructure/api/**/*.controller.ts"],
   "spec": {
-    "outputDirectory": "build",
+    "outputDirectory": "src/swagger",
     "specVersion": 3,
     "spec": {
       "servers": [
         {
-          "url": "http://localhost:8000",
+          "url": "http://localhost:8000/api",
           "description": "Localhost"
         }
       ]
     }
   },
   "routes": {
-    "routesDir": "build"
+    "basePath": "/api",
+    "routesDir": "src/infrastructure/routes",
+    "middleware": "express"
   }
 }
