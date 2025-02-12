@@ -8,9 +8,15 @@ import confetti from "canvas-confetti";
 import { useForm } from "react-hook-form";
 
 async function sendMessage(data: ContactData) {
-  const response = await axios.post("/api/contact", data);
-  console.log(JSON.stringify(response));
-  return;
+  try {
+    await axios.post("/api/contact", data);
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      throw new Error(error.response?.data?.message || "Erreur inconnue");
+    } else {
+      throw new Error("Erreur inconnue");
+    }
+  }
 }
 
 export function ContactForm() {
@@ -22,8 +28,6 @@ export function ContactForm() {
   } = useForm<ContactData>({
     resolver: zodResolver(contactSchema),
   });
-
-  console.log("🌸 ", isSubmitting);
 
   const onSubmit = async (data: ContactData) => {
     try {
@@ -42,7 +46,7 @@ export function ContactForm() {
     >
       <Input
         className="flex-1"
-        placeholder="Prénom/Nom"
+        placeholder="Nom"
         name="name"
         register={register}
         error={errors.name}
