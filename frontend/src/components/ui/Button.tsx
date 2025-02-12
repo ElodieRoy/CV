@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef } from "react";
 
 export function Button({
   className,
-  isLoading = true,
+  isLoading = false,
   ...props
 }: { isLoading?: boolean } & ComponentPropsWithoutRef<"button">) {
   return (

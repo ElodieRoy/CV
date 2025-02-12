@@ -50,6 +50,7 @@ export function ContactForm() {
         name="name"
         register={register}
         error={errors.name}
+        disabled={isSubmitting}
       />
       <Input
         className="flex-2"
@@ -57,6 +58,7 @@ export function ContactForm() {
         name="email"
         register={register}
         error={errors.email}
+        disabled={isSubmitting}
       />
       <Input
         as="textarea"
@@ -66,6 +68,7 @@ export function ContactForm() {
         name="message"
         register={register}
         error={errors.message}
+        disabled={isSubmitting}
       />
       <Button type="submit" className="w-full" isLoading={isSubmitting}>
         Envoyer
