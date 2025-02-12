@@ -1,76 +1,74 @@
 {
-	"components": {
-		"examples": {},
-		"headers": {},
-		"parameters": {},
-		"requestBodies": {},
-		"responses": {},
-		"schemas": {
-			"ReturnType_typeofContactInputDTO.parse_": {
-				"properties": {
-					"message": {
-						"type": "string"
-					},
-					"email": {
-						"type": "string"
-					},
-					"name": {
-						"type": "string"
-					}
-				},
-				"type": "object",
-				"description": "Obtain the return type of a function type"
-			},
-			"ContactInputDTO": {
-				"$ref": "#/components/schemas/ReturnType_typeofContactInputDTO.parse_"
-			}
-		},
-		"securitySchemes": {}
-	},
-	"info": {
-		"title": "backend",
-		"version": "1.0.0",
-		"description": "Backend with express for CV online",
-		"license": {
-			"name": "ISC"
-		},
-		"contact": {
-			"name": "Elodie ROY"
-		}
-	},
-	"openapi": "3.0.0",
-	"paths": {
-		"/contact": {
-			"post": {
-				"operationId": "SendEmail",
-				"responses": {
-					"200": {
-						"description": "Email sent"
-					}
-				},
-				"summary": ": Send an email from contact form",
-				"tags": [
-					"Contact"
-				],
-				"security": [],
-				"parameters": [],
-				"requestBody": {
-					"required": true,
-					"content": {
-						"application/json": {
-							"schema": {
-								"$ref": "#/components/schemas/ContactInputDTO"
-							}
-						}
-					}
-				}
-			}
-		}
-	},
-	"servers": [
-		{
-			"url": "http://localhost:8000/api",
-			"description": "Localhost"
-		}
-	]
+  "components": {
+    "examples": {},
+    "headers": {},
+    "parameters": {},
+    "requestBodies": {},
+    "responses": {},
+    "schemas": {
+      "ReturnType_typeofContactInputDTO.parse_": {
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "description": "Obtain the return type of a function type"
+      },
+      "ContactInputDTO": {
+        "$ref": "#/components/schemas/ReturnType_typeofContactInputDTO.parse_"
+      }
+    },
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "backend",
+    "version": "1.0.0",
+    "description": "Backend with express for CV online",
+    "license": {
+      "name": "ISC"
+    },
+    "contact": {
+      "name": "Elodie ROY"
+    }
+  },
+  "openapi": "3.0.0",
+  "paths": {
+    "/contact": {
+      "post": {
+        "operationId": "SendEmail",
+        "responses": {
+          "200": {
+            "description": "Email sent"
+          }
+        },
+        "summary": ": Send an email from contact form",
+        "tags": ["Contact"],
+        "security": [],
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactInputDTO"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8000/api",
+      "description": "Localhost"
+    }
+  ]
 }

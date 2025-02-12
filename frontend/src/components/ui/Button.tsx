@@ -15,7 +15,7 @@ export function Button({
             !isLoading,
         },
         { "opacity-50 cursor-not-allowed": isLoading },
-        className
+        className,
       )}
       {...props}
     >

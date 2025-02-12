@@ -9,8 +9,8 @@ export default defineConfig({
   server: {
     proxy: {
       // Rediriger toutes les requêtes de /api vers http://localhost:3000
-      '/api': {
-        target: 'http://backend:8000', // URL backend
+      "/api": {
+        target: "http://backend:8000", // URL backend
         changeOrigin: true,
       },
     },
