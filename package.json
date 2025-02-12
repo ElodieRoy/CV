@@ -2,8 +2,12 @@
   "name": "cv",
   "version": "1.0.0",
   "scripts": {
-    "install-all": "cd frontend && npm ci",
-    "test": "cd frontend && npm run ts-check && npm run lint && npm run format",
+    "install-all": "npm run install:backend && npm run install:frontend",
+    "install:frontend": "npm i --prefix frontend",
+    "install:backend": "npm i --prefix backend",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "npm run ts-check --prefix frontend && npm run lint --prefix frontend && npm run format --prefix frontend",
+    "test:backend": "npm run ts-check --prefix backend && npm run lint --prefix backend && npm run format --prefix backend",
     "postinstall": "echo '⚠️ Please install recommended VS Code extensions listed in .vscode/extensions.json'"
   }
 }

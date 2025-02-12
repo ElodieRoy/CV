@@ -39,7 +39,8 @@
   --animate-fade-in: fade-in 1ms ease-in forwards;
   --animate-zoom-in: zoom-in 700ms ease-in forwards;
   --animate-slide-in-top: slide-in-top 500ms forwards;
-  --animate-slide-through: slide-in-left 500ms ease-in-out 1s,
+  --animate-slide-through:
+    slide-in-left 500ms ease-in-out 1s,
     slide-out-right 500ms ease-in-out forwards 1500ms;
 }
 
