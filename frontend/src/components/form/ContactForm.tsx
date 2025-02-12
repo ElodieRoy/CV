@@ -3,12 +3,13 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { confettiParams } from "@/constants";
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
 import confetti from "canvas-confetti";
 import { useForm } from "react-hook-form";
 
 async function sendMessage(data: ContactData) {
-  await new Promise((r) => setTimeout(r, 1000));
-  console.log(JSON.stringify(data));
+  const response = await axios.post("/api/contact", data);
+  console.log(JSON.stringify(response));
   return;
 }
 
