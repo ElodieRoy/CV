@@ -1,4 +1,3 @@
-
 import bodyParser from 'body-parser';
 import express from 'express';
 import { serve, setup } from 'swagger-ui-express';
@@ -14,7 +13,6 @@ app.use(bodyParser.json());
 app.use('/api-docs', serve, setup(swaggerDocument));
 
 RegisterRoutes(app);
-
 
 const server = app.listen(config.port, () => {
   console.log(`🚀🚀 Listening at http://localhost:${config.port}`);
