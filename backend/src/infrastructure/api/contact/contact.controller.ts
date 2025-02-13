@@ -1,6 +1,14 @@
-import { Body, Controller, Post, Route, SuccessResponse, Tags } from 'tsoa';
+import {
+  Body,
+  Controller,
+  Post,
+  Response,
+  Route,
+  SuccessResponse,
+  Tags,
+} from 'tsoa';
+import { InvalidInputError } from '../error-handler';
 import { ContactInputDTO } from './contact.dto';
-import { sentEmail } from './contact.service';
 
 @Route('contact')
 export class ContactController extends Controller {
@@ -14,20 +22,21 @@ export class ContactController extends Controller {
   @Post()
   @Tags('Contact')
   @SuccessResponse('200', 'Email sent')
+  @Response('400', 'Invalid input')
+  @Response('500', 'Internal server error')
   async sendEmail(@Body() requestBody: ContactInputDTO): Promise<void> {
     const result = ContactInputDTO.safeParse(requestBody);
 
     if (!result.success) {
-      this.setStatus(400);
       const zodErrorMessage = result.error.errors[0].message;
-      throw new Error(zodErrorMessage);
+      throw new InvalidInputError(zodErrorMessage);
     }
 
-    try {
-      sentEmail(result.data);
-    } catch (error) {
-      console.error(error);
-      throw new Error('An error occured while sending the email');
-    }
+    throw new Error('An error occured while sending the email');
+    // try {
+    //   sentEmail(result.data);
+    // } catch (error) {
+    //   throw new Error('An error occured while sending the email');
+    // }
   }
 }

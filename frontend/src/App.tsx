@@ -5,10 +5,12 @@ import { Container } from "@/components/ui/Container";
 import { Contact } from "@/sections/Contact";
 import { Profile } from "@/sections/Profile";
 import { Skills } from "@/sections/Skills";
+import { ToastContainer } from "react-toastify";
 
 export default function App() {
   return (
     <>
+      <ToastContainer />
       <Header />
       <ToolBar />
       <main className="bg-background text-foreground">

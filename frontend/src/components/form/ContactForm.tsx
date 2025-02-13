@@ -6,18 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import confetti from "canvas-confetti";
 import { useForm } from "react-hook-form";
-
-async function sendMessage(data: ContactData) {
-  try {
-    await axios.post("/api/contact", data);
-  } catch (error) {
-    if (axios.isAxiosError(error)) {
-      throw new Error(error.response?.data?.message || "Erreur inconnue");
-    } else {
-      throw new Error("Erreur inconnue");
-    }
-  }
-}
+import { toast } from "react-toastify";
 
 export function ContactForm() {
   const {
@@ -31,11 +20,17 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactData) => {
     try {
-      await sendMessage(data);
+      await axios.post("/api/contact", data);
       confetti(confettiParams)?.catch((e) => console.error(e));
       reset();
-    } catch (e) {
-      console.error(e);
+    } catch (error) {
+      const errorMessage =
+        axios.isAxiosError(error) && error.response?.data?.error
+          ? error.response.data.error
+          : "Une erreur inconnue est survenue";
+
+      toast.error(errorMessage);
+      console.error(error);
     }
   };
 
