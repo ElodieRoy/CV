@@ -36,7 +36,7 @@ export function Home() {
           <MapPinIcon className="size-4" />
           <Typography type="small">{t("home.location")}</Typography>
         </div>
-        <Button className="backdrop-blur-lg text-xs opacity-0 animate-slide-in-top animation-delay-1500 duration-500 hover:bg-light transition-all hover:text-black/70">
+        <Button className="backdrop-blur-lg border-light text-xs opacity-0 animate-slide-in-top animation-delay-1500 duration-500 hover:bg-light transition-all hover:text-black/70">
           {t("home.download")}
         </Button>
       </div>
