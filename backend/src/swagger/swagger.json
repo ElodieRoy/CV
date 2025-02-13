@@ -46,6 +46,12 @@
 				"responses": {
 					"200": {
 						"description": "Email sent"
+					},
+					"400": {
+						"description": "Invalid input"
+					},
+					"500": {
+						"description": "Internal server error"
 					}
 				},
 				"summary": ": Send an email from contact form",

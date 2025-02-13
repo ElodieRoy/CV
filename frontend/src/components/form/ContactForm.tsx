@@ -3,20 +3,16 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { confettiParams } from "@/constants";
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
 import confetti from "canvas-confetti";
 import { useForm } from "react-hook-form";
-
-async function sendMessage(data: ContactData) {
-  await new Promise((r) => setTimeout(r, 1000));
-  console.log(JSON.stringify(data));
-  return;
-}
+import { toast } from "react-toastify";
 
 export function ContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<ContactData>({
     resolver: zodResolver(contactSchema),
@@ -24,11 +20,17 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactData) => {
     try {
-      await sendMessage(data);
+      await axios.post("/api/contact", data);
       confetti(confettiParams)?.catch((e) => console.error(e));
       reset();
-    } catch (e) {
-      console.error(e);
+    } catch (error) {
+      const errorMessage =
+        axios.isAxiosError(error) && error.response?.data?.error
+          ? error.response.data.error
+          : "Une erreur inconnue est survenue";
+
+      toast.error(errorMessage);
+      console.error(error);
     }
   };
 
@@ -43,13 +45,15 @@ export function ContactForm() {
         name="name"
         register={register}
         error={errors.name}
+        disabled={isSubmitting}
       />
       <Input
-        className="flex-2"
+        className="w-full md:flex-2"
         placeholder="Email"
         name="email"
         register={register}
         error={errors.email}
+        disabled={isSubmitting}
       />
       <Input
         as="textarea"
@@ -59,8 +63,9 @@ export function ContactForm() {
         name="message"
         register={register}
         error={errors.message}
+        disabled={isSubmitting}
       />
-      <Button type="submit" className="w-full">
+      <Button type="submit" className="w-full" isLoading={isSubmitting}>
         Envoyer
       </Button>
     </form>

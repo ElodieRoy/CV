@@ -4,6 +4,7 @@ import { serve, setup } from 'swagger-ui-express';
 import swaggerDocument from '../../swagger/swagger.json';
 import { RegisterRoutes } from '../routes/routes';
 import config from './api.config';
+import { errorHandler } from './error-handler';
 
 const app = express();
 
@@ -13,6 +14,8 @@ app.use(bodyParser.json());
 app.use('/api-docs', serve, setup(swaggerDocument));
 
 RegisterRoutes(app);
+
+app.use(errorHandler);
 
 const server = app.listen(config.port, () => {
   console.log(`🚀🚀 Listening at http://localhost:${config.port}`);
