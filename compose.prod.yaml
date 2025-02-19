@@ -1,0 +1,25 @@
+networks:
+  my-network:
+services:
+  frontend:
+    image: cv-frontend-prod
+    build:
+      context: frontend
+      dockerfile: docker/Dockerfile-prod
+    ports:
+      - 80:80
+    networks:
+      - my-network
+    depends_on:
+      - backend
+
+  backend:
+    image: cv-backend-prod
+    build:
+      context: backend
+      dockerfile: docker/Dockerfile-prod
+    networks:
+      - my-network
+    restart: always
+    environment:
+      - NODE_ENV=production
