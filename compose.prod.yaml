@@ -1,13 +1,16 @@
 networks:
   my-network:
 services:
-  frontend:
-    image: cv-frontend-prod
-    build:
-      context: frontend
-      dockerfile: docker/Dockerfile-prod
+  reverse-proxy:
+    restart: unless-stopped
+    image: nginx:alpine
+    volumes:
+      - ./dist:/usr/share/nginx/html
+      - ./certificates:/etc/nginx/ssl
+      - ./nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
+      - 443:443
     networks:
       - my-network
     depends_on:
