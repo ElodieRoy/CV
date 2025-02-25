@@ -6,7 +6,7 @@ import { techStack } from "@/constants";
 export function Skills() {
   return (
     <section id="skills">
-      <Typography type="h3">Compétences</Typography>
+      <Typography type="h3">Mes compétences</Typography>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-8">
         {techStack.map((category) => (
           <InViewWrapper key={category.category}>

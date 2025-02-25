@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { ToolBar } from "@/components/ToolBar";
 import { Container } from "@/components/ui/Container";
 import { Contact } from "@/sections/Contact";
+import { Experiences } from "@/sections/Experiences";
 import { Profile } from "@/sections/Profile";
 import { Skills } from "@/sections/Skills";
 import { ToastContainer } from "react-toastify";
@@ -17,7 +18,7 @@ export default function App() {
         <Container>
           <Profile />
           <Skills />
-          {/* <Experience /> */}
+          <Experiences />
           <Contact />
         </Container>
       </main>
