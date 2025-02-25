@@ -11,5 +11,5 @@ RUN npm install -g ts-node typescript
 
 EXPOSE 8000
 
-# Lauch Vite in dev mode
+# Lauch the app
 CMD ["npm", "run", "dev"]

@@ -24,7 +24,7 @@ export const techStack = [
       { name: "Hibernate", logo: "/icons/hibernate-original.svg" },
       { name: "Node.js", logo: "/icons/nodejs-original.svg" },
       { name: "Express", logo: "/icons/express-original.svg" },
-      { name: "tRPC", logo: "/icons/trpc-original.svg" },
+      { name: "Swagger", logo: "/icons/swagger-original.svg" },
       { name: "REST", logo: "/icons/apirest.svg" },
       { name: "PostgreSQL", logo: "/icons/postgresql-original.svg" },
       { name: "MySQL", logo: "/icons/mysql-original.svg" },

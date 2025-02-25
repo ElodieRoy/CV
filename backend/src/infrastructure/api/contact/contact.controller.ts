@@ -9,6 +9,7 @@ import {
 } from 'tsoa';
 import { InvalidInputError } from '../error-handler';
 import { ContactInputDTO } from './contact.dto';
+import { sentEmail } from './contact.service';
 
 @Route('contact')
 export class ContactController extends Controller {
@@ -32,11 +33,12 @@ export class ContactController extends Controller {
       throw new InvalidInputError(zodErrorMessage);
     }
 
-    throw new Error('An error occured while sending the email');
-    // try {
-    //   sentEmail(result.data);
-    // } catch (error) {
-    //   throw new Error('An error occured while sending the email');
-    // }
+    try {
+      await sentEmail(result.data);
+    } catch (error) {
+      console.error(error);
+      throw new Error('An error occured while sending the email');
+    }
+
   }
 }
