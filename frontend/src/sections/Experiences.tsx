@@ -5,22 +5,26 @@ import { useEffect } from "react";
 export function Experiences() {
   useEffect(() => {
     const imgGroup = document.getElementById("img-group");
+    const imgGroupContainer = document.getElementById("img-group-container");
 
-    if (!imgGroup) return;
+    if (!imgGroup || !imgGroupContainer) return;
 
     const items = imgGroup.getElementsByTagName("li");
 
     // Animate horizontally during vertical scroll
     scroll(
-      animate("#img-group", {
+      animate(imgGroup, {
         transform: ["none", `translateX(-${items.length - 1}00vw)`],
       }),
-      { target: document.getElementById("img-group-container") || undefined }
+      { target: imgGroupContainer }
     );
 
-    // Progress bar representing gallery scroll
-    scroll(animate("#progress", { scaleX: [0, 1] }), {
-      target: document.getElementById("img-group-container") || undefined,
+    // Progress bar representing scroll
+    scroll(animate("#progress", { x: ["-100%", "0%"] }), {
+      target: imgGroupContainer,
+    });
+    scroll(animate("#progress-bar-end", { opacity: [0, 0, 0, 0, 1] }), {
+      target: imgGroupContainer,
     });
   }, []);
 
@@ -30,47 +34,32 @@ export function Experiences() {
       <div id="img-group-container" className="h-[500vh] relative">
         <div className="sticky top-0 overflow-hidden h-screen">
           <ul id="img-group" className="flex">
-            <li className="flex w-screen h-screen items-center justify-center flex-col flex-none img-container">
-              <img
-                className="w-8 h-9"
-                src="https://examples.motion.dev/photos/cityscape/1.jpg"
-              />
-              <h3>#001</h3>
-            </li>
-            <li className="flex w-screen h-screen items-center justify-center flex-col flex-none img-container">
-              <img
-                className="w-80 h-96"
-                src="https://examples.motion.dev/photos/cityscape/2.jpg"
-              />
-              <h3>#002</h3>
-            </li>
-            <li className="flex w-screen h-screen items-center justify-center flex-col flex-none img-container">
-              <img
-                className="w-80 h-96"
-                src="https://examples.motion.dev/photos/cityscape/3.jpg"
-              />
-              <h3>#003</h3>
-            </li>
-            <li className="flex w-screen h-screen items-center justify-center flex-col flex-none img-container">
-              <img
-                className="w-80 h-96"
-                src="https://examples.motion.dev/photos/cityscape/4.jpg"
-              />
-              <h3>#004</h3>
-            </li>
-            <li className="flex w-screen h-screen items-center justify-center flex-col flex-none img-container">
-              <img
-                className="w-80 h-96"
-                src="https://examples.motion.dev/photos/cityscape/5.jpg"
-              />
-              <h3>#005</h3>
-            </li>
+            {["1", "2", "3", "4", "5"].map((i) => (
+              <li
+                key={i}
+                className="flex w-screen h-screen items-center justify-center flex-col flex-none img-container"
+              >
+                <img
+                  className="w-80 h-96"
+                  src={`https://examples.motion.dev/photos/cityscape/${i}.jpg`}
+                />
+                <h3>#00{i}</h3>
+              </li>
+            ))}
           </ul>
+          <div id="progress-bar" className="relative -top-16 h-1 bg-foreground">
+            <span
+              id="progress-bar-start"
+              className="absolute -top-1 rounded-full bg-primary size-3 z-1"
+            />
+            <span className="absolute -top-1 right-0 rounded-full bg-foreground size-3 z-1" />
+            <span
+              id="progress-bar-end"
+              className="absolute -top-1 right-0 rounded-full bg-primary size-3 z-2"
+            />
+            <div id="progress" className="h-full bg-primary" />
+          </div>
         </div>
-        <div
-          id="progress"
-          className="fixed left-0 w-full h-1 bg-amber-400 bottom-12"
-        />
       </div>
     </section>
   );
