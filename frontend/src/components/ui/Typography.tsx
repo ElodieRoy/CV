@@ -8,7 +8,7 @@ const typographyVariants = cva("selection:bg-red-500/70 selection:text-light", {
       h1: "select-all scroll-m-20 font-mono text-3xl font-bold",
       h2: "select-all scroll-m-20 text-3xl font-light tracking-tighter transition-colors lg:text-4xl",
       h3: "pt-20 pb-8 lg:pt-18 text-center text-4xl font-semibold bg-linear-to-r from-pink-500 to-amber-500 bg-clip-text text-transparent",
-      h4: "text-primary text-3xl font-semibold",
+      h4: "bg-foreground2 py-1 px-10 rounded-2xl text-background text-2xl font-semibold",
       p: "text-lg leading-7 [&:not(:first-of-type)]:mt-6",
       default: "",
       quote: "mt-6 border-l-2 pl-6 italic",

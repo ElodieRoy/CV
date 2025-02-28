@@ -14,10 +14,10 @@ export function ToolBar() {
   return (
     <div
       className={cn(
-        "max-lg:hidden bg-primary fixed right-0 top-1/4 rounded-l-2xl transition-all flex p-3 w-fit flex-col gap-5 translate-x-full",
+        "max-lg:hidden bg-primary fixed right-0 top-1/4 rounded-l-2xl transition-all flex p-3 w-fit flex-col gap-5 translate-x-full z-10",
         {
           "translate-x-0": isScrolled,
-        },
+        }
       )}
     >
       <ThemeButton />

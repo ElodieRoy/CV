@@ -13,7 +13,7 @@ export function useSliderScrollAnimation() {
     // Animate horizontally during vertical scroll
     scroll(
       animate(slider, {
-        transform: ["none", `translateX(-${sliderItemsLength - 1}00vw)`],
+        transform: ["none", `translateX(-${sliderItemsLength - 1}00%)`],
       }),
       { target: sliderContainer }
     );
