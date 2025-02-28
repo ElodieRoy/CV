@@ -47,7 +47,7 @@ export function Slider() {
         },
         {
           id: "web",
-          title: "Évolution Web",
+          title: "Transition Web",
           image: "/icons/power.svg",
           logo: [],
           description:
