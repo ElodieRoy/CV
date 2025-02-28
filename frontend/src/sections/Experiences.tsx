@@ -48,7 +48,7 @@ export function Slider() {
         {
           id: "web",
           title: "Évolution Web",
-          image: "/icons/power3.svg",
+          image: "/icons/power.svg",
           logo: [],
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.",
