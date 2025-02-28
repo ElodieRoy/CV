@@ -1,5 +1,6 @@
 import { ProgressBar } from "@/components/ProgressBar";
 import { Typography } from "@/components/ui/Typography";
+import { experiences } from "@/constants";
 import { useSliderScrollAnimation } from "@/hooks/useSliderScrollAnimation";
 
 export function Experiences() {
@@ -27,58 +28,27 @@ export function Experiences() {
 export function Slider() {
   return (
     <ul id="slider" className="flex h-full">
-      {[
-        {
-          id: "graduate",
-          title: "Diplômée Bac+5",
-          image: "/icons/graduate.svg",
-          logo: [],
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.",
-        },
-        {
-          id: "data",
-          title: "Data Analyst",
-          image: "/icons/data.svg",
-          logo: [],
-          secteur: "Aéronautique (Airbus, Safran)",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.",
-        },
-        {
-          id: "web",
-          title: "Transition Web",
-          image: "/icons/power.svg",
-          logo: [],
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.",
-        },
-        {
-          id: "developer",
-          title: "Développeuse web",
-          image: "/icons/coding.svg",
-          logo: [],
-          secteur: "Environnement & Gestion forestière (ONF), cybersécurité",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.",
-        },
-        {
-          id: "covid",
-          title: "Construire demain",
-          image: "/icons/build.svg",
-          logo: [],
-          secteur: "Aéronautique (Airbus, Safran)",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.",
-        },
-      ].map(({ id, title, image, description }) => (
+      {experiences.map((experience) => (
         <li
-          key={id}
+          key={experience.id}
           className="p-2 flex w-full h-full items-center flex-col flex-none img-container gap-4"
         >
-          <img src={image} alt={id} className="h-20" />
-          <Typography type="h4">{title}</Typography>
-          <p>{description}</p>
+          <img src={experience.image} alt={experience.id} className="h-20" />
+          <Typography type="h4">{experience.title}</Typography>
+          <div className="flex h-10 justify-center items-center gap-4">
+            {experience.logos.map((logo) => (
+              <div className="h-full w-20 bg-light py-1 px-2 rounded-lg shadow-md flex items-center justify-center">
+                <img
+                  key={logo.title}
+                  src={logo.url}
+                  alt={logo.title}
+                  className="max-w-full"
+                />
+              </div>
+            ))}
+          </div>
+          {experience.type === "education" && <p>{experience.description}</p>}
+          {experience.type === "job" && <p>{experience.secteur}</p>}
         </li>
       ))}
     </ul>
