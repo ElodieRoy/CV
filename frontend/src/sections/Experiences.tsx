@@ -48,7 +48,30 @@ export function Slider() {
             ))}
           </div>
           {experience.type === "education" && <p>{experience.description}</p>}
-          {experience.type === "job" && <p>{experience.secteur}</p>}
+          {experience.type === "job" && (
+            <div className="flex flex-col gap-4">
+              <div>
+                <Typography type="lead">Secteur:</Typography>
+                <span>{experience.secteur}</span>
+              </div>
+
+              <div>
+                <Typography type="lead">Rôles:</Typography>
+                <ul className="list-disc list-inside ">
+                  {experience.roles.map((role, index) => (
+                    <li key={index} className="ml-4">
+                      {role}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <Typography type="lead">Compétences:</Typography>
+                <span>{experience.skills}</span>
+              </div>
+            </div>
+          )}
         </li>
       ))}
     </ul>

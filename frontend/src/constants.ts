@@ -75,7 +75,7 @@ type Experience = {
   title: string,
   image: string,
   logos: { url: string, title: string }[],
-} & ({ type: "education", description: string } | { type: "job", secteur: string, role: string[], skills: string })
+} & ({ type: "education", description: string } | { type: "job", secteur: string, roles: string[], skills: string })
 export const experiences: Experience[] = [
   {
     id: "graduate",
@@ -93,7 +93,7 @@ export const experiences: Experience[] = [
     image: "/icons/data.svg",
     logos: [{ title: "Akka", url: "/logos/company/akka.png" }, { title: "Sopra-steria", url: "/logos/company/sopra-steria.png" }],
     secteur: "Aéronautique (Airbus, Safran)",
-    role: ["Data Analyst", "Data Scientist", "Data Engineer"],
+    roles: ["Data Analyst", "Data Scientist", "Data Engineer"],
     skills: "SAP, ETL, base de données, reporting",
   },
   {
@@ -112,7 +112,7 @@ export const experiences: Experience[] = [
     image: "/icons/coding.svg",
     logos: [{ title: "Magellium", url: "/logos/company/magellium.png" }, { title: "Forensoc", url: "/logos/company/forensoc.png" }],
     secteur: "Environnement & Gestion forestière (ONF), cybersécurité",
-    role: ["Frontend", "Backend", "Fullstack"],
+    roles: ["Frontend", "Backend", "Fullstack"],
     skills:
       "Frontend, backend, base de données, devOps, agilité, dev mobile, webSocket",
   },
