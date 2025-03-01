@@ -13,13 +13,21 @@ export function useSliderScrollAnimation() {
     // Animate horizontally during vertical scroll
     scroll(
       animate(slider, {
-        transform: ["none", `translateX(-${sliderItemsLength - 1}00%)`],
+        transform: [
+          "none",
+          `translate${
+            window.innerWidth >= 1024 ? "Y" : "X"
+          }(-${sliderItemsLength - 1}00%)`,
+        ],
       }),
       { target: sliderContainer }
     );
 
     // Progress bar representing scroll
     scroll(animate("#progress", { x: ["-100%", "0%"] }), {
+      target: sliderContainer,
+    });
+    scroll(animate("#vertical-progress", { y: ["-100%", "0%"] }), {
       target: sliderContainer,
     });
     scroll(
