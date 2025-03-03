@@ -10,39 +10,48 @@ export function VerticalProgressBar({
         id="vertical-progress-bar"
         className="relative w-full h-full bg-light2"
       >
-        <BulletPrimary id="progress-bar-start" />
+        <BulletPrimary id="progress-bar-start" year="2006" />
         {/* 2011 */}
         <BulletForeground style={{ top: `${getPercentFrom2006(2011)}%` }} />
         <BulletPrimary
           id="progress-bar-1"
+          year="2011"
           style={{ top: `${getPercentFrom2006(2011)}%` }}
         />
         {/* 2020 */}
         <BulletForeground style={{ top: `${getPercentFrom2006(2020)}%` }} />
         <BulletPrimary
           id="progress-bar-2"
+          year="2020"
           style={{ top: `${getPercentFrom2006(2020)}%` }}
         />
         {/* 2022 */}
         <BulletForeground style={{ top: `${getPercentFrom2006(2022)}%` }} />
         <BulletPrimary
           id="progress-bar-3"
+          year="2022"
           style={{ top: `${getPercentFrom2006(2022)}%` }}
         />
         <BulletForeground className="bottom-0" />
-        <BulletPrimary id="progress-bar-4" className="bottom-0" />
+        <BulletPrimary id="progress-bar-4" year="" className="bottom-0" />
         <div id="vertical-progress" className="h-full w-full bg-primary" />
       </div>
     </div>
   );
 }
 
-function Bullet({ className, ...props }: ComponentPropsWithoutRef<"span">) {
+function Bullet({
+  className,
+  children,
+  ...props
+}: ComponentPropsWithoutRef<"span">) {
   return (
     <span
       {...props}
       className={cn("absolute -left-1 rounded-full size-3", className)}
-    />
+    >
+      {children}
+    </span>
   );
 }
 
@@ -54,8 +63,13 @@ function BulletForeground({
 }
 
 function BulletPrimary({
+  year,
   className,
   ...props
-}: ComponentPropsWithoutRef<"span">) {
-  return <Bullet {...props} className={cn("bg-primary z-2", className)} />;
+}: { year: string } & ComponentPropsWithoutRef<"span">) {
+  return (
+    <Bullet {...props} className={cn("bg-primary z-2 text-primary", className)}>
+      <span className="absolute -left-12 font-bold">{year}</span>
+    </Bullet>
+  );
 }

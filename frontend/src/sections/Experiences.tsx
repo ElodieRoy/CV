@@ -25,7 +25,7 @@ export function Experiences() {
           <div className="h-[calc(100%_-_112px)] lg:h-[calc(100%_-_200px)] lg:mt-10 overflow-hidden relative">
             <Slider />
             {/* vertical progress bar (only visible on lg)*/}
-            <VerticalProgressBar className="max-lg:hidden absolute h-full w-1 top-0 left-114 z-1" />
+            <VerticalProgressBar className="max-lg:hidden absolute h-full w-1 top-0 left-126 z-1" />
           </div>
 
           {/* progress bar (only visible on sm) : 112px */}
@@ -45,7 +45,7 @@ export function Slider() {
           className="p-2 w-full h-full flex-none img-container flex max-lg:flex-col items-center gap-14 lg:gap-0 lg:p-30"
         >
           {/* Title & icon */}
-          <div className="flex items-center flex-col gap-4 lg:w-76 lg:mr-11 ">
+          <div className="flex items-center flex-col gap-4 lg:w-76 lg:mr-23 ">
             <img src={experience.image} alt={experience.id} className="h-20" />
             <Typography type="h4">{experience.title}</Typography>
           </div>
