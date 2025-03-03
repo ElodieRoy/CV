@@ -25,7 +25,7 @@ export function Experiences() {
           <div className="h-[calc(100%_-_112px)] lg:h-[calc(100%_-_200px)] lg:mt-10 overflow-hidden relative">
             <Slider />
             {/* vertical progress bar (only visible on lg)*/}
-            <VerticalProgressBar className="max-lg:hidden absolute h-full w-1 top-0 left-114" />
+            <VerticalProgressBar className="max-lg:hidden absolute h-full w-1 top-0 left-114 z-1" />
           </div>
 
           {/* progress bar (only visible on sm) : 112px */}
@@ -52,16 +52,22 @@ export function Slider() {
 
           {/* Détails Experience */}
           <div className="flex items-center flex-col gap-4 flex-4">
-            <div className="flex h-10 justify-center items-center gap-4">
-              {experience.logos.map((logo) => (
-                <div
-                  key={logo.title}
-                  className="h-full w-20 bg-light py-1 px-2 rounded-lg shadow-md flex items-center justify-center"
-                >
-                  <img src={logo.url} alt={logo.title} className="max-w-full" />
-                </div>
-              ))}
-            </div>
+            {experience.logos && experience.logos.length > 0 && (
+              <div className="flex h-10 justify-center items-center gap-4">
+                {experience.logos.map((logo) => (
+                  <div
+                    key={logo.title}
+                    className="h-full w-20 bg-light py-1 px-2 rounded-lg shadow-md flex items-center justify-center"
+                  >
+                    <img
+                      src={logo.url}
+                      alt={logo.title}
+                      className="max-w-full  object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
 
             <div className="px-6">
               {experience.type === "education" && (

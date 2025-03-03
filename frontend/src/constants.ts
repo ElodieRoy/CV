@@ -28,7 +28,10 @@ export const techStack = [
       { name: "REST", logo: "/logos/skills/apirest.svg" },
       { name: "PostgreSQL", logo: "/logos/skills/postgresql-original.svg" },
       { name: "MySQL", logo: "/logos/skills/mysql-original.svg" },
-      { name: "ElasticSearch", logo: "/logos/skills/elasticsearch-original.svg" },
+      {
+        name: "ElasticSearch",
+        logo: "/logos/skills/elasticsearch-original.svg",
+      },
     ],
   },
   {
@@ -71,29 +74,40 @@ export const confettiParams = {
   origin: { y: 0.8 },
 };
 type Experience = {
-  id: string,
-  title: string,
-  image: string,
-  logos: { url: string, title: string }[],
-} & ({ type: "education", description: string } | { type: "job", secteur: string, roles: string[], skills: string })
+  id: string;
+  title: string;
+  image: string;
+  logos?: { url: string; title: string }[];
+} & (
+    | { type: "education"; description: string }
+    | { type: "job"; secteur: string; roles: string[]; skills: string }
+  );
 export const experiences: Experience[] = [
   {
     id: "graduate",
     type: "education",
     title: "Diplômée Bac+5",
     image: "/icons/graduate.svg",
-    logos: [{ url: "/logos/company/universite.png", title: "Université Toulouse 3 Paul Sabatier" }],
+    logos: [
+      {
+        url: "/logos/company/universite.png",
+        title: "Université Toulouse 3 Paul Sabatier",
+      },
+    ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.",
+      "Intéressée par les mathématiques et intriguée par l’informatique, j’ai choisi de faire un DUT en Statistiques et Traitement Informatique des Données à Niort (79) après mon bac S. Cette formation m’a tellement plu que j’ai voulu aller plus loin en poursuivant un master en Statistique et Informatique Décisionnelle à Toulouse, pour approfondir encore plus mon intérêt pour l'exploitation des données et leur valorisation à travers des outils concrets et adaptés.",
   },
   {
     id: "dataAnalyst",
     type: "job",
     title: "Data Analyst",
     image: "/icons/data.svg",
-    logos: [{ title: "Akka", url: "/logos/company/akka.png" }, { title: "Sopra-steria", url: "/logos/company/sopra-steria.png" }],
+    logos: [
+      { title: "Akka", url: "/logos/company/akka.png" },
+      { title: "Sopra-steria", url: "/logos/company/sopra-steria.png" },
+    ],
     secteur: "Aéronautique (Airbus, Safran)",
-    roles: ["Data Analyst", "Data Scientist", "Data Engineer"],
+    roles: ["Rencontrer les équipes métiers pour comprendre leurs objectifs", "Explorer les données sources (SAP, IBM, fichiers plats)", "Collecter et organiser les données pertinentes dans une base de données", "Automatiser les traitement et chargement des données", "Visualiser les données pour faciliter l’analyse et l’interprétation par les utilisateurs"],
     skills: "SAP, ETL, base de données, reporting",
   },
   {
@@ -103,26 +117,28 @@ export const experiences: Experience[] = [
     image: "/icons/power.svg",
     logos: [{ title: "Brassart", url: "/logos/company/brassart.png" }],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.",
+      "J'ai perdu mon emploi à cause de la crise liée au COVID. Face à la situation difficile pour retrouver un travail dans un domaine non essentiel, j'ai choisi de prendre du temps pour réfléchir à mes envies et à mes besoins. C'est alors que j'ai naturellement décidé de me former au développement web (équivalent bac+3), dans le but d'acquérir des compétences techniques supplémentaires pour personnaliser les interfaces de visualisation des données. Finalement, cette expérience m'a tellement plu que j'ai décidé de poursuivre ma carrière dans le web !"
   },
   {
     id: "developerWeb",
     type: "job",
     title: "Développeuse web",
     image: "/icons/coding.svg",
-    logos: [{ title: "Magellium", url: "/logos/company/magellium.png" }, { title: "Forensoc", url: "/logos/company/forensoc.png" }],
+    logos: [
+      { title: "Magellium", url: "/logos/company/magellium.png" },
+      { title: "Forensoc", url: "/logos/company/forensoc.png" },
+    ],
     secteur: "Environnement & Gestion forestière (ONF), cybersécurité",
-    roles: ["Frontend", "Backend", "Fullstack"],
+    roles: ["Gestion de base de données (SQL et NoSQL)", "Developement des fonctionnalités back-end et front-end", "Ajouter des routes API selon la méthode REST", "Réduction de la dette technique", "Revues de code", "Déploiements"],
     skills:
-      "Frontend, backend, base de données, devOps, agilité, dev mobile, webSocket",
+      "Front-end, back-end, base de données, devOps, agilité, dev mobile, webSocket",
   },
   {
     id: "tomorrow",
     type: "education",
     title: "Construire demain",
     image: "/icons/build.svg",
-    logos: [],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosamtempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosamtempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosamtempora excepturi tenetur error. Itaque tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam. Lorem"
   },
-]
+];
