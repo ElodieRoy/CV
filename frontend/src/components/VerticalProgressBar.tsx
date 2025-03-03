@@ -69,7 +69,7 @@ function BulletPrimary({
 }: { year: string } & ComponentPropsWithoutRef<"span">) {
   return (
     <Bullet {...props} className={cn("bg-primary z-2 text-primary", className)}>
-      <span className="absolute -left-12 font-bold">{year}</span>
+      <span className="absolute -left-10 font-bold text-sm">{year}</span>
     </Bullet>
   );
 }
