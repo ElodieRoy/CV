@@ -20,7 +20,7 @@ export function useSliderScrollAnimation() {
           }(-${sliderItemsLength - 1}00%)`,
         ],
       }),
-      { target: sliderContainer }
+      { target: sliderContainer },
     );
 
     // Progress bar representing scroll
@@ -30,7 +30,7 @@ export function useSliderScrollAnimation() {
       }),
       {
         target: sliderContainer,
-      }
+      },
     );
     scroll(
       animate("#vertical-progress", {
@@ -38,7 +38,7 @@ export function useSliderScrollAnimation() {
       }),
       {
         target: sliderContainer,
-      }
+      },
     );
 
     // change bullet color in scroll
@@ -47,12 +47,12 @@ export function useSliderScrollAnimation() {
         scroll(
           animate(`#progress-bar-${step + 1}`, {
             opacity: Array.from({ length: sliderItemsLength }, (_, i) =>
-              i > step ? 1 : 0
+              i > step ? 1 : 0,
             ),
           }),
           {
             target: sliderContainer,
-          }
+          },
         );
       }, step * 500); // Delays each step by 500ms
     }
