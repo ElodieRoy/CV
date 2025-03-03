@@ -24,21 +24,37 @@ export function useSliderScrollAnimation() {
     );
 
     // Progress bar representing scroll
-    scroll(animate("#progress", { x: ["-100%", "0%"] }), {
-      target: sliderContainer,
-    });
-    scroll(animate("#vertical-progress", { y: ["-100%", "0%"] }), {
-      target: sliderContainer,
-    });
     scroll(
-      animate("#progress-bar-end", {
-        opacity: Array.from({ length: sliderItemsLength }, (_, i) =>
-          i === sliderItemsLength - 1 ? 1 : 0
-        ),
+      animate("#progress", {
+        x: ["-100%", "-72%", "-72%", "-22%", "-22%", "-11%", "-11%", "0%"],
       }),
       {
         target: sliderContainer,
       }
     );
+    scroll(
+      animate("#vertical-progress", {
+        y: ["-100%", "-72%", "-72%", "-22%", "-22%", "-11%", "-11%", "0%"],
+      }),
+      {
+        target: sliderContainer,
+      }
+    );
+
+    // change bullet color in scroll
+    for (let step = 0; step < 5; step++) {
+      setTimeout(() => {
+        scroll(
+          animate(`#progress-bar-${step + 1}`, {
+            opacity: Array.from({ length: sliderItemsLength }, (_, i) =>
+              i > step ? 1 : 0
+            ),
+          }),
+          {
+            target: sliderContainer,
+          }
+        );
+      }, step * 500); // Delays each step by 500ms
+    }
   }, []);
 }

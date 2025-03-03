@@ -79,9 +79,9 @@ type Experience = {
   image: string;
   logos?: { url: string; title: string }[];
 } & (
-    | { type: "education"; description: string }
-    | { type: "job"; secteur: string; roles: string[]; skills: string }
-  );
+  | { type: "education"; description: string }
+  | { type: "job"; secteur: string; roles: string[]; skills: string }
+);
 export const experiences: Experience[] = [
   {
     id: "graduate",
@@ -107,7 +107,13 @@ export const experiences: Experience[] = [
       { title: "Sopra-steria", url: "/logos/company/sopra-steria.png" },
     ],
     secteur: "Aéronautique (Airbus, Safran)",
-    roles: ["Rencontrer les équipes métiers pour comprendre leurs objectifs", "Explorer les données sources (SAP, IBM, fichiers plats)", "Collecter et organiser les données pertinentes dans une base de données", "Automatiser les traitement et chargement des données", "Visualiser les données pour faciliter l’analyse et l’interprétation par les utilisateurs"],
+    roles: [
+      "Rencontrer les équipes métiers pour comprendre leurs objectifs",
+      "Explorer les données sources (SAP, IBM, fichiers plats)",
+      "Collecter et organiser les données pertinentes dans une base de données",
+      "Automatiser les traitement et chargement des données",
+      "Visualiser les données pour faciliter l’analyse et l’interprétation par les utilisateurs",
+    ],
     skills: "SAP, ETL, base de données, reporting",
   },
   {
@@ -117,7 +123,7 @@ export const experiences: Experience[] = [
     image: "/icons/power.svg",
     logos: [{ title: "Brassart", url: "/logos/company/brassart.png" }],
     description:
-      "J'ai perdu mon emploi à cause de la crise liée au COVID. Face à la situation difficile pour retrouver un travail dans un domaine non essentiel, j'ai choisi de prendre du temps pour réfléchir à mes envies et à mes besoins. C'est alors que j'ai naturellement décidé de me former au développement web (équivalent bac+3), dans le but d'acquérir des compétences techniques supplémentaires pour personnaliser les interfaces de visualisation des données. Finalement, cette expérience m'a tellement plu que j'ai décidé de poursuivre ma carrière dans le web !"
+      "J'ai perdu mon emploi à cause de la crise liée au COVID. Face à la situation difficile pour retrouver un travail dans un domaine non essentiel, j'ai choisi de prendre du temps pour réfléchir à mes envies et à mes besoins. C'est alors que j'ai naturellement décidé de me former au développement web (équivalent bac+3), dans le but d'acquérir des compétences techniques supplémentaires pour personnaliser les interfaces de visualisation des données. Finalement, cette expérience m'a tellement plu que j'ai décidé de poursuivre ma carrière dans le web !",
   },
   {
     id: "developerWeb",
@@ -129,7 +135,14 @@ export const experiences: Experience[] = [
       { title: "Forensoc", url: "/logos/company/forensoc.png" },
     ],
     secteur: "Environnement & Gestion forestière (ONF), cybersécurité",
-    roles: ["Gestion de base de données (SQL et NoSQL)", "Developement des fonctionnalités back-end et front-end", "Ajouter des routes API selon la méthode REST", "Réduction de la dette technique", "Revues de code", "Déploiements"],
+    roles: [
+      "Gestion de base de données (SQL et NoSQL)",
+      "Developement des fonctionnalités back-end et front-end",
+      "Ajouter des routes API selon la méthode REST",
+      "Réduction de la dette technique",
+      "Revues de code",
+      "Déploiements",
+    ],
     skills:
       "Front-end, back-end, base de données, devOps, agilité, dev mobile, webSocket",
   },
@@ -139,6 +152,6 @@ export const experiences: Experience[] = [
     title: "Construire demain",
     image: "/icons/build.svg",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosamtempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosamtempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosamtempora excepturi tenetur error. Itaque tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam. Lorem"
+      "Lorem ipsum dolor sit amet consectetur adipisicing elitsectetur adipisicing elitsectetur adipisicing elitsectetur adipisicing elitsectetur adipisicing elitsectetur adipisicing elitsectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosamtempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosamtempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosamtempora excepturi tenetur error. Itaque tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam. Lorem",
   },
 ];
