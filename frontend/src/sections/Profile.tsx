@@ -1,10 +1,11 @@
+import { Section } from "@/components/Section";
 import { Typography } from "@/components/ui/Typography";
 import { CURRENT_YEAR } from "@/constants";
 
 export function Profile() {
   const nbExp = CURRENT_YEAR - 2021;
   return (
-    <section id="profile">
+    <Section id="profile">
       <Typography type="h3" className="from-primary text-left">
         ✨ Qui suis-je ? ✨
       </Typography>
@@ -27,6 +28,6 @@ export function Profile() {
         <strong>projet structuré</strong> tout en évoluant et apprenant chaque
         jour.
       </Typography>
-    </section>
+    </Section>
   );
 }
