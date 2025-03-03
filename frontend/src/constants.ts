@@ -79,9 +79,9 @@ type Experience = {
   image: string;
   logos?: { url: string; title: string }[];
 } & (
-  | { type: "education"; description: string }
-  | { type: "job"; secteur: string; roles: string[]; skills: string }
-);
+    | { type: "education"; shortDescription: string; longDescription: string }
+    | { type: "job"; secteur: string; roles: { shortDescription: string[], longDescription: string[] }; skills: string }
+  );
 export const experiences: Experience[] = [
   {
     id: "graduate",
@@ -94,8 +94,9 @@ export const experiences: Experience[] = [
         title: "Université Toulouse 3 Paul Sabatier",
       },
     ],
-    description:
-      "Intéressée par les mathématiques et intriguée par l’informatique, j’ai choisi de faire un DUT en Statistiques et Traitement Informatique des Données à Niort (79) après mon bac S. Cette formation m’a tellement plu que j’ai voulu aller plus loin en poursuivant un master en Statistique et Informatique Décisionnelle à Toulouse, pour approfondir encore plus mon intérêt pour l'exploitation des données et leur valorisation à travers des outils concrets et adaptés.",
+    shortDescription: "Intéressée par les mathématiques et l’informatique, j’ai suivi un DUT en Statistiques et Traitement Informatique des Données à Niort (79), puis un master en Statistique et Informatique Décisionnelle à Toulouse pour approfondir mon expertise en valorisation des données.",
+    longDescription:
+      "Intéressée par les mathématiques et l’informatique, j’ai choisi de faire un DUT en Statistiques et Traitement Informatique des Données à Niort (79) après mon bac S. Cette formation m’a tellement plu que j’ai voulu aller plus loin en poursuivant un master en Statistique et Informatique Décisionnelle à Toulouse, pour approfondir encore plus mon intérêt pour l'exploitation des données et leur valorisation à travers des outils concrets et adaptés.",
   },
   {
     id: "dataAnalyst",
@@ -107,13 +108,20 @@ export const experiences: Experience[] = [
       { title: "Sopra-steria", url: "/logos/company/sopra-steria.png" },
     ],
     secteur: "Aéronautique (Airbus, Safran)",
-    roles: [
-      "Rencontrer les équipes métiers pour comprendre leurs objectifs",
-      "Explorer les données sources (SAP, IBM, fichiers plats)",
-      "Collecter et organiser les données pertinentes dans une base de données",
-      "Automatiser les traitement et chargement des données",
-      "Visualiser les données pour faciliter l’analyse et l’interprétation par les utilisateurs",
-    ],
+    roles: {
+      shortDescription: [
+        "Analyse des besoins métiers",
+        "Collecte et organisation des données",
+        "Automatisation des traitements et chargements",
+        "Création de visualisations pour faciliter l'interprétation"
+      ], longDescription: [
+        "Rencontrer les équipes métiers pour comprendre leurs besoins",
+        "Explorer les données sources (SAP, IBM, fichiers plats)",
+        "Collecter et organiser les données pertinentes dans une base de données",
+        "Automatiser les traitement et chargement des données",
+        "Création de visualisations des données pour faciliter l’analyse et l’interprétation par les utilisateurs",
+      ]
+    },
     skills: "SAP, ETL, base de données, reporting",
   },
   {
@@ -122,11 +130,12 @@ export const experiences: Experience[] = [
     title: "Transition Web",
     image: "/icons/power.svg",
     logos: [{ title: "Brassart", url: "/logos/company/brassart.png" }],
-    description:
-      "J'ai perdu mon emploi à cause de la crise liée au COVID. Face à la situation difficile pour retrouver un travail dans un domaine non essentiel, j'ai choisi de prendre du temps pour réfléchir à mes envies et à mes besoins. C'est alors que j'ai naturellement décidé de me former au développement web (équivalent bac+3), dans le but d'acquérir des compétences techniques supplémentaires pour personnaliser les interfaces de visualisation des données. Finalement, cette expérience m'a tellement plu que j'ai décidé de poursuivre ma carrière dans le web !",
+    shortDescription: "Suite à la suppression de mon poste en raison de la crise du COVID, j’ai saisi l’opportunité de me former au développement web (RNCP niveau 5) pour enrichir mes compétences en visualisation de données. L'univers du web et ses possibilités de création m'ont tellement plu que j'ai choisi de poursuivre dans cette voie.",
+    longDescription:
+      "Suite à la suppression de mon poste due à la crise du COVID et dans un contexte de marché de l'emploi complexe, j’ai pris le temps de réfléchir à mes aspirations professionnelles. C'est alors que j'ai naturellement décidé de me former au développement web (niveau 5 du RNCP), dans le but d'acquérir des compétences techniques supplémentaires pour personnaliser les interfaces de visualisation des données. L'univers du web et ses possibilités de création m'ont tellement plu que j’ai finalement choisi de m’orienter durablement dans cette voie.",
   },
   {
-    id: "developerWeb",
+    id: "developperWeb",
     type: "job",
     title: "Développeuse web",
     image: "/icons/coding.svg",
@@ -135,23 +144,34 @@ export const experiences: Experience[] = [
       { title: "Forensoc", url: "/logos/company/forensoc.png" },
     ],
     secteur: "Environnement & Gestion forestière (ONF), cybersécurité",
-    roles: [
-      "Gestion de base de données (SQL et NoSQL)",
-      "Developement des fonctionnalités back-end et front-end",
-      "Ajouter des routes API selon la méthode REST",
-      "Réduction de la dette technique",
-      "Revues de code",
-      "Déploiements",
-    ],
+    roles: {
+      shortDescription: [
+        "Gestion de bases de données",
+        "Développement full-stack",
+        "Création d’API REST",
+        "Correction de bugs",
+        "Déploiements",
+        "Participation aux évènements Agile"
+      ], longDescription: [
+        "Gestion de bases de données (SQL et NoSQL)",
+        "Developement des fonctionnalités back-end/front-end",
+        "Création d’API REST",
+        "Réduction de la dette technique",
+        "Revues de code",
+        "Déploiements",
+        "Analyse des problèmes et correction de bugs",
+        "Participation aux évènements Agile",
+      ]
+    },
     skills:
-      "Front-end, back-end, base de données, devOps, agilité, dev mobile, webSocket",
+      "Front-end, back-end, base de données, devOps, agilité,  webSocket",
   },
   {
     id: "tomorrow",
     type: "education",
     title: "Construire demain",
     image: "/icons/build.svg",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elitsectetur adipisicing elitsectetur adipisicing elitsectetur adipisicing elitsectetur adipisicing elitsectetur adipisicing elitsectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta, laborum illum iste placeat perferendis iure tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosamtempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosamtempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosamtempora excepturi tenetur error. Itaque tempora excepturi tenetur error. Itaque eum quae exercitationem corporis impedit facilis eaque nemo laboriosam. Lorem",
+    shortDescription: "Après une expérience en start-up, je recherche de nouveaux défis au sein d'une équipe dynamique et bienveillante, dans un projet structuré. Passionné par le développement back-end, front-end et les bases de données relationnelles, j'ai approfondi mes compétences avec des formations sur des outils tels que Tailwind, Next.js, Astro, Zustand, Zod, et Playwright, tout en travaillant sur des projets pour renforcer mes connaissances.",
+    longDescription: "Après une expérience enrichissante mais exigeante au sein d'une start-up, je suis à la recherche de nouveaux défis. Mon objectif est de contribuer à la création d'un produit de qualité au sein d'une équipe soudée, fun et bienveillante dans un projet structuré tout en évoluant et apprenant chaque jour. Passionné par le développement back-end, front-end, ainsi que par les bases de données relationnelles, j'ai profité de cette période pour développer mes compétences en suivant des formations sur des outils qui m'intéressent (Tailwind, Next.js, Astro, Zustand, Zod, Playwright, ...). Parallèlement, je réfléchis à des projets d'applications afin de consolider et approfondir mes connaissances."
   },
 ];

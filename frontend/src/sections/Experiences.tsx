@@ -55,7 +55,7 @@ export function Slider() {
           </div>
 
           {/* Détails Experience */}
-          <div className="flex items-center flex-col gap-4 flex-4">
+          <div className="flex items-center flex-col gap-4 lg:gap-10 flex-4">
             {experience.logos && experience.logos.length > 0 && (
               <div className="flex h-8 lg:h-10 justify-center items-center gap-4">
                 {experience.logos.map((logo) => (
@@ -75,10 +75,13 @@ export function Slider() {
 
             <div className="px-3 lg:px-6">
               {experience.type === "education" && (
-                <p>{experience.description}</p>
+                <>
+                  <p className="lg:hidden">{experience.shortDescription}</p>
+                  <p className="max-lg:hidden">{experience.longDescription}</p>
+                </>
               )}
               {experience.type === "job" && (
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3 lg:gap-6">
                   <div>
                     <Typography type="lead">Secteurs d'activité:</Typography>
                     <span>{experience.secteur}</span>
@@ -87,8 +90,18 @@ export function Slider() {
                   <div>
                     <Typography type="lead">Rôles:</Typography>
 
-                    <div className="list-disc list-inside">
-                      {experience.roles.map((role, index) => (
+                    <div className="list-disc list-inside max-lg:hidden">
+                      {experience.roles.longDescription.map((role, index) => (
+                        <span
+                          key={index}
+                          className="block ml-2 lg:ml-4 before:content-['•'] before:mr-2 text-"
+                        >
+                          {role}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="list-disc list-inside lg:hidden">
+                      {experience.roles.shortDescription.map((role, index) => (
                         <span
                           key={index}
                           className="block ml-2 lg:ml-4 before:content-['•'] before:mr-2 text-"

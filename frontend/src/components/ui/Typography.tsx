@@ -13,7 +13,7 @@ const typographyVariants = cva("selection:bg-red-500/70 selection:text-light", {
       default: "",
       quote: "mt-6 border-l-2 pl-6 italic",
       code: "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",
-      lead: "font-semibold inline-block mr-2 text-muted-foreground",
+      lead: "font-bold text-lg inline-block mr-2 text-muted-foreground",
       large: "text-lg font-semibold",
       small: "text-md font-light leading-none",
       muted: "text-sm text-muted-foreground",

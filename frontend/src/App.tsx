@@ -16,7 +16,7 @@ export default function App() {
       <ToastContainer />
       <Header />
       <ToolBar />
-      <main className="bg-background text-foreground max-lg:text-sm">
+      <main className="bg-background text-foreground">
         <ErrorBoundary fallback={<Error />}>
           <Container>
             <Profile />
