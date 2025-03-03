@@ -14,6 +14,7 @@ export function Experiences() {
       </Typography>
       <div id="slider-container" className="h-[200vh] relative lg:pt-18">
         <div className="sticky top-20 overflow-hidden h-[calc(100vh_-_80px)]">
+          <div className="h-full lg:h-1/12 w-3 lg:w-full absolute z-1 backdrop-blur-[1px] right-0 lg:bottom-0" />
           {/* title (only visible on lg) : 112px */}
           <div className="flex flex-col justify-center items-center h-28 max-lg:hidden">
             <Typography type="h3" className="pb-0 lg:pt-0">
