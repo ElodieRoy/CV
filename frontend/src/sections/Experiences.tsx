@@ -42,34 +42,38 @@ export function Slider() {
       {experiences.map((experience) => (
         <li
           key={experience.id}
-          className="p-2 w-full h-full flex-none img-container flex max-lg:flex-col items-center gap-14 lg:gap-0 lg:p-30"
+          className="w-full h-full flex-none img-container flex max-lg:flex-col items-center gap-14 lg:gap-0 lg:p-30"
         >
           {/* Title & icon */}
           <div className="flex items-center flex-col gap-4 lg:w-76 lg:mr-21 ">
-            <img src={experience.image} alt={experience.id} className="h-20" />
+            <img
+              src={experience.image}
+              alt={experience.id}
+              className="h-14 lg:h-20"
+            />
             <Typography type="h4">{experience.title}</Typography>
           </div>
 
           {/* Détails Experience */}
           <div className="flex items-center flex-col gap-4 flex-4">
             {experience.logos && experience.logos.length > 0 && (
-              <div className="flex h-10 justify-center items-center gap-4">
+              <div className="flex h-8 lg:h-10 justify-center items-center gap-4">
                 {experience.logos.map((logo) => (
                   <div
                     key={logo.title}
-                    className="h-full w-20 bg-light py-1 px-2 rounded-lg shadow-md flex items-center justify-center"
+                    className="h-full w-14 lg:w-20 bg-light p-1 lg:p-2 rounded-lg shadow-md flex items-center justify-center"
                   >
                     <img
                       src={logo.url}
                       alt={logo.title}
-                      className="max-w-full  object-contain"
+                      className="max-w-full object-contain"
                     />
                   </div>
                 ))}
               </div>
             )}
 
-            <div className="px-6">
+            <div className="px-3 lg:px-6">
               {experience.type === "education" && (
                 <p>{experience.description}</p>
               )}
@@ -87,7 +91,7 @@ export function Slider() {
                       {experience.roles.map((role, index) => (
                         <span
                           key={index}
-                          className="block ml-2 lg:ml-4 before:content-['•'] before:mr-2"
+                          className="block ml-2 lg:ml-4 before:content-['•'] before:mr-2 text-"
                         >
                           {role}
                         </span>
