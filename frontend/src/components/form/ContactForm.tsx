@@ -65,6 +65,7 @@ export function ContactForm() {
         error={errors.message}
         disabled={isSubmitting}
       />
+
       <Button type="submit" className="w-full" isLoading={isSubmitting}>
         Envoyer
       </Button>
