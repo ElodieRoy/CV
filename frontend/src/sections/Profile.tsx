@@ -16,7 +16,7 @@ export function Profile() {
         performantes et pensées pour l'utilisateur, n'hésitant pas à explorer et
         tester les outils les plus adaptés pour y parvenir.
       </Typography>
-      <Typography type="p">
+      {/* <Typography type="p">
         Issue d’une reconversion après 9 ans dans l’informatique décisionnelle,
         j’ai développé une approche centrée sur le produit et l’utilisateur,
         enrichie d'une <strong>rigueur technique</strong> et expertise en{" "}
@@ -27,7 +27,7 @@ export function Profile() {
         d'une <strong>équipe soudée et bienveillante</strong> dans un{" "}
         <strong>projet structuré</strong> tout en évoluant et apprenant chaque
         jour.
-      </Typography>
+      </Typography> */}
     </Section>
   );
 }
