@@ -8,7 +8,7 @@ export function VerticalProgressBar({
     <div className={className}>
       <div
         id="vertical-progress-bar"
-        className="relative w-full h-full bg-foreground2"
+        className="relative w-full h-full bg-light2"
       >
         <BulletPrimary id="progress-bar-start" />
         {/* 2011 */}
@@ -50,7 +50,7 @@ function BulletForeground({
   className,
   ...props
 }: ComponentPropsWithoutRef<"span">) {
-  return <Bullet {...props} className={cn("bg-foreground2 z-1", className)} />;
+  return <Bullet {...props} className={cn("bg-light2 z-1", className)} />;
 }
 
 function BulletPrimary({

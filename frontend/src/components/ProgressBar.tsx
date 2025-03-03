@@ -4,7 +4,7 @@ import { ComponentPropsWithoutRef } from "react";
 export function ProgressBar({ className }: ComponentPropsWithoutRef<"div">) {
   return (
     <div className={className}>
-      <div id="progress-bar" className="relative h-1 bg-foreground2">
+      <div id="progress-bar" className="relative h-1 bg-light2">
         <BulletPrimary id="progress-bar-start" />
         {/* 2011 */}
         <BulletForeground style={{ left: `${getPercentFrom2006(2011)}%` }} />
@@ -44,9 +44,7 @@ export function ProgressBar({ className }: ComponentPropsWithoutRef<"div">) {
     className,
     ...props
   }: ComponentPropsWithoutRef<"span">) {
-    return (
-      <Bullet {...props} className={cn("bg-foreground2 z-1", className)} />
-    );
+    return <Bullet {...props} className={cn("bg-light2 z-1", className)} />;
   }
 
   function BulletPrimary({
