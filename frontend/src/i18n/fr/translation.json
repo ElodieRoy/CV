@@ -1,8 +1,8 @@
 {
   "menu": {
     "profile": "Profil",
-    "skills": "Compétences",
-    "experiences": "Expériences",
+    "skills": "Mes compétences",
+    "experiences": "Mon parcours",
     "contact": "Contact"
   },
   "home": {

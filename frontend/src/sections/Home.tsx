@@ -4,7 +4,7 @@ import { Typography } from "@/components/ui/Typography";
 import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import MapPinIcon from "@heroicons/react/24/outline/MapPinIcon";
 import { useTranslation } from "react-i18next";
-import bgImage from "src/assets/bg1.webp";
+import bgImage from "src/assets/bg.webp";
 
 export function Home() {
   const { t } = useTranslation();

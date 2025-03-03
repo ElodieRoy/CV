@@ -81,7 +81,7 @@ export function LinkedinButton({
         target="_blank"
         rel="noreferrer"
       >
-        <img src="/icons/linkedin-plain.svg" />
+        <img src="/logos/social/linkedin-plain.svg" />
       </a>
     </IconButtons>
   );
@@ -93,7 +93,7 @@ export function GithubButton({
   return (
     <IconButtons className={className}>
       <a href={"https://github.com/ElodieRoy"} target="_blank" rel="noreferrer">
-        <img src="/icons/github-light.svg" />
+        <img src="/logos/social/github-light.svg" />
       </a>
     </IconButtons>
   );

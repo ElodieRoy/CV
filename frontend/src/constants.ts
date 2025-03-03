@@ -4,54 +4,57 @@ export const techStack = [
   {
     category: "Frontend",
     tools: [
-      { name: "TypeScript", logo: "/icons/typescript-original.svg" },
-      { name: "React", logo: "/icons/react-original.svg" },
-      { name: "Astro", logo: "/icons/astro-original.svg" },
-      { name: "Vite", logo: "/icons/vitejs-original.svg" },
-      { name: "HTML", logo: "/icons/html5-original.svg" },
-      { name: "Redux", logo: "/icons/redux-original.svg" },
-      { name: "TailwindCss", logo: "/icons/tailwindcss-original.svg" },
-      { name: "CSS", logo: "/icons/css3-original.svg" },
-      { name: "Material UI", logo: "/icons/materialui-original.svg" },
-      { name: "Shadcn UI", logo: "/icons/shadcnui.svg" },
+      { name: "TypeScript", logo: "/logos/skills/typescript-original.svg" },
+      { name: "React", logo: "/logos/skills/react-original.svg" },
+      { name: "Astro", logo: "/logos/skills/astro-original.svg" },
+      { name: "Vite", logo: "/logos/skills/vitejs-original.svg" },
+      { name: "HTML", logo: "/logos/skills/html5-original.svg" },
+      { name: "Redux", logo: "/logos/skills/redux-original.svg" },
+      { name: "TailwindCss", logo: "/logos/skills/tailwindcss-original.svg" },
+      { name: "CSS", logo: "/logos/skills/css3-original.svg" },
+      { name: "Material UI", logo: "/logos/skills/materialui-original.svg" },
+      { name: "Shadcn UI", logo: "/logos/skills/shadcnui.svg" },
     ],
   },
   {
     category: "Backend",
     tools: [
-      { name: "JAVA", logo: "/icons/java-original.svg" },
-      { name: "Spring", logo: "/icons/spring-original.svg" },
-      { name: "Hibernate", logo: "/icons/hibernate-original.svg" },
-      { name: "Node.js", logo: "/icons/nodejs-original.svg" },
-      { name: "Express", logo: "/icons/express-original.svg" },
-      { name: "Swagger", logo: "/icons/swagger-original.svg" },
-      { name: "REST", logo: "/icons/apirest.svg" },
-      { name: "PostgreSQL", logo: "/icons/postgresql-original.svg" },
-      { name: "MySQL", logo: "/icons/mysql-original.svg" },
-      { name: "ElasticSearch", logo: "/icons/elasticsearch-original.svg" },
+      { name: "JAVA", logo: "/logos/skills/java-original.svg" },
+      { name: "Spring", logo: "/logos/skills/spring-original.svg" },
+      { name: "Hibernate", logo: "/logos/skills/hibernate-original.svg" },
+      { name: "Node.js", logo: "/logos/skills/nodejs-original.svg" },
+      { name: "Express", logo: "/logos/skills/express-original.svg" },
+      { name: "Swagger", logo: "/logos/skills/swagger-original.svg" },
+      { name: "REST", logo: "/logos/skills/apirest.svg" },
+      { name: "PostgreSQL", logo: "/logos/skills/postgresql-original.svg" },
+      { name: "MySQL", logo: "/logos/skills/mysql-original.svg" },
+      {
+        name: "ElasticSearch",
+        logo: "/logos/skills/elasticsearch-original.svg",
+      },
     ],
   },
   {
     category: "Devops & CI",
     tools: [
-      { name: "Git", logo: "/icons/git-original.svg" },
-      { name: "Docker", logo: "/icons/docker-original.svg" },
-      { name: "GitLab CI", logo: "/icons/gitlab-original.svg" },
-      { name: "GitHub", logo: "/icons/github-original.svg" },
-      { name: "PlayWright", logo: "/icons/playwright-original.svg" },
-      { name: "Jest", logo: "/icons/jest-original.svg" },
+      { name: "Git", logo: "/logos/skills/git-original.svg" },
+      { name: "Docker", logo: "/logos/skills/docker-original.svg" },
+      { name: "GitLab CI", logo: "/logos/skills/gitlab-original.svg" },
+      { name: "GitHub", logo: "/logos/skills/github-original.svg" },
+      { name: "PlayWright", logo: "/logos/skills/playwright-original.svg" },
+      { name: "Jest", logo: "/logos/skills/jest-original.svg" },
     ],
   },
   {
     category: "Autres outils",
     tools: [
-      { name: "VS Code", logo: "/icons/vscode-original.svg" },
-      { name: "Linux", logo: "/icons/linux-original.svg" },
-      { name: "Jira", logo: "/icons/jira-original.svg" },
-      { name: "SAP", logo: "/icons/sap.svg" },
-      { name: "Kibana", logo: "/icons/kibana-original.svg" },
-      { name: "Notion", logo: "/icons/notion-original.svg" },
-      { name: "XD", logo: "/icons/xd-original.svg" },
+      { name: "VS Code", logo: "/logos/skills/vscode-original.svg" },
+      { name: "Linux", logo: "/logos/skills/linux-original.svg" },
+      { name: "Jira", logo: "/logos/skills/jira-original.svg" },
+      { name: "SAP", logo: "/logos/skills/sap.svg" },
+      { name: "Kibana", logo: "/logos/skills/kibana-original.svg" },
+      { name: "Notion", logo: "/logos/skills/notion-original.svg" },
+      { name: "XD", logo: "/logos/skills/xd-original.svg" },
     ],
   },
 ];
@@ -70,3 +73,115 @@ export const confettiParams = {
   ],
   origin: { y: 0.8 },
 };
+type Experience = {
+  id: string;
+  title: string;
+  image: string;
+  logos?: { url: string; title: string }[];
+} & (
+  | { type: "education"; shortDescription: string; longDescription: string }
+  | {
+      type: "job";
+      secteur: string;
+      roles: { shortDescription: string[]; longDescription: string[] };
+      skills: string;
+    }
+);
+export const experiences: Experience[] = [
+  {
+    id: "graduate",
+    type: "education",
+    title: "Diplômée Bac+5",
+    image: "/icons/graduate.svg",
+    logos: [
+      {
+        url: "/logos/company/universite.png",
+        title: "Université Toulouse 3 Paul Sabatier",
+      },
+    ],
+    shortDescription:
+      "Intéressée par les mathématiques et l’informatique, j’ai suivi un DUT en Statistiques et Traitement Informatique des Données à Niort (79), puis un master en Statistique et Informatique Décisionnelle à Toulouse pour approfondir mon expertise en valorisation des données.",
+    longDescription:
+      "Intéressée par les mathématiques et l’informatique, j’ai choisi de faire un DUT en Statistiques et Traitement Informatique des Données à Niort (79) après mon bac S. Cette formation m’a tellement plu que j’ai voulu aller plus loin en poursuivant un master en Statistique et Informatique Décisionnelle à Toulouse, pour approfondir encore plus mon intérêt pour l'exploitation des données et leur valorisation à travers des outils concrets et adaptés.",
+  },
+  {
+    id: "dataAnalyst",
+    type: "job",
+    title: "Data Analyst",
+    image: "/icons/data.svg",
+    logos: [
+      { title: "Akka", url: "/logos/company/akka.png" },
+      { title: "Sopra-steria", url: "/logos/company/sopra-steria.png" },
+    ],
+    secteur: "Aéronautique (Airbus, Safran)",
+    roles: {
+      shortDescription: [
+        "Analyse des besoins métiers",
+        "Collecte et organisation des données",
+        "Automatisation des traitements et chargements",
+        "Création de visualisations pour faciliter l'interprétation",
+      ],
+      longDescription: [
+        "Rencontrer les équipes métiers pour comprendre leurs besoins",
+        "Explorer les données sources (SAP, IBM, fichiers plats)",
+        "Collecter et organiser les données pertinentes dans une base de données",
+        "Automatiser les traitement et chargement des données",
+        "Création de visualisations des données pour faciliter l’analyse et l’interprétation par les utilisateurs",
+      ],
+    },
+    skills: "SAP, ETL, base de données, reporting",
+  },
+  {
+    id: "transitionWeb",
+    type: "education",
+    title: "Transition Web",
+    image: "/icons/power.svg",
+    logos: [{ title: "Brassart", url: "/logos/company/brassart.png" }],
+    shortDescription:
+      "Suite à la suppression de mon poste en raison de la crise du COVID, j’ai saisi l’opportunité de me former au développement web (RNCP niveau 5) pour enrichir mes compétences en visualisation de données. L'univers du web et ses possibilités de création m'ont tellement plu que j'ai choisi de poursuivre dans cette voie.",
+    longDescription:
+      "Suite à la suppression de mon poste due à la crise du COVID et dans un contexte de marché de l'emploi complexe, j’ai pris le temps de réfléchir à mes aspirations professionnelles. C'est alors que j'ai naturellement décidé de me former au développement web (niveau 5 du RNCP), dans le but d'acquérir des compétences techniques supplémentaires pour personnaliser les interfaces de visualisation des données. L'univers du web et ses possibilités de création m'ont tellement plu que j’ai finalement choisi de m’orienter durablement dans cette voie.",
+  },
+  {
+    id: "developperWeb",
+    type: "job",
+    title: "Développeuse web",
+    image: "/icons/coding.svg",
+    logos: [
+      { title: "Magellium", url: "/logos/company/magellium.png" },
+      { title: "Forensoc", url: "/logos/company/forensoc.png" },
+    ],
+    secteur: "Environnement & Gestion forestière (ONF), cybersécurité",
+    roles: {
+      shortDescription: [
+        "Gestion de bases de données",
+        "Développement full-stack",
+        "Création d’API REST",
+        "Correction de bugs",
+        "Déploiements",
+        "Participation aux évènements Agile",
+      ],
+      longDescription: [
+        "Gestion de bases de données (SQL et NoSQL)",
+        "Developement des fonctionnalités back-end/front-end",
+        "Création d’API REST",
+        "Réduction de la dette technique",
+        "Revues de code",
+        "Déploiements",
+        "Analyse des problèmes et correction de bugs",
+        "Participation aux évènements Agile",
+      ],
+    },
+    skills: "Front-end, back-end, base de données, devOps, agilité,  webSocket",
+  },
+  {
+    id: "tomorrow",
+    type: "education",
+    title: "Construire demain",
+    image: "/icons/build.svg",
+    shortDescription:
+      "Après une expérience en start-up, je recherche de nouveaux défis au sein d'une équipe dynamique et bienveillante, dans un projet structuré. Passionné par le développement back-end, front-end et les bases de données relationnelles, j'ai approfondi mes compétences avec des formations sur des outils tels que Tailwind, Next.js, Astro, Zustand, Zod, et Playwright, tout en travaillant sur des projets pour renforcer mes connaissances.",
+    longDescription:
+      "Après une expérience enrichissante au sein d'une start-up, je suis à la recherche de nouveaux défis. Mon objectif est de contribuer à la création d'un produit de qualité au sein d'une équipe soudée, fun et bienveillante dans un projet structuré tout en évoluant et apprenant chaque jour. Passionné par le développement back-end, front-end, ainsi que par les bases de données relationnelles, j'ai profité de cette période pour développer mes compétences en suivant des formations sur des outils qui m'intéressent (Tailwind, Next.js, Astro, Zustand, Zod, Playwright, ...). Parallèlement, je réfléchis à des projets d'applications afin de consolider et approfondir mes connaissances.",
+  },
+];

@@ -1,12 +1,13 @@
 import { InViewWrapper } from "@/components/InViewWrapper";
+import { Section } from "@/components/Section";
 import { Card } from "@/components/ui/card";
 import { Typography } from "@/components/ui/Typography";
 import { techStack } from "@/constants";
 
 export function Skills() {
   return (
-    <section id="skills">
-      <Typography type="h3">Compétences</Typography>
+    <Section id="skills">
+      <Typography type="h3">Mes compétences</Typography>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-8">
         {techStack.map((category) => (
           <InViewWrapper key={category.category}>
@@ -28,6 +29,6 @@ export function Skills() {
           </InViewWrapper>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }
