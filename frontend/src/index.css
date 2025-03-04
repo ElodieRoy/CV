@@ -79,6 +79,14 @@ button {
   cursor: pointer;
 }
 
+.bg-nav {
+  /* background-color: transparent; */
+  background-image: radial-gradient(transparent 1px, var(--background) 1px);
+  background-size: 4px 4px;
+  backdrop-filter: blur(3px);
+  mask: linear-gradient(rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
 /*** Animations ***/
 @keyframes blur-in-bottom {
   0% {

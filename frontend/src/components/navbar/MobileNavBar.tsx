@@ -25,26 +25,29 @@ export function MobileNavBar() {
         />
       )}
       <span
-        className={cn("lg:hidden font-bold text-2xl opacity-0 transition-all", {
-          "opacity-100 delay-400": isScrolled,
-        })}
+        className={cn(
+          "lg:hidden font-bold text-2xl opacity-0 transition-all duration-500",
+          {
+            "opacity-100": isScrolled,
+          }
+        )}
       >
         Elodie ROY
       </span>
       <div className="lg:hidden ml-auto flex gap-4 items-center">
         <ThemeButton
-          className={cn("size-0 lg:hidden", {
-            "size-6 delay-300": isScrolled,
+          className={cn("size-0 lg:hidden text-foreground2", {
+            "size-6": isScrolled,
           })}
         />
         <LanguageButton
-          className={cn("lg:hidden size-0", {
-            "size-6 delay-300": isScrolled,
+          className={cn("lg:hidden size-0 text-foreground2", {
+            "size-6": isScrolled,
           })}
         />
         <DownloadButton
-          className={cn("lg:hidden size-0", {
-            "size-6 delay-300": isScrolled,
+          className={cn("lg:hidden size-0 text-foreground2", {
+            "size-6": isScrolled,
           })}
         />
         <button
@@ -55,8 +58,8 @@ export function MobileNavBar() {
             className={cn(
               "absolute right-0 top-0 size-full scale-0 transition-all duration-500 rotate-0",
               {
-                "scale-100 rotate-90": isMenuOpen,
-              },
+                "scale-100 rotate-90 text-light": isMenuOpen,
+              }
             )}
           />
           <Bars3Icon
@@ -64,15 +67,15 @@ export function MobileNavBar() {
               "absolute right-0 top-0 size-full scale-100 transition-all duration-500",
               {
                 "scale-0": isMenuOpen,
-              },
+              }
             )}
           />
         </button>
       </div>
       <div
         className={cn(
-          "lg:hidden fixed z-2 top-0 right-0 w-4/5 md:w-2/5 sm:w-3/5 bg-primary h-screen translate-x-full transition-all duration-500 py-22 flex flex-col justify-between pl-20 text-[0px] font-normal",
-          { "translate-x-0 text-2xl": isMenuOpen },
+          "lg:hidden fixed z-2 top-0 right-0 w-4/5 md:w-2/5 sm:w-3/5 bg-primary h-screen translate-x-full transition-all duration-500 py-22 flex flex-col justify-between pl-20 text-[0px] font-normal text-light",
+          { "translate-x-0 text-2xl": isMenuOpen }
         )}
       >
         <NavBarContent onItemClick={() => setIsMenuOpen(false)} />

@@ -26,12 +26,12 @@ export function ThemeButton({ className }: ComponentPropsWithoutRef<"button">) {
   return (
     <IconButtons onClick={toggleDarkMode} className={className}>
       <MoonIcon
-        className="absolute top-0 scale-100 rotate-0 dark:scale-0 dark:rotate-180 transition-all size-full"
+        className="absolute top-0 scale-100 rotate-0 dark:scale-0 dark:rotate-180 size-full"
         onClick={() => (localStorage.currentTheme = "dark")}
         title={t("lightMode")}
       />
       <SunIcon
-        className="absolute top-0 scale-0 rotate-0 dark:scale-100 dark:rotate-180 transition-all size-full"
+        className="absolute top-0 scale-0 rotate-0 dark:scale-100 dark:rotate-180 size-full"
         onClick={() => (localStorage.currentTheme = "light")}
         title={t("DarkMode")}
       />
