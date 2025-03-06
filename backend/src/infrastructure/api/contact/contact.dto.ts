@@ -19,4 +19,3 @@ export type ContactInputDTO = {
   email: string;
   message: string;
 };
-

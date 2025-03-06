@@ -21,7 +21,7 @@ export function NavBarContent({ onItemClick }: NavBarContentProps) {
           <span
             className={cn(
               "absolute left-0 -bottom-1 w-0 h-1 lg:h-0.5 rounded-md bg-light transition-all duration-300 group-hover:w-full",
-              { "bg-foreground2": isScrolled }
+              { "bg-foreground2": isScrolled },
             )}
           />
         </li>

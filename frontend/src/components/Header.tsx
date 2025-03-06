@@ -14,7 +14,7 @@ export function Header() {
           "h-20 lg:h-18 fixed -top-full w-full z-1 bg-nav transition-[top] duration-500",
           {
             "top-0": isScrolled,
-          }
+          },
         )}
       />
       <Container
@@ -22,7 +22,7 @@ export function Header() {
           "fixed left-0 right-0 text-light h-16 lg:h-14 px-4 z-1 flex items-center lg:max-w-6xl pt-0 lg:pt-0 gap-2 lg:transition-[color] lg:duration-500",
           {
             "text-foreground2": isScrolled,
-          }
+          },
         )}
       >
         <DesktopNavBar />

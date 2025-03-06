@@ -1,14 +1,13 @@
-import { Request, Response, Router } from "express";
-import fs from "fs";
-import path from "path";
+import { Request, Response, Router } from 'express';
+import fs from 'fs';
+import path from 'path';
 
 // Fixme: get download using TSOA
 const router = Router();
 
 router.get('/', (_req: Request, res: Response) => {
-  const cvName = "CV_Elodie_ROY_Developpeuse_web.pdf"
+  const cvName = 'CV_Elodie_ROY_Developpeuse_web.pdf';
   const cvPath = path.join(__dirname, `../../../../documents/${cvName}`);
-
 
   // Check if file exists
   if (!fs.existsSync(cvPath)) {
@@ -32,7 +31,6 @@ export default router;
 
 // @Route('download')
 // export class DownloadController extends Controller {
-
 
 //   constructor() {
 //     super();

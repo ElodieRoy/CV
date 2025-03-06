@@ -14,12 +14,11 @@ function downloadBlob(blob: Blob, fileName: string) {
 export async function handleDownload() {
   try {
     const response = await axios.get("/api/download", {
-      responseType: 'blob',
+      responseType: "blob",
     });
 
-    const blob = new Blob([response.data], { type: 'application/pdf' });
-    downloadBlob(blob, 'CV_Elodie_ROY_Developpeuse_web');
-
+    const blob = new Blob([response.data], { type: "application/pdf" });
+    downloadBlob(blob, "CV_Elodie_ROY_Developpeuse_web");
   } catch (error) {
     toastAxiosError(error);
   }
