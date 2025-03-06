@@ -1,6 +1,7 @@
 import photo from "@/assets/Elodie_ROY_photo_342.jpg";
 import { Button } from "@/components/ui/Button";
 import { Typography } from "@/components/ui/Typography";
+import { useDownload } from "@/hooks/useDownload";
 import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import MapPinIcon from "@heroicons/react/24/outline/MapPinIcon";
 import { useTranslation } from "react-i18next";
@@ -8,6 +9,8 @@ import bgImage from "src/assets/bg.webp";
 
 export function Home() {
   const { t } = useTranslation();
+  const { download } = useDownload();
+
   return (
     <section
       className="bg-linear-to-r/shorter lg:bg-linear-to-r/hsl from-red-500/70 lg:from-pink-500/70 lg:via-red-500/70 to-amber-500/70 text-light h-full"
@@ -40,7 +43,10 @@ export function Home() {
           <MapPinIcon className="size-4" />
           <Typography type="small">{t("home.location")}</Typography>
         </div>
-        <Button className="backdrop-blur-lg border-light text-xs opacity-0 animate-slide-in-top animation-delay-1500 duration-500 hover:bg-light transition-all hover:text-black/70">
+        <Button
+          className="backdrop-blur-lg border-light text-xs opacity-0 animate-slide-in-top animation-delay-1500 duration-500 hover:bg-light transition-all hover:text-black/70"
+          onClick={download}
+        >
           {t("home.download")}
         </Button>
       </div>

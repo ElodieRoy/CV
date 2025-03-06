@@ -8,7 +8,7 @@ import {
   Tags,
 } from 'tsoa';
 import { InvalidInputError } from '../error-handler';
-import { ContactInputDTO } from './contact.dto';
+import { ContactInputDTO, contactInputDTO } from './contact.dto';
 import { sentEmail } from './contact.service';
 
 @Route('contact')
@@ -22,11 +22,11 @@ export class ContactController extends Controller {
    */
   @Post()
   @Tags('Contact')
-  @SuccessResponse('200', 'Email sent')
-  @Response('400', 'Invalid input')
-  @Response('500', 'Internal server error')
+  @SuccessResponse(200, 'Email sent')
+  @Response(400, 'Invalid input')
+  @Response(500, 'Internal server error')
   async sendEmail(@Body() requestBody: ContactInputDTO): Promise<void> {
-    const result = ContactInputDTO.safeParse(requestBody);
+    const result = contactInputDTO.safeParse(requestBody);
 
     if (!result.success) {
       const zodErrorMessage = result.error.errors[0].message;

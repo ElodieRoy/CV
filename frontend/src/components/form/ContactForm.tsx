@@ -1,12 +1,9 @@
 import { ContactData, contactSchema } from "@/components/form/types";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
-import { confettiParams } from "@/constants";
+import { handleSentMessage } from "@/services/sentMessage";
 import { zodResolver } from "@hookform/resolvers/zod";
-import axios from "axios";
-import confetti from "canvas-confetti";
 import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
 
 export function ContactForm() {
   const {
@@ -19,19 +16,7 @@ export function ContactForm() {
   });
 
   const onSubmit = async (data: ContactData) => {
-    try {
-      await axios.post("/api/contact", data);
-      confetti(confettiParams)?.catch((e) => console.error(e));
-      reset();
-    } catch (error) {
-      const errorMessage =
-        axios.isAxiosError(error) && error.response?.data?.error
-          ? error.response.data.error
-          : "Une erreur inconnue est survenue";
-
-      toast.error(errorMessage);
-      console.error(error);
-    }
+    await handleSentMessage(data).then(() => reset());
   };
 
   return (
