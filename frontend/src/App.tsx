@@ -19,7 +19,7 @@ export default function App() {
       <main className="bg-background text-foreground">
         <ErrorBoundary fallback={<Error />}>
           <Container>
-            <Profile />
+            <Profile className="max-lg:pt-12 lg:hidden" />
             <Skills />
             <Experiences />
             <Contact />
