@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const ContactInputDTO = z.object({
+export const contactInputDTO = z.object({
   name: z
     .string()
     .min(1, 'Le nom doit contenir au moins 1 caractère')
@@ -12,4 +12,11 @@ export const ContactInputDTO = z.object({
     .max(3000, 'Le message ne doit pas dépasser 3000 caractères.'),
 });
 
-export type ContactInputDTO = ReturnType<typeof ContactInputDTO.parse>;
+// export type ContactInputDTO = z.infer<typeof contactInputDTO>;
+// Fixme: with tsoa version infer from zod not working : https://github.com/lukeautry/tsoa/issues/1256
+export type ContactInputDTO = {
+  name: string;
+  email: string;
+  message: string;
+};
+

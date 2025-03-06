@@ -1,4 +1,5 @@
 {
+	"openapi": "3.0.0",
 	"components": {
 		"examples": {},
 		"headers": {},
@@ -6,7 +7,7 @@
 		"requestBodies": {},
 		"responses": {},
 		"schemas": {
-			"ReturnType_typeofContactInputDTO.parse_": {
+			"ContactInputDTO": {
 				"properties": {
 					"message": {
 						"type": "string"
@@ -18,11 +19,12 @@
 						"type": "string"
 					}
 				},
-				"type": "object",
-				"description": "Obtain the return type of a function type"
-			},
-			"ContactInputDTO": {
-				"$ref": "#/components/schemas/ReturnType_typeofContactInputDTO.parse_"
+				"required": [
+					"message",
+					"email",
+					"name"
+				],
+				"type": "object"
 			}
 		},
 		"securitySchemes": {}
@@ -38,7 +40,6 @@
 			"name": "Elodie ROY"
 		}
 	},
-	"openapi": "3.0.0",
 	"paths": {
 		"/contact": {
 			"post": {
@@ -70,25 +71,6 @@
 						}
 					}
 				}
-			}
-		},
-		"/download": {
-			"get": {
-				"operationId": "GetCV",
-				"responses": {
-					"200": {
-						"description": "CV downloaded"
-					},
-					"500": {
-						"description": "Internal server error"
-					}
-				},
-				"summary": ": Get pdf cv",
-				"tags": [
-					"Download"
-				],
-				"security": [],
-				"parameters": []
 			}
 		}
 	},

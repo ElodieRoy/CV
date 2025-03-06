@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
 
-export class InvalidInputError extends Error {}
-export class NotFoundError extends Error {}
-export class ConflictError extends Error {}
+export class InvalidInputError extends Error { }
+export class NotFoundError extends Error { }
+export class ConflictError extends Error { }
 
 export const errorHandler = (
   error: unknown,
