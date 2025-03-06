@@ -1,4 +1,5 @@
 import { useDarkTheme } from "@/hooks/useDarkTheme";
+import { useDownload } from "@/hooks/useDownload";
 import { cn } from "@/lib/utils";
 import { EnvelopeIcon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { ArrowDownTrayIcon, LanguageIcon } from "@heroicons/react/24/solid";
@@ -54,8 +55,14 @@ export function DownloadButton({
   className,
 }: ComponentPropsWithoutRef<"button">) {
   const { t } = useTranslation();
+  const { download } = useDownload();
+
   return (
-    <IconButtons title={t("home.download")} className={className}>
+    <IconButtons
+      title={t("home.download")}
+      className={className}
+      onClick={download}
+    >
       <ArrowDownTrayIcon />
     </IconButtons>
   );

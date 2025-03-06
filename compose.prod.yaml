@@ -21,6 +21,8 @@ services:
     build:
       context: backend
       dockerfile: docker/Dockerfile-prod
+    volumes:
+      - ./documents:/usr/src/app/documents
     networks:
       - my-network
     restart: always
