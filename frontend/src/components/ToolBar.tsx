@@ -2,7 +2,6 @@ import {
   ContactButton,
   DownloadButton,
   GithubButton,
-  LanguageButton,
   LinkedinButton,
   ThemeButton,
 } from "@/components/ui/IconButtons";
@@ -17,11 +16,11 @@ export function ToolBar() {
         "max-lg:hidden bg-primary fixed right-0 top-1/4 rounded-l-2xl transition-all flex p-3 w-fit flex-col gap-5 translate-x-full z-10",
         {
           "translate-x-0": isScrolled,
-        },
+        }
       )}
     >
       <ThemeButton />
-      <LanguageButton />
+      {/* <LanguageButton /> */}
       <DownloadButton />
       <ContactButton />
       <LinkedinButton />
