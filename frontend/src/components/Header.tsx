@@ -8,7 +8,8 @@ import { Home } from "@/sections/Home";
 export function Header() {
   const { isScrolled } = useIsScrolled();
   return (
-    <header className="h-full 3xl:h-2/3">
+    // <header className="h-full 3xl:h-2/3">
+    <header className="h-full">
       <div
         className={cn(
           "h-20 lg:h-18 fixed -top-full w-full z-1 bg-nav transition-[top] duration-500",

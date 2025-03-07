@@ -1,10 +1,6 @@
 import { NavBarContent } from "@/components/navbar/NavBarContent";
 import { Socials } from "@/components/Socials";
-import {
-  DownloadButton,
-  LanguageButton,
-  ThemeButton,
-} from "@/components/ui/IconButtons";
+import { DownloadButton, ThemeButton } from "@/components/ui/IconButtons";
 import { Typography } from "@/components/ui/Typography";
 import { CURRENT_YEAR } from "@/constants";
 import { useIsScrolled } from "@/hooks/useIsScrolled";
@@ -40,11 +36,11 @@ export function MobileNavBar() {
             "size-6": isScrolled,
           })}
         />
-        <LanguageButton
+        {/* <LanguageButton
           className={cn("lg:hidden size-0 text-foreground2", {
             "size-6": isScrolled,
           })}
-        />
+        /> */}
         <DownloadButton
           className={cn("lg:hidden size-0 text-foreground2", {
             "size-6": isScrolled,

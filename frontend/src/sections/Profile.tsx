@@ -1,33 +1,26 @@
 import { Section } from "@/components/Section";
 import { Typography } from "@/components/ui/Typography";
 import { CURRENT_YEAR } from "@/constants";
+import { ComponentPropsWithoutRef } from "react";
 
-export function Profile() {
+export function Profile({ className }: ComponentPropsWithoutRef<"section">) {
   const nbExp = CURRENT_YEAR - 2021;
   return (
-    <Section id="profile">
-      <Typography type="h3" className="from-primary text-left">
-        ✨ Qui suis-je ? ✨
+    <Section id="profile" className={className}>
+      <Typography type="p" className="lg:text-xl lg:leading-relaxed">
+        Bonjour 👋 je suis <strong>Élodie</strong>, développeuse{" "}
+        <strong>full-stack web</strong> avec plus de {nbExp} ans d'expérience,
+        spécialisée en <strong>React</strong> et <strong>TypeScript</strong>.
       </Typography>
-      <Typography type="p">
-        Je suis Élodie, développeuse <strong>full-stack web</strong> avec plus
-        de {nbExp} ans d'expérience, spécialisée en <strong>React</strong> et{" "}
-        <strong>TypeScript</strong>. J'aime concevoir des applications
-        performantes et pensées pour l'utilisateur, n'hésitant pas à explorer et
-        tester les outils les plus adaptés pour y parvenir.
+      <Typography type="p" className="lg:text-xl lg:leading-relaxed">
+        Je suis passionnée par le front-end mais j’apprécie également le
+        back-end et les bases de données pour leur rigueur. J’aime créer des
+        interfaces fluides et intuitives, alliant{" "}
+        <strong>performance et expérience utilisateur</strong>. Toujours{" "}
+        <strong>curieuse</strong>, j’explore et teste les outils les plus
+        adaptés pour y parvenir, tout en gardant à l'esprit l'
+        <strong>expérience de développement</strong>.
       </Typography>
-      {/* <Typography type="p">
-        Issue d’une reconversion après 9 ans dans l’informatique décisionnelle,
-        j’ai développé une approche centrée sur le produit et l’utilisateur,
-        enrichie d'une <strong>rigueur technique</strong> et expertise en{" "}
-        <strong>gestion et exploitation des données</strong>.
-      </Typography>
-      <Typography type="p">
-        Je cherche à contribuer à la création d'un produit de qualité au sein
-        d'une <strong>équipe soudée et bienveillante</strong> dans un{" "}
-        <strong>projet structuré</strong> tout en évoluant et apprenant chaque
-        jour.
-      </Typography> */}
     </Section>
   );
 }
