@@ -79,14 +79,14 @@ type Experience = {
   image: string;
   logos?: { url: string; title: string }[];
 } & (
-  | { type: "education"; shortDescription: string; longDescription: string }
-  | {
+    | { type: "education"; shortDescription: string; longDescription: string }
+    | {
       type: "job";
       secteur: string;
       roles: { shortDescription: string[]; longDescription: string[] };
       skills: string;
     }
-);
+  );
 export const experiences: Experience[] = [
   {
     id: "graduate",
@@ -127,7 +127,7 @@ export const experiences: Experience[] = [
         "Traduire les besoins en une solution technique",
         "Explorer les données sources (SAP, IBM, fichiers plats)",
         "Collecter et organiser les données pertinentes dans une base de données",
-        "Automatiser les traitement et chargement des données",
+        "Automatiser les traitements et chargement des données",
         "Création de visualisations des données pour faciliter l’analyse et l’interprétation par les utilisateurs",
         "Evolution et maintenance des outils développés",
       ],
@@ -141,9 +141,9 @@ export const experiences: Experience[] = [
     image: "/icons/power.svg",
     logos: [{ title: "Brassart", url: "/logos/company/brassart.png" }],
     shortDescription:
-      "Suite à la suppression de mon poste en raison de la crise du COVID, j’ai saisi l’opportunité de me former au développement web (RNCP niveau 5) pour enrichir mes compétences en visualisation de données. L'univers du web et ses possibilités de création m'ont tellement plu que j'ai choisi de poursuivre dans cette voie.",
+      "Suite à la suppression de mon poste en raison de la crise du COVID, j’ai saisi l’opportunité de me former au développement web (RNCP niveau 5) pour satisfaire ma curiosité et enrichir mes compétences en visualisation de données. L'univers du web et ses possibilités de création m'ont tellement plu que j'ai choisi de poursuivre dans cette voie.",
     longDescription:
-      "Suite à la suppression de mon poste due à la crise du COVID et dans un contexte de marché de l'emploi complexe, j’ai pris le temps de réfléchir à mes aspirations professionnelles. C'est alors que j'ai naturellement décidé de me former au développement web (niveau 5 du RNCP), dans le but d'acquérir des compétences techniques supplémentaires pour personnaliser les interfaces de visualisation des données. L'univers du web et ses possibilités de création m'ont tellement plu que j’ai finalement choisi de m’orienter durablement dans cette voie.",
+      "Suite à la suppression de mon poste due à la crise du COVID et dans un contexte de marché de l'emploi complexe, j’ai pris le temps de réfléchir à mes aspirations professionnelles. Attirée par le web depuis le début de ma carrière, j'ai alors naturellement décidé de me former au développement web (niveau 5 du RNCP), dans le but d'assouvir ma curiosité et d'acquérir des compétences techniques supplémentaires pour personnaliser les interfaces de visualisation des données. L'univers du web et ses possibilités de création m'ont tellement plu que j’ai finalement choisi de m’orienter durablement dans cette voie.",
   },
   {
     id: "developperWeb",
@@ -165,13 +165,13 @@ export const experiences: Experience[] = [
         "Participation aux évènements Agile",
       ],
       longDescription: [
-        "Gestion et migration de bases de données (SQL et NoSQL)",
+        "Gestion et migration de bases de données",
         "Developement des fonctionnalités back-end/front-end",
         "Création d’API REST",
         "Réduction de la dette technique",
         "Revues de code",
         "Intégration et déploiement continu",
-        "Analyse des problèmes techniques et correction de bugs",
+        "Analyse de problèmes techniques et correction de bugs",
         "Participation aux évènements Agile",
       ],
     },
@@ -183,8 +183,8 @@ export const experiences: Experience[] = [
     title: "Construire demain",
     image: "/icons/build.svg",
     shortDescription:
-      "Après une expérience en start-up, je recherche de nouveaux défis au sein d'une équipe dynamique et bienveillante, dans un projet structuré. Passionné par le développement back-end, front-end et les bases de données relationnelles, j'ai approfondi mes compétences avec des formations sur des outils tels que Tailwind, Next.js, Astro, Zustand, Zod, et Playwright, tout en travaillant sur des projets pour renforcer mes connaissances.",
+      "Après une expérience enrichissante en start-up, je cherche de nouveaux défis au sein d’une équipe soudée et bienveillante avec un projet structuré. Passionnée par le développement, j’enrichis mes compétences avec l’écosystème React et développe des projets personnels pour les appliquer et les approfondir.",
     longDescription:
-      "Après une expérience enrichissante au sein d'une start-up, je suis à la recherche de nouveaux défis. Mon objectif est de contribuer à la création d'un produit de qualité au sein d'une équipe soudée, fun et bienveillante dans un projet structuré tout en évoluant et apprenant chaque jour. Passionné par le développement back-end, front-end, ainsi que par les bases de données relationnelles, j'ai profité de cette période pour développer mes compétences en suivant des formations sur des outils qui m'intéressent (Tailwind, Next.js, Astro, Zustand, Zod, Playwright, ...). Parallèlement, je réfléchis à des projets d'applications afin de consolider et approfondir mes connaissances.",
+      "Après une expérience enrichissante au sein d'une start-up, je suis à la recherche de nouveaux défis. Mon objectif est de contribuer à la création d'un produit de qualité au sein d'une équipe soudée, fun et bienveillante dans un projet structuré. Passionnée par le développement, je profite de cette période pour enrichir mes compétences avec les outils de l'écosystème React. En parallèle, je développe des projets personnels pour appliquer et approfondir mes connaissances.",
   },
 ];
