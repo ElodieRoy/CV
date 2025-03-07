@@ -23,14 +23,14 @@ export function Experiences() {
           </div>
 
           {/* slider : 100% - 112px */}
-          <div className="h-[calc(100%_-_112px)] lg:h-[calc(100%_-_200px)] lg:mt-10 overflow-hidden relative">
+          <div className="h-[calc(100%_-_80px)] lg:h-[calc(100%_-_200px)] lg:mt-10 overflow-hidden relative">
             <Slider />
             {/* vertical progress bar (only visible on lg)*/}
             <VerticalProgressBar className="max-lg:hidden absolute h-full w-1 top-0 left-124 z-1" />
           </div>
 
           {/* progress bar (only visible on sm) : 112px */}
-          <ProgressBar className="h-28 lg:hidden flex flex-col justify-center" />
+          <ProgressBar className="h-20 mt-4 lg:hidden" />
         </div>
       </div>
     </section>

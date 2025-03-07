@@ -11,17 +11,15 @@ export function Profile({ className }: ComponentPropsWithoutRef<"section">) {
         Bonjour 👋 je suis <strong>Élodie</strong>, développeuse{" "}
         <strong>full-stack web</strong> avec plus de {nbExp} ans d'expérience,
         spécialisée en <strong>React</strong> et <strong>TypeScript</strong>.
-        J'aime concevoir des applications performantes et pensées pour
-        l'utilisateur, n'hésitant pas à explorer et tester les outils les plus
-        adaptés pour y parvenir.
       </Typography>
       <Typography type="p" className="lg:text-xl lg:leading-relaxed">
-        Je cherche à contribuer à la création d'un produit de qualité au sein
-        d'une <strong>équipe soudée et bienveillante</strong>. Sensible à
-        l’expérience utilisateur et l’ergonomie des interfaces, j'apprécie
-        également le travail backend et les bases de données pour leur rigueur.
-        J'aime apprendre, alors si je n'ai pas toutes les compétences requises
-        pour un poste, je vois ça comme une belle opportunité.
+        Je suis passionnée par le front-end mais j’apprécie également le
+        back-end et les bases de données pour leur rigueur. J’aime créer des
+        interfaces fluides et intuitives, alliant{" "}
+        <strong>performance et expérience utilisateur</strong>. Toujours{" "}
+        <strong>curieuse</strong>, j’explore et teste les outils les plus
+        adaptés pour y parvenir, tout en gardant à l'esprit l'
+        <strong>expérience de développement</strong>.
       </Typography>
     </Section>
   );

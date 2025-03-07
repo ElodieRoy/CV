@@ -21,8 +21,7 @@ export function Home() {
         className="absolute bg-cover bg-bottom opacity-30 h-full w-full -z-1"
         style={{ backgroundImage: `url(${bgImage})` }}
       />
-      <div className="container m-auto h-full flex justify-evenly items-center">
-        <Profile className="max-lg:hidden max-w-xl opacity-0 animate-blur-in-bottom animation-delay-500" />
+      <div className="container m-auto h-full flex justify-center items-center gap-20">
         <div className="flex flex-col justify-center items-center gap-3">
           <div className="size-36 lg:size-72 scale-0.5 rounded-full border-3 border-light overflow-hidden opacity-0 animate-zoom-in bg-[url('/images/backgroundPhoto.png')] bg-cover bg-end bg-no-repeat flex justify-center items-center">
             <img src={photo} alt="profil photo" />
@@ -53,6 +52,7 @@ export function Home() {
             {t("home.download")}
           </Button>
         </div>
+        <Profile className="max-lg:hidden max-w-2xl opacity-0 animate-blur-in-bottom animation-delay-500" />
       </div>
       <p className="text-light text-xs absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2 flex-nowrap items-center 3xl:hidden">
         {t("scroll")}
