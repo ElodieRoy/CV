@@ -15,11 +15,11 @@ export function Profile({ className }: ComponentPropsWithoutRef<"section">) {
       <Typography type="p" className="lg:text-xl lg:leading-relaxed">
         Je suis passionnée par le front-end mais j’apprécie également le
         back-end et les bases de données pour leur rigueur. J’aime créer des
-        interfaces fluides et intuitives, alliant{" "}
-        <strong>performance et expérience utilisateur</strong>. Toujours{" "}
+        interfaces <strong>performantes</strong> et{" "}
+        <strong>pensées pour l'utilisateur</strong>. Toujours{" "}
         <strong>curieuse</strong>, j’explore et teste les outils les plus
         adaptés pour y parvenir, tout en gardant à l'esprit l'
-        <strong>expérience de développement</strong>.
+        <strong>expérience développeur</strong> (DX).
       </Typography>
     </Section>
   );
