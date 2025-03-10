@@ -3,10 +3,13 @@ import { Typography } from "@/components/ui/Typography";
 import { CURRENT_YEAR } from "@/constants";
 import { ComponentPropsWithoutRef } from "react";
 
-export function Profile({ className }: ComponentPropsWithoutRef<"section">) {
+export function Profile({
+  className,
+  id,
+}: ComponentPropsWithoutRef<"section">) {
   const nbExp = CURRENT_YEAR - 2021;
   return (
-    <Section id="profile" className={className}>
+    <Section id={id} className={className}>
       <Typography type="p" className="lg:text-xl lg:leading-relaxed">
         Bonjour 👋 je suis <strong>Élodie</strong>, développeuse{" "}
         <strong>full-stack web</strong> avec plus de {nbExp} ans d'expérience,
