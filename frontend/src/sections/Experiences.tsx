@@ -43,14 +43,14 @@ export function Slider() {
       {experiences.map((experience) => (
         <li
           key={experience.id}
-          className="w-full h-full flex-none img-container flex max-lg:flex-col items-center gap-14 lg:gap-0 lg:p-30"
+          className="w-full h-full flex-none img-container flex max-lg:flex-col items-center gap-10 lg:gap-0 lg:p-30"
         >
           {/* Title & icon */}
           <div className="flex items-center flex-col gap-4 lg:w-76 lg:mr-21 ">
             <img
               src={experience.image}
               alt={experience.id}
-              className="h-14 lg:h-20"
+              className="h-12 lg:h-20"
             />
             <Typography type="h4">{experience.title}</Typography>
           </div>

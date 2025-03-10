@@ -118,9 +118,9 @@ export const experiences: Experience[] = [
       shortDescription: [
         "Analyse des besoins métiers",
         "Collecte et organisation des données",
-        "Automatisation des traitements et chargements",
-        "Création de visualisations pour faciliter l'interprétation",
-        "Evolution et maintenance des outils développés",
+        "Automatisation des traitements",
+        "Création de visualisations des données pour faciliter l'interprétation",
+        "Evolution et maintenance des outils",
       ],
       longDescription: [
         "Rencontrer les équipes métiers pour comprendre leurs besoins",
