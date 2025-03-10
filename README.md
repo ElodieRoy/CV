@@ -19,16 +19,14 @@ This online CV website was designed to showcase my skills and professional exper
 - Interactive presentation of skills, projects, and experiences
 - Contact form
 - Responsive and modern interface
-- Fast loading with Static Site Generation (SSG)
 - Easy deployment with Docker
-- SEO optimized with Next.js
-- Optional multilingual support
+- Multilingual support (🚧 Initiated and currently in progress)
 
 ---
 
 ## Technologies Used
 
-- **Frontend Framework**: Next.js used for static rendering (SSG), perfect for SEO and performance
+- **Frontend**: React.js with ViteJS to demonstrate my skills in building modern web applications. (Using Next.js or Astro would have been a better choice for this project to achieve higher performance with Static Site Generation (SSG) and improved SEO)
 - **Language**: TypeScript for type safety and better long-term maintenance
 - **Styling**: Tailwind CSS because it is modern, fast to configure and use, and ideal for quickly creating responsive designs
 - **Data Management**: JSON, the simplicity of the data and the frequency of updates justify the use of these simple files
@@ -41,6 +39,8 @@ This online CV website was designed to showcase my skills and professional exper
 ### Prerequisites
 
 - [Docker](https://www.docker.com/)
+or
+- [Node](https://nodejs.org/en)
 
 ### Steps
 
@@ -48,14 +48,25 @@ This online CV website was designed to showcase my skills and professional exper
   ```bash
    git clone https://github.com/ElodieRoy/CV.git
   ```
-2. **Go to the right directory and start the Docker services**
+
+2. **Go to 'CV' directory**
+
+3. **Launch application**
+- With Docker : start the Docker services
   ```bash
   docker compose up
   ```
 
-3. **Access the site: Open http://localhost:3000 in your browser**
+- With Node : install all dependency for frontend and backend
+  ```bash
+  npm run install-all
+  npm run start-all
+  ```
+  /!\ You have to add an `.env` for variable `NODE_ENV=development`and `PORT=8000`and also if you want variable for emailing
 
-4. **Enjoy!**
+4. **Access the site: Open http://localhost:5173 in your browser**
+
+5. **Enjoy!**
 
 ---
 
