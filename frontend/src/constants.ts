@@ -79,14 +79,14 @@ type Experience = {
   image: string;
   logos?: { url: string; title: string }[];
 } & (
-  | { type: "education"; shortDescription: string; longDescription: string }
-  | {
+    | { type: "education"; shortDescription: string; longDescription: string }
+    | {
       type: "job";
       secteur: string;
       roles: { shortDescription: string[]; longDescription: string[] };
       skills: string;
     }
-);
+  );
 export const experiences: Experience[] = [
   {
     id: "graduate",
@@ -102,7 +102,7 @@ export const experiences: Experience[] = [
     shortDescription:
       "Intéressée par les mathématiques et l’informatique, j’ai suivi un DUT en Statistiques et Traitement Informatique des Données à Niort (79), puis un master en Statistique et Informatique Décisionnelle à Toulouse pour approfondir mon expertise en valorisation des données.",
     longDescription:
-      "Intéressée par les mathématiques et l’informatique, j’ai choisi de faire un DUT en Statistiques et Traitement Informatique des Données à Niort (79) après mon bac S. Cette formation m’a tellement plu que j’ai voulu aller plus loin en poursuivant un master en Statistique et Informatique Décisionnelle à Toulouse, pour approfondir encore plus mon intérêt pour l'exploitation des données et leur valorisation à travers des outils concrets et adaptés.",
+      "Intéressée par les mathématiques et l’informatique, j’ai choisi de faire un DUT en Statistiques et Traitement Informatique des Données à Niort (79) après mon bac S. Cette formation m’a tellement plu que j’ai voulu aller plus loin en poursuivant un master en Statistique et Informatique Décisionnelle à Toulouse, pour approfondir encore plus mon intérêt pour l'exploitation des données et leur valorisation.",
   },
   {
     id: "dataAnalyst",
@@ -183,8 +183,8 @@ export const experiences: Experience[] = [
     title: "Construire demain",
     image: "/icons/build.svg",
     shortDescription:
-      "Après une expérience enrichissante en start-up, je cherche de nouveaux défis au sein d’une équipe soudée et bienveillante avec un projet structuré. Passionnée par le développement, j’enrichis mes compétences avec l’écosystème React et développe des projets personnels pour les appliquer et les approfondir.",
+      "Après une expérience enrichissante en start-up, je cherche de nouveaux défis au sein d’une équipe soudée et bienveillante. Passionnée par le développement, je profite de cette période pour enrichir mes compétences avec les outils de l’écosystème React en développant des projets personnels.",
     longDescription:
-      "Après une expérience enrichissante au sein d'une start-up, je suis à la recherche de nouveaux défis. Mon objectif est de contribuer à la création d'un produit de qualité au sein d'une équipe soudée, fun et bienveillante dans un projet structuré. Passionnée par le développement, je profite de cette période pour enrichir mes compétences avec les outils de l'écosystème React. En parallèle, je développe des projets personnels pour appliquer et approfondir mes connaissances.",
+      "Après une expérience enrichissante au sein d'une start-up, je suis à la recherche de nouveaux défis. Mon objectif est de contribuer à la création d'un produit de qualité au sein d'une équipe soudée, fun et bienveillante. Passionnée par le développement, je profite de cette période pour enrichir mes compétences avec les outils de l'écosystème React en développant des projets personnels.",
   },
 ];
