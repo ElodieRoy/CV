@@ -19,6 +19,7 @@ export function NavBarContent({ onItemClick, format }: NavBarContentProps) {
           <a
             className="relative"
             href={`#${key === "profile" && format === "desktop" ? "home" : key}`}
+            aria-label={`section-${key}`}
           >
             {value}
           </a>

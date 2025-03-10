@@ -25,7 +25,11 @@ export function ThemeButton({ className }: ComponentPropsWithoutRef<"button">) {
   const { toggleDarkMode } = useDarkTheme();
   const { t } = useTranslation();
   return (
-    <IconButtons onClick={toggleDarkMode} className={className}>
+    <IconButtons
+      onClick={toggleDarkMode}
+      className={className}
+      aria-label="Theme bouton"
+    >
       <MoonIcon
         className="absolute top-0 scale-100 rotate-0 dark:scale-0 dark:rotate-180 size-full"
         onClick={() => (localStorage.currentTheme = "dark")}
@@ -45,7 +49,11 @@ export function LanguageButton({
 }: ComponentPropsWithoutRef<"button">) {
   const { t } = useTranslation();
   return (
-    <IconButtons title={t("translate")} className={className}>
+    <IconButtons
+      title={t("translate")}
+      className={className}
+      aria-label="Langue"
+    >
       <LanguageIcon />
     </IconButtons>
   );
@@ -62,6 +70,7 @@ export function DownloadButton({
       title={t("home.download")}
       className={className}
       onClick={download}
+      aria-label="Télécharger CV"
     >
       <ArrowDownTrayIcon />
     </IconButtons>
@@ -70,8 +79,8 @@ export function DownloadButton({
 
 export function ContactButton() {
   return (
-    <IconButtons>
-      <a href={"#contact"}>
+    <IconButtons aria-label="Contact">
+      <a href={"#contact"} aria-label="Lien vers contact">
         <EnvelopeIcon />
       </a>
     </IconButtons>
@@ -82,13 +91,14 @@ export function LinkedinButton({
   className,
 }: ComponentPropsWithoutRef<"button">) {
   return (
-    <IconButtons className={className}>
+    <IconButtons className={className} aria-label="Linkedin">
       <a
         href={"https://www.linkedin.com/in/eroy"}
         target="_blank"
         rel="noreferrer"
+        aria-label="Lien vers linkedin"
       >
-        <img src="/logos/social/linkedin-plain.svg" />
+        <img src="/logos/social/linkedin-plain.svg" alt="linkedin" />
       </a>
     </IconButtons>
   );
@@ -98,9 +108,14 @@ export function GithubButton({
   className,
 }: ComponentPropsWithoutRef<"button">) {
   return (
-    <IconButtons className={className}>
-      <a href={"https://github.com/ElodieRoy"} target="_blank" rel="noreferrer">
-        <img src="/logos/social/github-light.svg" />
+    <IconButtons className={className} aria-label="Github">
+      <a
+        href={"https://github.com/ElodieRoy"}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Lien vers github"
+      >
+        <img src="/logos/social/github-light.svg" alt="github" />
       </a>
     </IconButtons>
   );

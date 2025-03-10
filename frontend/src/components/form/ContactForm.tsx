@@ -51,7 +51,12 @@ export function ContactForm() {
         disabled={isSubmitting}
       />
 
-      <Button type="submit" className="w-full" isLoading={isSubmitting}>
+      <Button
+        type="submit"
+        className="w-full"
+        isLoading={isSubmitting}
+        aria-label="Envoyer"
+      >
         Envoyer
       </Button>
     </form>

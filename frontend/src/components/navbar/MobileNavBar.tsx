@@ -49,6 +49,7 @@ export function MobileNavBar() {
         <button
           className="relative size-9 z-3"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Menu"
         >
           <XMarkIcon
             className={cn(

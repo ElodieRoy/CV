@@ -48,6 +48,7 @@ export function Home() {
           <Button
             className="backdrop-blur-lg border-light text-xs opacity-0 animate-slide-in-top animation-delay-1500 duration-500 hover:bg-light transition-all hover:text-black/70"
             onClick={download}
+            aria-label="Télecharger CV"
           >
             {t("home.download")}
           </Button>
