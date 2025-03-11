@@ -46,7 +46,7 @@ export const techStack = [
     ],
   },
   {
-    category: "Autres outils",
+    category: "Other Tools",
     tools: [
       { name: "VS Code", logo: "/logos/skills/vscode-original.svg" },
       { name: "Linux", logo: "/logos/skills/linux-original.svg" },
@@ -79,14 +79,14 @@ type Experience = {
   image: string;
   logos?: { url: string; title: string }[];
 } & (
-  | { type: "education"; shortDescription: string; longDescription: string }
-  | {
+    | { type: "education"; shortDescription: string; longDescription: string }
+    | {
       type: "job";
       secteur: string;
       roles: { shortDescription: string[]; longDescription: string[] };
       skills: string;
     }
-);
+  );
 export const experiences: Experience[] = [
   {
     id: "graduate",
