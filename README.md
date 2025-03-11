@@ -20,7 +20,7 @@ This online CV website was designed to showcase my skills and professional exper
 - Contact form
 - Responsive and modern interface
 - Easy deployment with Docker
-- Multilingual support (🚧 Initiated and currently in progress)
+- Multilingual support (🚧 Missing translate Zod error messages with zod-i18n-map)
 
 ---
 

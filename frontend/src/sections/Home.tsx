@@ -1,4 +1,5 @@
 import photo from "@/assets/Elodie_ROY_photo_342-removebg.png";
+import { Background } from "@/components/Background";
 import { Button } from "@/components/ui/Button";
 import { Typography } from "@/components/ui/Typography";
 import { useDownload } from "@/hooks/useDownload";
@@ -6,7 +7,6 @@ import { Profile } from "@/sections/Profile";
 import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import MapPinIcon from "@heroicons/react/24/outline/MapPinIcon";
 import { useTranslation } from "react-i18next";
-import bgImage from "src/assets/bg.webp";
 
 export function Home() {
   const { t } = useTranslation();
@@ -17,10 +17,7 @@ export function Home() {
       className="bg-linear-to-r/shorter lg:bg-linear-to-r/hsl from-red-500/70 lg:from-pink-500/70 lg:via-red-500/70 to-amber-500/70 text-light h-full"
       id="home"
     >
-      <div
-        className="absolute bg-cover bg-bottom opacity-30 h-full w-full -z-1"
-        style={{ backgroundImage: `url(${bgImage})` }}
-      />
+      <Background />
       <div className="container m-auto h-full flex justify-center items-center gap-20">
         <div className="flex flex-col justify-center items-center gap-3">
           <div className="size-36 lg:size-72 scale-0.5 rounded-full border-3 border-light overflow-hidden opacity-0 animate-zoom-in bg-[url('/images/backgroundPhoto.png')] bg-cover bg-end bg-no-repeat flex justify-center items-center">
