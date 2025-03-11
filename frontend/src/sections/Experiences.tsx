@@ -1,16 +1,17 @@
 import { ProgressBar } from "@/components/ProgressBar";
 import { Typography } from "@/components/ui/Typography";
 import { VerticalProgressBar } from "@/components/VerticalProgressBar";
-import { experiences } from "@/constants";
 import { useSliderScrollAnimation } from "@/hooks/useSliderScrollAnimation";
+import { useTranslation } from "react-i18next";
 
 export function Experiences() {
   useSliderScrollAnimation();
+  const { t } = useTranslation();
 
   return (
     <section id="experiences">
       <Typography type="h3" className="lg:hidden">
-        Mon parcours
+        {t("menu.experiences")}
       </Typography>
       <div id="slider-container" className="h-[200vh] relative lg:pt-18">
         <div className="sticky top-20 overflow-hidden h-[calc(100vh_-_80px)]">
@@ -18,7 +19,7 @@ export function Experiences() {
           {/* title (only visible on lg) : 112px */}
           <div className="flex flex-col justify-center items-center h-28 max-lg:hidden">
             <Typography type="h3" className="pb-0 lg:pt-0">
-              Mon parcours
+              {t("menu.experiences")}
             </Typography>
           </div>
 
@@ -37,7 +38,29 @@ export function Experiences() {
   );
 }
 
+type Experience = {
+  id: string;
+  title: string;
+  image: string;
+  logos?: { url: string; title: string }[];
+} & (
+  | { type: "education"; shortDescription: string; longDescription: string }
+  | {
+      type: "job";
+      secteur: string;
+      roles: { shortDescription: string[]; longDescription: string[] };
+      skills: string;
+    }
+);
+
 export function Slider() {
+  const { t } = useTranslation();
+
+  const experiences = t("experiences", {
+    returnObjects: true,
+    ns: "experiences",
+  }) as Experience[];
+
   return (
     <ul id="slider" className="flex h-full lg:flex-col">
       {experiences.map((experience) => (
@@ -84,12 +107,16 @@ export function Slider() {
               {experience.type === "job" && (
                 <div className="flex flex-col gap-3 lg:gap-6">
                   <div>
-                    <Typography type="lead">Secteurs d'activité:</Typography>
+                    <Typography type="lead">
+                      {t("activity", { ns: "experiences" })}:
+                    </Typography>
                     <span>{experience.secteur}</span>
                   </div>
 
                   <div>
-                    <Typography type="lead">Rôles:</Typography>
+                    <Typography type="lead">
+                      {t("role", { ns: "experiences" })}:
+                    </Typography>
 
                     <div className="list-disc list-inside max-lg:hidden">
                       {experience.roles.longDescription.map((role, index) => (
@@ -113,7 +140,9 @@ export function Slider() {
                     </div>
                   </div>
                   <div>
-                    <Typography type="lead">Compétences:</Typography>
+                    <Typography type="lead">
+                      {t("skills", { ns: "experiences" })}:
+                    </Typography>
                     <span>{experience.skills}</span>
                   </div>
                 </div>
