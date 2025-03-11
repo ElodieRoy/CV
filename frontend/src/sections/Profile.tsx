@@ -14,7 +14,7 @@ export function Profile({
   return (
     <Section id={id} className={className}>
       <Typography type="p" className="lg:text-xl lg:leading-relaxed">
-        <Trans>{t("about", { nbExp, ns: "home" })}</Trans>
+        <Trans i18nKey="about">{t("about", { nbExp, ns: "home" })}</Trans>
       </Typography>
       <Typography type="p" className="lg:text-xl lg:leading-relaxed">
         <Trans i18nKey="description" ns="home" />
