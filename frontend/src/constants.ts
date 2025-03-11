@@ -2,7 +2,7 @@ export const CURRENT_YEAR = new Date().getFullYear();
 
 export const techStack = [
   {
-    category: "Frontend",
+    category: "frontend",
     tools: [
       { name: "TypeScript", logo: "/logos/skills/typescript-original.svg" },
       { name: "React", logo: "/logos/skills/react-original.svg" },
@@ -17,7 +17,7 @@ export const techStack = [
     ],
   },
   {
-    category: "Backend",
+    category: "backend",
     tools: [
       { name: "JAVA", logo: "/logos/skills/java-original.svg" },
       { name: "Spring", logo: "/logos/skills/spring-original.svg" },
@@ -35,7 +35,7 @@ export const techStack = [
     ],
   },
   {
-    category: "Devops & CI",
+    category: "devops",
     tools: [
       { name: "Git", logo: "/logos/skills/git-original.svg" },
       { name: "Docker", logo: "/logos/skills/docker-original.svg" },
@@ -46,7 +46,7 @@ export const techStack = [
     ],
   },
   {
-    category: "Other Tools",
+    category: "tools",
     tools: [
       { name: "VS Code", logo: "/logos/skills/vscode-original.svg" },
       { name: "Linux", logo: "/logos/skills/linux-original.svg" },

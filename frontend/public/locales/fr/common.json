@@ -9,5 +9,8 @@
   "translate": "English version",
   "lightMode": "Mode jour",
   "darkMode": "Mode nuit",
-  "Other Tools": "Autres outils"
+  "frontend": "Frontend",
+  "backend": "Backend",
+  "devops": "Devops & CI",
+  "tools": "Autres outils"
 }
