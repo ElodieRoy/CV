@@ -38,7 +38,7 @@ export function ThemeButton({ className }: ComponentPropsWithoutRef<"button">) {
       <SunIcon
         className="absolute top-0 scale-0 rotate-0 dark:scale-100 dark:rotate-180 size-full"
         onClick={() => (localStorage.currentTheme = "light")}
-        title={t("DarkMode")}
+        title={t("darkMode")}
       />
     </IconButtons>
   );
