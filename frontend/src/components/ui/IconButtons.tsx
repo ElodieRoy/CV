@@ -2,7 +2,7 @@ import { useDarkTheme } from "@/hooks/useDarkTheme";
 import { useDownload } from "@/hooks/useDownload";
 import { cn } from "@/lib/utils";
 import { EnvelopeIcon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
-import { ArrowDownTrayIcon, LanguageIcon } from "@heroicons/react/24/solid";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import { ComponentPropsWithoutRef } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -56,11 +56,13 @@ export function LanguageButton({
   return (
     <IconButtons
       title={t("translate")}
-      className={className}
+      className={cn("flex items-center justify-center", className)}
       aria-label="Langue"
       onClick={handleChangeLng}
     >
-      <LanguageIcon />
+      <span className="text-lg font-semibold">
+        {i18n.resolvedLanguage === "fr" ? "EN" : "FR"}
+      </span>
     </IconButtons>
   );
 }
