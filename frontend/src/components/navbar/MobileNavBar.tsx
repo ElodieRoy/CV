@@ -44,11 +44,7 @@ export function MobileNavBar() {
             "size-6": isScrolled,
           })}
         />
-        <LanguageButton
-          className={cn("lg:hidden size-0 text-foreground2", {
-            "size-6": isScrolled,
-          })}
-        />
+        <LanguageButton className="lg:hidden size-6 text-foreground2" />
         <button
           className="relative size-9 z-3"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
