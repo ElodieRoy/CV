@@ -12,8 +12,6 @@ export function NavBarContent({ onItemClick, format }: NavBarContentProps) {
   const { t } = useTranslation();
   const menu = Object.entries(t("menu", { returnObjects: true }));
 
-  console.log("🌸 ", menu);
-
   return (
     <ul className="flex flex-col lg:flex-row gap-10">
       {menu.map(([key, value]) => (
@@ -28,7 +26,7 @@ export function NavBarContent({ onItemClick, format }: NavBarContentProps) {
           <span
             className={cn(
               "absolute left-0 -bottom-1 w-0 h-1 lg:h-0.5 rounded-md bg-light transition-all duration-300 group-hover:w-full",
-              { "bg-foreground2": isScrolled }
+              { "bg-foreground2": isScrolled },
             )}
           />
         </li>

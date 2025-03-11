@@ -15,5 +15,5 @@ createRoot(document.getElementById("root")!).render(
         </Suspense>
       </ScrollProvider>
     </DarkThemeProvider>
-  </StrictMode>
+  </StrictMode>,
 );

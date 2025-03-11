@@ -48,14 +48,17 @@ export function LanguageButton({
   className,
 }: ComponentPropsWithoutRef<"button">) {
   const { t, i18n } = useTranslation();
+  const handleChangeLng = async () => {
+    const newLng = i18n.resolvedLanguage === "fr" ? "en" : "fr";
+    await i18n.changeLanguage(newLng);
+    localStorage.setItem("i18nextLng", newLng);
+  };
   return (
     <IconButtons
       title={t("translate")}
       className={className}
       aria-label="Langue"
-      onClick={() =>
-        i18n.changeLanguage(i18n.resolvedLanguage === "fr" ? "en" : "fr")
-      }
+      onClick={handleChangeLng}
     >
       <LanguageIcon />
     </IconButtons>

@@ -2,5 +2,7 @@
   "name": "Elodie ROY",
   "title": "Développeuse Full-Stack",
   "location": "Toulouse",
-  "download": "Télécharger CV"
+  "download": "Télécharger CV",
+  "about": "Bonjour 👋 je suis <strong>Élodie</strong>, développeuse <strong>full-stack web</strong> avec plus de {{nbExp}} ans d'expérience, spécialisée en <strong>React</strong> et <strong>TypeScript</strong>.",
+  "description": "Je suis passionnée par le front-end mais j’apprécie également le back-end et les bases de données pour leur rigueur. J’aime créer des interfaces <strong>performantes</strong> et <strong>pensées pour l'utilisateur</strong>. Toujours <strong>curieuse</strong>, j’explore et teste les outils les plus adaptés pour y parvenir, tout en gardant à l'esprit l'<strong>expérience développeur</strong> (DX)."
 }

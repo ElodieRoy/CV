@@ -79,14 +79,14 @@ type Experience = {
   image: string;
   logos?: { url: string; title: string }[];
 } & (
-    | { type: "education"; shortDescription: string; longDescription: string }
-    | {
+  | { type: "education"; shortDescription: string; longDescription: string }
+  | {
       type: "job";
       secteur: string;
       roles: { shortDescription: string[]; longDescription: string[] };
       skills: string;
     }
-  );
+);
 export const experiences: Experience[] = [
   {
     id: "graduate",

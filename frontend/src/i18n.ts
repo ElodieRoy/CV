@@ -9,23 +9,19 @@ i18next
   .use(Backend)
   .init({
     fallbackLng: "fr",
-    lng: "fr",
+    lng: localStorage.getItem("i18nextLng") ?? "fr",
     debug: true,
-    ns: ["common", "home", "menu"],
-    defaultNS: "common",
+    ns: ["glossary", "common", "home", "menu"],
+    defaultNS: ["common"],
     // if you see an error like: "Argument of type 'DefaultTFuncReturn' is not assignable to parameter of type xyz"
     // set returnNull to false (and also in the i18next.d.ts options)
     // returnNull: false,
   })
-// .then(() => {
-//   console.log("i18next initialized successfully");
-// })
-// .catch((error) => {
-//   console.error("i18next initialization failed", error);
-// });
-
-i18next.loadNamespaces("home").then(() => {
-  console.log("Namespace 'home' loaded");
-});
+  .then(() => {
+    console.log("i18next initialized successfully");
+  })
+  .catch((error) => {
+    console.error("i18next initialization failed", error);
+  });
 
 export default i18next;

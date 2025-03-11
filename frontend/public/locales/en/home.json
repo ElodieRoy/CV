@@ -2,5 +2,7 @@
   "name": "Elodie ROY",
   "title": "Full-Stack Developer",
   "location": "Toulouse",
-  "download": "Download Resume"
+  "download": "Download CV",
+  "about": "Hello 👋 I am <strong>Élodie</strong>, a <strong>full-stack web</strong> developer with over {{nbExp}} years of experience, specializing in <strong>React</strong> and <strong>TypeScript</strong>.",
+  "description": "I am passionate about front-end development, but I also enjoy back-end and databases for their precision. I love creating <strong>high-performance</strong> and <strong>user-centric</strong> interfaces. Always <strong>curious</strong>, I explore and test the most suitable tools to achieve this while keeping in mind the <strong>Developer eXperience</strong> (DX)."
 }
