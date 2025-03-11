@@ -12,6 +12,8 @@ export function NavBarContent({ onItemClick, format }: NavBarContentProps) {
   const { t } = useTranslation();
   const menu = Object.entries(t("menu", { returnObjects: true }));
 
+  console.log("🌸 ", menu);
+
   return (
     <ul className="flex flex-col lg:flex-row gap-10">
       {menu.map(([key, value]) => (

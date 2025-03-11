@@ -30,27 +30,29 @@ export function Home() {
             type="h1"
             className="lg:hidden opacity-0 animate-blur-in-bottom animation-delay-500"
           >
-            {t("home.name")}
+            {t("name", { ns: "home" })}
           </Typography>
           <div className="lg:hidden overflow-hidden w-fit relative">
             <Typography
               type="h2"
               className="opacity-0 text-light animate-fade-in animation-delay-1500"
             >
-              {t("home.title")}
+              {t("title", { ns: "home" })}
             </Typography>
             <div className="absolute top-0 bg-light h-14 w-full opacity-0 animate-slide-through" />
           </div>
           <div className="flex items-center gap-1 opacity-0 animate-slide-in-top animation-delay-1000">
             <MapPinIcon className="size-4" />
-            <Typography type="small">{t("home.location")}</Typography>
+            <Typography type="small">
+              {t("location", { ns: "home" })}
+            </Typography>
           </div>
           <Button
             className="backdrop-blur-lg border-light text-xs opacity-0 animate-slide-in-top animation-delay-1500 duration-500 hover:bg-light transition-all hover:text-black/70"
             onClick={download}
             aria-label="Télecharger CV"
           >
-            {t("home.download")}
+            {t("download", { ns: "home" })}
           </Button>
         </div>
         <Profile className="max-lg:hidden max-w-2xl opacity-0 animate-blur-in-bottom animation-delay-500" />

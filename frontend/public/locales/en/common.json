@@ -1,0 +1,12 @@
+{
+  "menu": {
+    "profile": "Profile",
+    "skills": "My Skills",
+    "experiences": "My Journey",
+    "contact": "Contact"
+  },
+  "scroll": "Scroll",
+  "translate": "French Version",
+  "lightMode": "Light Mode",
+  "darkMode": "Dark Mode"
+}

@@ -53,7 +53,9 @@ export function LanguageButton({
       title={t("translate")}
       className={className}
       aria-label="Langue"
-      onClick={() => i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr")}
+      onClick={() =>
+        i18n.changeLanguage(i18n.resolvedLanguage === "fr" ? "en" : "fr")
+      }
     >
       <LanguageIcon />
     </IconButtons>
@@ -68,7 +70,7 @@ export function DownloadButton({
 
   return (
     <IconButtons
-      title={t("home.download")}
+      title={t("download", { ns: "home" })}
       className={className}
       onClick={download}
       aria-label="Télécharger CV"
