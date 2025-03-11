@@ -47,12 +47,13 @@ export function ThemeButton({ className }: ComponentPropsWithoutRef<"button">) {
 export function LanguageButton({
   className,
 }: ComponentPropsWithoutRef<"button">) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <IconButtons
       title={t("translate")}
       className={className}
       aria-label="Langue"
+      onClick={() => i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr")}
     >
       <LanguageIcon />
     </IconButtons>
