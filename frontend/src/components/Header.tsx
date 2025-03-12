@@ -1,6 +1,7 @@
 import { DesktopNavBar } from "@/components/navbar/DesktopNavBar";
 import { MobileNavBar } from "@/components/navbar/MobileNavBar";
 import { Container } from "@/components/ui/Container";
+import { LanguageButton } from "@/components/ui/IconButtons";
 import { useIsScrolled } from "@/hooks/useIsScrolled";
 import { cn } from "@/lib/utils";
 import { Home } from "@/sections/Home";
@@ -25,6 +26,11 @@ export function Header() {
           },
         )}
       >
+        <LanguageButton
+          className={cn("max-lg:hidden size-6 text-light", {
+            "text-foreground2": isScrolled,
+          })}
+        />
         <DesktopNavBar />
         <MobileNavBar />
       </Container>
