@@ -1,8 +1,11 @@
+import { Copyright } from "@/components/Copyright";
 import { NavBarContent } from "@/components/navbar/NavBarContent";
 import { Socials } from "@/components/Socials";
-import { DownloadButton, ThemeButton } from "@/components/ui/IconButtons";
-import { Typography } from "@/components/ui/Typography";
-import { CURRENT_YEAR } from "@/constants";
+import {
+  DownloadButton,
+  LanguageButton,
+  ThemeButton,
+} from "@/components/ui/IconButtons";
 import { useIsScrolled } from "@/hooks/useIsScrolled";
 import { cn } from "@/lib/utils";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
@@ -36,14 +39,14 @@ export function MobileNavBar() {
             "size-6": isScrolled,
           })}
         />
-        {/* <LanguageButton
-          className={cn("lg:hidden size-0 text-foreground2", {
-            "size-6": isScrolled,
-          })}
-        /> */}
         <DownloadButton
           className={cn("lg:hidden size-0 text-foreground2", {
             "size-6": isScrolled,
+          })}
+        />
+        <LanguageButton
+          className={cn("lg:hidden size-6 text-light", {
+            "text-foreground2": isScrolled,
           })}
         />
         <button
@@ -81,7 +84,7 @@ export function MobileNavBar() {
         />
         <div>
           <Socials />
-          <Typography type="muted">@{CURRENT_YEAR} - By Elodie ROY</Typography>
+          <Copyright />
         </div>
       </div>
     </>

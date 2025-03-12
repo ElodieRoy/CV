@@ -2,6 +2,7 @@ import {
   ContactButton,
   DownloadButton,
   GithubButton,
+  LanguageButton,
   LinkedinButton,
   ThemeButton,
 } from "@/components/ui/IconButtons";
@@ -19,8 +20,8 @@ export function ToolBar() {
         },
       )}
     >
+      <LanguageButton />
       <ThemeButton />
-      {/* <LanguageButton /> */}
       <DownloadButton />
       <ContactButton />
       <LinkedinButton />

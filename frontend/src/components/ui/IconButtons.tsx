@@ -2,7 +2,7 @@ import { useDarkTheme } from "@/hooks/useDarkTheme";
 import { useDownload } from "@/hooks/useDownload";
 import { cn } from "@/lib/utils";
 import { EnvelopeIcon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
-import { ArrowDownTrayIcon, LanguageIcon } from "@heroicons/react/24/solid";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import { ComponentPropsWithoutRef } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -38,7 +38,7 @@ export function ThemeButton({ className }: ComponentPropsWithoutRef<"button">) {
       <SunIcon
         className="absolute top-0 scale-0 rotate-0 dark:scale-100 dark:rotate-180 size-full"
         onClick={() => (localStorage.currentTheme = "light")}
-        title={t("DarkMode")}
+        title={t("darkMode")}
       />
     </IconButtons>
   );
@@ -47,14 +47,22 @@ export function ThemeButton({ className }: ComponentPropsWithoutRef<"button">) {
 export function LanguageButton({
   className,
 }: ComponentPropsWithoutRef<"button">) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const handleChangeLng = async () => {
+    const newLng = i18n.resolvedLanguage === "fr" ? "en" : "fr";
+    await i18n.changeLanguage(newLng);
+    localStorage.setItem("i18nextLng", newLng);
+  };
   return (
     <IconButtons
       title={t("translate")}
-      className={className}
+      className={cn("flex items-center justify-center", className)}
       aria-label="Langue"
+      onClick={handleChangeLng}
     >
-      <LanguageIcon />
+      <span className="text-lg font-semibold">
+        {i18n.resolvedLanguage === "fr" ? "EN" : "FR"}
+      </span>
     </IconButtons>
   );
 }
@@ -67,7 +75,7 @@ export function DownloadButton({
 
   return (
     <IconButtons
-      title={t("home.download")}
+      title={t("download", { ns: "home" })}
       className={className}
       onClick={download}
       aria-label="Télécharger CV"

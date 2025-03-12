@@ -1,0 +1,10 @@
+{
+  "contact": "Contact me",
+  "description": "Interested in a collaboration, curious to know more, or just want to chat? Feel free to leave me a message.",
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
+  }
+}
