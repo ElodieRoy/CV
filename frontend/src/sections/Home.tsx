@@ -1,3 +1,4 @@
+import photoDraw from "@/assets/Elodie_ROY_photo_342-removebg-draw.png";
 import photo from "@/assets/Elodie_ROY_photo_342-removebg.png";
 import { Background } from "@/components/Background";
 import { Button } from "@/components/ui/Button";
@@ -22,6 +23,11 @@ export function Home() {
         <div className="flex flex-col justify-center items-center gap-3">
           <div className="size-36 lg:size-72 scale-0.5 rounded-full border-3 border-light overflow-hidden opacity-0 animate-zoom-in bg-[url('/images/backgroundPhoto.png')] bg-cover bg-end bg-no-repeat flex justify-center items-center">
             <img src={photo} alt="photo" />
+            <img
+              src={photoDraw}
+              alt="photo"
+              className="absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-500"
+            />
           </div>
           <Typography
             type="h1"
