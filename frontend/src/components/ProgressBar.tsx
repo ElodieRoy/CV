@@ -29,7 +29,9 @@ export function ProgressBar({ className }: ComponentPropsWithoutRef<"div">) {
         />
         <BulletForeground className="right-0" />
         <BulletPrimary id="progress-bar-4" className="right-0" year="" />
-        <div id="progress" className="h-full bg-primary" />
+        <div className="h-full w-full overflow-x-hidden">
+          <div id="progress" className="h-full bg-primary" />
+        </div>
       </div>
     </div>
   );

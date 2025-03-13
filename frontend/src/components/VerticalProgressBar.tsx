@@ -34,7 +34,9 @@ export function VerticalProgressBar({
         />
         <BulletForeground className="bottom-0" />
         <BulletPrimary id="progress-bar-4" year="" className="bottom-0" />
-        <div id="vertical-progress" className="h-full w-full bg-primary" />
+        <div className="h-full overflow-y-hidden">
+          <div id="vertical-progress" className="h-full w-full bg-primary" />
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import { ProgressBar } from "@/components/ProgressBar";
+import { Card } from "@/components/ui/card";
 import { Typography } from "@/components/ui/Typography";
 import { VerticalProgressBar } from "@/components/VerticalProgressBar";
 import { useSliderScrollAnimation } from "@/hooks/useSliderScrollAnimation";
@@ -24,14 +25,14 @@ export function Experiences() {
           </div>
 
           {/* slider : 100% - 112px */}
-          <div className="h-[calc(100%_-_80px)] lg:h-[calc(100%_-_200px)] lg:mt-10 overflow-hidden relative">
+
+          <Card className="h-[calc(100%_-_20px)] lg:h-[calc(100%_-_200px)] lg:mt-10 overflow-hidden relative p-0 pt-6">
             <Slider />
             {/* vertical progress bar (only visible on lg)*/}
-            <VerticalProgressBar className="max-lg:hidden absolute h-full w-1 top-0 left-124 z-1" />
-          </div>
-
-          {/* progress bar (only visible on sm) : 112px */}
-          <ProgressBar className="h-20 mt-4 lg:hidden" />
+            <VerticalProgressBar className="max-lg:hidden absolute h-[calc(100%_-_2rem)] w-1 top-4 left-124 z-1" />
+            {/* progress bar (only visible on sm) : 112px */}
+            <ProgressBar className="h-20 mt-4 lg:hidden w-[calc(100%_-_2rem)] ml-4" />
+          </Card>
         </div>
       </div>
     </section>
@@ -62,7 +63,10 @@ export function Slider() {
   }) as Experience[];
 
   return (
-    <ul id="slider" className="flex h-full lg:flex-col">
+    <ul
+      id="slider"
+      className="flex h-[calc(100%_-_3rem)] lg:h-full lg:flex-col"
+    >
       {experiences.map((experience) => (
         <li
           key={experience.id}
