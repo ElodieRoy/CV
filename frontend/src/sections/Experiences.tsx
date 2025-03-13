@@ -1,3 +1,8 @@
+import dataAnalyst from "@/assets/icons/data-analytics.png";
+import graduate from "@/assets/icons/graduation.png";
+import transitionWeb from "@/assets/icons/power.png";
+import developperWeb from "@/assets/icons/programming.png";
+import tomorrow from "@/assets/icons/rocket-launch.png";
 import { ProgressBar } from "@/components/ProgressBar";
 import { Card } from "@/components/ui/card";
 import { Typography } from "@/components/ui/Typography";
@@ -54,6 +59,14 @@ type Experience = {
     }
 );
 
+const images = {
+  graduate: graduate,
+  dataAnalyst: dataAnalyst,
+  transitionWeb: transitionWeb,
+  developperWeb: developperWeb,
+  tomorrow: tomorrow,
+};
+
 export function Slider() {
   const { t } = useTranslation();
 
@@ -75,7 +88,7 @@ export function Slider() {
           {/* Title & icon */}
           <div className="flex items-center flex-col gap-4 lg:w-76 lg:mr-21 ">
             <img
-              src={experience.image}
+              src={images[experience.id]}
               alt={experience.id}
               className="h-12 lg:h-20"
             />

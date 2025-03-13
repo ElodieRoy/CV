@@ -7,7 +7,6 @@
       "id": "graduate",
       "type": "education",
       "title": "Master's Graduate",
-      "image": "/icons/graduate.svg",
       "shortDescription": "Interested in mathematics and computer science, I pursued a DUT in Statistics and Data Processing in Niort (79), followed by a Master's degree in Statistics and Decision Informatics in Toulouse to deepen my expertise in data valorization.",
       "longDescription": "Passionate about mathematics and computer science, I decided to complete a DUT in Statistics and Data Processing in Niort (79) after my science baccalaureate (Bac S). I enjoyed this training so much that I wanted to go further by pursuing a Master's degree in Statistics and Decision Informatics in Toulouse, to further enhance my interest in data analysis and valorization."
     },
@@ -15,7 +14,6 @@
       "id": "dataAnalyst",
       "type": "job",
       "title": "Data Analyst",
-      "image": "/icons/data.svg",
       "logos": [
         { "title": "Akka", "url": "/logos/company/akka.png" },
         { "title": "Sopra-Steria", "url": "/logos/company/sopra-steria.png" }
@@ -45,7 +43,6 @@
       "id": "transitionWeb",
       "type": "education",
       "title": "Web Transition",
-      "image": "/icons/power.svg",
       "logos": [{ "title": "Brassart", "url": "/logos/company/brassart.png" }],
       "shortDescription": "Following the elimination of my position due to the COVID crisis, I took the opportunity to train in web development (RNCP level 5) to satisfy my curiosity and enrich my skills in data visualization. The world of web development and its creative possibilities captivated me so much that I decided to continue in this field.",
       "longDescription": "After losing my position due to the COVID crisis and facing a challenging job market, I took some time to reflect on my professional aspirations. Attracted to the web from the beginning of my career, I naturally decided to train in web development (RNCP level 5), aiming to satisfy my curiosity and acquire additional technical skills to customize data visualization interfaces. The web world and its creative possibilities fascinated me so much that I ultimately chose to pursue a career in this field."
@@ -54,7 +51,6 @@
       "id": "developerWeb",
       "type": "job",
       "title": "Web Developer",
-      "image": "/icons/coding.svg",
       "logos": [
         { "title": "Magellium", "url": "/logos/company/magellium.png" },
         { "title": "Forensoc", "url": "/logos/company/forensoc.png" }
@@ -86,7 +82,6 @@
       "id": "tomorrow",
       "type": "education",
       "title": "Building Tomorrow",
-      "image": "/icons/build.svg",
       "shortDescription": "After a rewarding experience in a startup, I am looking for new challenges within a close-knit and caring team. Passionate about development, I am taking advantage of this period to enhance my skills with React ecosystem tools by working on personal projects.",
       "longDescription": "Following a rewarding experience in a startup, I am seeking new challenges. My goal is to contribute to the creation of a quality product within a cohesive, fun, and caring team. Passionate about development, I am using this time to expand my skills with React ecosystem tools by developing personal projects."
     }
