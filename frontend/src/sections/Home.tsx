@@ -21,7 +21,7 @@ export function Home() {
       <Background />
       <div className="container m-auto h-full flex justify-center items-center gap-20">
         <div className="flex flex-col justify-center items-center gap-3">
-          <div className="size-36 lg:size-72 scale-0.5 rounded-full border-3 border-light overflow-hidden opacity-0 animate-zoom-in bg-[url('/images/backgroundPhoto.png')] bg-cover bg-end bg-no-repeat flex justify-center items-center">
+          <div className="size-36 lg:size-50 scale-0.5 rounded-full border-3 border-light overflow-hidden opacity-0 animate-zoom-in bg-[url('/images/backgroundPhoto.png')] bg-cover bg-end bg-no-repeat flex justify-center items-center">
             <img src={photo} alt="photo" />
             <img
               src={photoDraw}
