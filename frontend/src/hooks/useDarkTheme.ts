@@ -1,8 +1,8 @@
 import { DarkThemeContext } from "@/contexts/DarkThemeContext";
-import { useContext } from "react";
+import { use } from "react";
 
 export const useDarkTheme = () => {
-  const context = useContext(DarkThemeContext);
+  const context = use(DarkThemeContext);
   if (!context)
     throw new Error("useDarkTheme must be used within an DarkThemeProvider");
   return context;

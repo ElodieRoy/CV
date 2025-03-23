@@ -3,7 +3,7 @@ import { PropsWithChildren, useEffect, useState } from "react";
 
 export const DarkThemeProvider = ({ children }: PropsWithChildren) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(
-    localStorage.currentTheme === "dark" || !("theme" in localStorage),
+    localStorage.currentTheme === "dark" || !("theme" in localStorage)
   );
 
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
@@ -13,8 +13,8 @@ export const DarkThemeProvider = ({ children }: PropsWithChildren) => {
   }, [isDarkMode]);
 
   return (
-    <DarkThemeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
+    <DarkThemeContext value={{ isDarkMode, toggleDarkMode }}>
       {children}
-    </DarkThemeContext.Provider>
+    </DarkThemeContext>
   );
 };

@@ -20,9 +20,5 @@ export const ScrollProvider = ({ children }: PropsWithChildren) => {
     };
   }, []);
 
-  return (
-    <ScrollContext.Provider value={{ isScrolled }}>
-      {children}
-    </ScrollContext.Provider>
-  );
+  return <ScrollContext value={{ isScrolled }}>{children}</ScrollContext>;
 };
